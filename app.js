@@ -557,6 +557,10 @@ function readInspector() {
     const elements = getCurrentElements();
     const el = elements[state.selectedId];
     if (!el) return;
+    const prev = {
+        ...el,
+        perspective: getPerspective(el),
+    };
     if (!el.perspective) el.perspective = getDefaultPerspective();
     el.key = els.inKey.value.trim() || el.key;
     el.x = parseInt(els.inX.value, 10) || 0;
@@ -576,8 +580,39 @@ function readInspector() {
     if (el.type === 'textblock') {
         el.blockWidth = Math.max(10, parseInt(els.inBlockWidth.value, 10) || 400);
         el.blockHeight = Math.max(0, parseInt(els.inBlockHeight.value, 10) || 0);
-        el.lineHeight = parseFloat(els.inLineHeight.value) || 1.2;
+    el.lineHeight = parseFloat(els.inLineHeight.value) || 1.2;
         el.textAlign = els.inTextAlign.value || 'left';
+    }
+
+    const typeChanged = prev.type !== el.type && (prev.type === 'text' || prev.type === 'textblock') && (el.type === 'text' || el.type === 'textblock');
+    if (typeChanged) {
+        const img = getCurrentImage();
+        if (img) {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.img.width;
+            canvas.height = img.img.height;
+            const ctx = canvas.getContext('2d');
+            const lang = getCurrentLang();
+
+            const oldCorners = getTransformedCorners(ctx, prev, lang, 0);
+            const cleanNew = { ...el, perspective: getDefaultPerspective() };
+            const newGeom = getTransformedCorners(ctx, cleanNew, lang, 0);
+            const base = {
+                tl: { x: newGeom.x, y: newGeom.y },
+                tr: { x: newGeom.x + newGeom.w, y: newGeom.y },
+                bl: { x: newGeom.x, y: newGeom.y + newGeom.h },
+                br: { x: newGeom.x + newGeom.w, y: newGeom.y + newGeom.h },
+            };
+            const remap = {};
+            ['tl', 'tr', 'bl', 'br'].forEach((name) => {
+                const local = inverseTransformPoint(newGeom.mat, oldCorners[name].x, oldCorners[name].y);
+                remap[name] = {
+                    x: Math.round((local.x - base[name].x) * 10) / 10,
+                    y: Math.round((local.y - base[name].y) * 10) / 10,
+                };
+            });
+            el.perspective = remap;
+        }
     }
     drawPreview();
     renderElementsList();
