@@ -827,12 +827,16 @@ function getDefaultPerspective() {
 
 function getPerspective(el) {
     const p = el.perspective || {};
-    return {
+    const normalized = {
         tl: { x: p.tl?.x || 0, y: p.tl?.y || 0 },
         tr: { x: p.tr?.x || 0, y: p.tr?.y || 0 },
         bl: { x: p.bl?.x || 0, y: p.bl?.y || 0 },
-        br: { x: p.br?.x || 0, y: p.br?.y || 0 },
     };
+    normalized.br = {
+        x: normalized.tr.x + normalized.bl.x - normalized.tl.x,
+        y: normalized.tr.y + normalized.bl.y - normalized.tl.y,
+    };
+    return normalized;
 }
 
 function hasPerspective(el) {
@@ -937,47 +941,35 @@ function pointInElement(ctx, el, lang, px, py, pad = 0) {
     return local.x >= x - pad && local.x <= x + w + pad && local.y >= y - pad && local.y <= y + h + pad;
 }
 
-function drawImageTriangle(ctx, img, s1, s2, s3, d1, d2, d3) {
-    ctx.save();
-    ctx.beginPath();
-    ctx.moveTo(d1.x, d1.y);
-    ctx.lineTo(d2.x, d2.y);
-    ctx.lineTo(d3.x, d3.y);
-    ctx.closePath();
-    ctx.clip();
+function applyAffineFromCorners(ctx, corners, width, height) {
+    if (width <= 0 || height <= 0) return false;
+    const ex = {
+        x: ((corners.tr.x - corners.tl.x) + (corners.br.x - corners.bl.x)) / 2,
+        y: ((corners.tr.y - corners.tl.y) + (corners.br.y - corners.bl.y)) / 2,
+    };
+    const ey = {
+        x: ((corners.bl.x - corners.tl.x) + (corners.br.x - corners.tr.x)) / 2,
+        y: ((corners.bl.y - corners.tl.y) + (corners.br.y - corners.tr.y)) / 2,
+    };
+    const a = ex.x / width;
+    const b = ex.y / width;
+    const c = ey.x / height;
+    const d = ey.y / height;
+    const e = corners.tl.x;
+    const f = corners.tl.y;
+    ctx.transform(a, b, c, d, e, f);
+    return true;
+}
 
-    const det = s1.x * (s2.y - s3.y) + s2.x * (s3.y - s1.y) + s3.x * (s1.y - s2.y);
-    if (Math.abs(det) < 1e-6) {
+function drawPerspectiveText(ctx, el, lang, width, height, drawTextFn) {
+    const corners = getTransformedCorners(ctx, el, lang, 0);
+    ctx.save();
+    if (!applyAffineFromCorners(ctx, corners, width, height)) {
         ctx.restore();
         return;
     }
-    const a = (d1.x * (s2.y - s3.y) + d2.x * (s3.y - s1.y) + d3.x * (s1.y - s2.y)) / det;
-    const b = (d1.y * (s2.y - s3.y) + d2.y * (s3.y - s1.y) + d3.y * (s1.y - s2.y)) / det;
-    const c = (d1.x * (s3.x - s2.x) + d2.x * (s1.x - s3.x) + d3.x * (s2.x - s1.x)) / det;
-    const d = (d1.y * (s3.x - s2.x) + d2.y * (s1.x - s3.x) + d3.y * (s2.x - s1.x)) / det;
-    const e = (d1.x * (s2.x * s3.y - s3.x * s2.y) + d2.x * (s3.x * s1.y - s1.x * s3.y) + d3.x * (s1.x * s2.y - s2.x * s1.y)) / det;
-    const f = (d1.y * (s2.x * s3.y - s3.x * s2.y) + d2.y * (s3.x * s1.y - s1.x * s3.y) + d3.y * (s1.x * s2.y - s2.x * s1.y)) / det;
-
-    ctx.transform(a, b, c, d, e, f);
-    ctx.drawImage(img, 0, 0);
+    drawTextFn(ctx);
     ctx.restore();
-}
-
-function drawPerspectiveText(ctx, el, lang, text, width, height, drawTextFn) {
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.max(1, Math.ceil(width));
-    canvas.height = Math.max(1, Math.ceil(height));
-    const cctx = canvas.getContext('2d');
-    drawTextFn(cctx);
-
-    const geom = getTransformedCorners(ctx, el, lang, 0);
-    const srcTL = { x: 0, y: 0 };
-    const srcTR = { x: canvas.width, y: 0 };
-    const srcBL = { x: 0, y: canvas.height };
-    const srcBR = { x: canvas.width, y: canvas.height };
-
-    drawImageTriangle(ctx, canvas, srcTL, srcTR, srcBR, geom.tl, geom.tr, geom.br);
-    drawImageTriangle(ctx, canvas, srcTL, srcBL, srcBR, geom.tl, geom.bl, geom.br);
 }
 
 function drawTextBlock(ctx, el, lang) {
@@ -991,7 +983,7 @@ function drawTextBlock(ctx, el, lang) {
     const renderHeight = contentHeight > 0 ? contentHeight : lines.length * lineHeight;
 
     if (hasPerspective(el)) {
-        drawPerspectiveText(ctx, el, lang, text, maxWidth, renderHeight, (pctx) => {
+        drawPerspectiveText(ctx, el, lang, maxWidth, renderHeight, (pctx) => {
             pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
             pctx.fillStyle = el.color;
             pctx.textBaseline = 'top';
@@ -1071,7 +1063,7 @@ function drawElement(ctx, el, lang) {
     const height = el.fontSize;
 
     if (hasPerspective(el)) {
-        drawPerspectiveText(ctx, el, lang, text, width, height, (pctx) => {
+        drawPerspectiveText(ctx, el, lang, width, height, (pctx) => {
             pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
             pctx.fillStyle = el.color;
             pctx.textBaseline = 'middle';
@@ -1301,8 +1293,27 @@ window.addEventListener('mousemove', (e) => {
                 bl: { ...state.drag.startPerspective.bl },
                 br: { ...state.drag.startPerspective.br },
             };
-            next[state.drag.handle].x = Math.round((next[state.drag.handle].x + dxLocal) * 10) / 10;
-            next[state.drag.handle].y = Math.round((next[state.drag.handle].y + dyLocal) * 10) / 10;
+            next[state.drag.handle].x = next[state.drag.handle].x + dxLocal;
+            next[state.drag.handle].y = next[state.drag.handle].y + dyLocal;
+
+            const opposite = { tl: 'br', tr: 'bl', bl: 'tr', br: 'tl' };
+            const sideA = { tl: 'tr', tr: 'tl', bl: 'br', br: 'bl' };
+            const sideB = { tl: 'bl', tr: 'br', bl: 'tl', br: 'tr' };
+            const h = state.drag.handle;
+            const o = opposite[h];
+            const a = sideA[h];
+            const b = sideB[h];
+            next[o].x = next[a].x + next[b].x - next[h].x;
+            next[o].y = next[a].y + next[b].y - next[h].y;
+
+            next.tl.x = Math.round(next.tl.x * 10) / 10;
+            next.tl.y = Math.round(next.tl.y * 10) / 10;
+            next.tr.x = Math.round(next.tr.x * 10) / 10;
+            next.tr.y = Math.round(next.tr.y * 10) / 10;
+            next.bl.x = Math.round(next.bl.x * 10) / 10;
+            next.bl.y = Math.round(next.bl.y * 10) / 10;
+            next.br.x = Math.round(next.br.x * 10) / 10;
+            next.br.y = Math.round(next.br.y * 10) / 10;
             el.perspective = next;
             updateInspector();
         }
