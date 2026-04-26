@@ -1,0 +1,85 @@
+{
+    "ru-RU": {
+        "N1-STR1": "ВСТРОЕННАЯ ЧИТАЛКА",
+        "N1-STR2": "И ПРОСМОТРЩИКИ",
+
+        "N2-STR1": "СОЗДАЙТЕ",
+        "N2-STR2": "приватное хранилище и скрывайте фото, видео", 
+        "N2-STR3": "Хранилище",
+        "N2-STR4": "Контейнер 1",
+        "N2-STR5": "Введите пароль",
+
+        "N3-STR1": "Аудиоплеер",
+        "N3-STR2": "для музыки и аудиокниг", 
+        "N3-STR3": "не понимаешь уровень(Б(П)ИВ)",
+        "N3-STR4": "Экспорт",
+        "N3-STR5": "Удалить",
+    "G-Картинка 4":{
+        "N4-STR1": "ВАШИ ФАЙЛЫ",
+        "N4-STR2": "остаются на устройстве, без отправки в облако", 
+        
+        "G-Кнопки":{
+            "N4-STR4": "Безопасность",
+            "N4-STR5": "Зашита",
+            "N4-STR6": "Шифр",
+            "N4-STR7": "Автоблок",
+            "N4-STR7-1": "10 мин",
+            "N4-STR8": "Экран",
+            "N4-STR8-1": "Блокировка",
+            "N4-STR9": "Память",
+            "N4-STR9-1": "Очистка",
+            "N4-STR10": "Брутфорс",
+            "N4-STR10-1": "5^60c",
+            "N4-STR11": "Пароль восстановления",
+            "N4-STR12": "Заблокировать"
+        }
+        
+    }
+        
+    },
+    "de-DE": {
+        "appName": "FileFort",
+        "subtitle": "Sicherer PDF-Editor",
+        "cta": "Jetzt herunterladen"
+    },
+    "fr-FR": {
+        "appName": "FileFort",
+        "subtitle": "Éditeur PDF sécurisé",
+        "cta": "Télécharger"
+    },
+    "es-ES": {
+        "appName": "FileFort",
+        "subtitle": "Editor de PDF seguro",
+        "cta": "Descargar"
+    },
+    "it-IT": {
+        "appName": "FileFort",
+        "subtitle": "Editor PDF sicuro",
+        "cta": "Scarica"
+    },
+    "pt-BR": {
+        "appName": "FileFort",
+        "subtitle": "Editor de PDF seguro",
+        "cta": "Baixar agora"
+    },
+    "ja-JP": {
+        "appName": "FileFort",
+        "subtitle": "安全なPDFエディタ",
+        "cta": "今すぐダウンロード"
+    },
+    "ko-KR": {
+        "appName": "FileFort",
+        "subtitle": "안전한 PDF 편집기",
+        "cta": "지금 다운로드"
+    },
+    "zh-CN": {
+        "appName": "FileFort",
+        "subtitle": "安全PDF编辑器",
+        "cta": "立即下载"
+    },
+    "ar-SA": {
+        "appName": "FileFort",
+        "subtitle": "محرر PDF آمن",
+        "cta": "تحميل الآن"
+    }
+}
