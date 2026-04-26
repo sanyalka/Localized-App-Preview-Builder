@@ -273,6 +273,7 @@ function autoCreateElementsFromKeys() {
             rotation: 0,
             skewX: 0,
             skewY: 0,
+            perspective: getDefaultPerspective(),
         });
         added = true;
     });
@@ -307,6 +308,7 @@ function addElementToTemplate(key) {
         rotation: poolItem.rotation || 0,
         skewX: poolItem.skewX || 0,
         skewY: poolItem.skewY || 0,
+        perspective: poolItem.perspective ? getPerspective(poolItem) : getDefaultPerspective(),
     });
 
     state.selectedId = elements.length - 1;
@@ -506,6 +508,7 @@ els.addCustomElement.addEventListener('click', () => {
         rotation: 0,
         skewX: 0,
         skewY: 0,
+        perspective: getDefaultPerspective(),
     });
     renderElementsList();
 });
@@ -525,6 +528,7 @@ function updateInspector() {
     }
     els.inspector.classList.remove('hidden');
     const el = elements[state.selectedId];
+    if (!el.perspective) el.perspective = getDefaultPerspective();
     els.inKey.value = el.key;
     els.inX.value = el.x;
     els.inY.value = el.y;
@@ -553,6 +557,7 @@ function readInspector() {
     const elements = getCurrentElements();
     const el = elements[state.selectedId];
     if (!el) return;
+    if (!el.perspective) el.perspective = getDefaultPerspective();
     el.key = els.inKey.value.trim() || el.key;
     el.x = parseInt(els.inX.value, 10) || 0;
     el.y = parseInt(els.inY.value, 10) || 0;
@@ -691,7 +696,10 @@ els.loadProjectInput.addEventListener('change', async (e) => {
             }
         }
 
-        state.allKeys = data.allKeys;
+        state.allKeys = (data.allKeys || []).map(k => ({
+            ...k,
+            perspective: k.perspective ? getPerspective(k) : getDefaultPerspective(),
+        }));
         state.translations = data.translations || {};
         state.pendingTemplateElements = data.templateElements;
         applyPendingTemplateElements();
@@ -714,7 +722,10 @@ function applyPendingTemplateElements() {
     state.images.forEach(img => {
         const saved = state.pendingTemplateElements[img.name];
         if (saved) {
-            state.templateElements[img.id] = saved.map(e => ({...e}));
+            state.templateElements[img.id] = saved.map(e => ({
+                ...e,
+                perspective: e.perspective ? getPerspective(e) : getDefaultPerspective(),
+            }));
         }
     });
     delete state.pendingTemplateElements;
@@ -805,6 +816,67 @@ function getElementTransformMatrix(el, ox, oy) {
     return ctx.getTransform();
 }
 
+function getDefaultPerspective() {
+    return {
+        tl: { x: 0, y: 0 },
+        tr: { x: 0, y: 0 },
+        bl: { x: 0, y: 0 },
+        br: { x: 0, y: 0 },
+    };
+}
+
+function getPerspective(el) {
+    const p = el.perspective || {};
+    return {
+        tl: { x: p.tl?.x || 0, y: p.tl?.y || 0 },
+        tr: { x: p.tr?.x || 0, y: p.tr?.y || 0 },
+        bl: { x: p.bl?.x || 0, y: p.bl?.y || 0 },
+        br: { x: p.br?.x || 0, y: p.br?.y || 0 },
+    };
+}
+
+function hasPerspective(el) {
+    const p = getPerspective(el);
+    return Object.values(p).some(pt => pt.x !== 0 || pt.y !== 0);
+}
+
+function getElementBox(ctx, el, lang, pad = 0) {
+    const m = measureElement(ctx, el, lang);
+    if (el.type === 'textblock') {
+        const x = el.x - pad;
+        const y = el.y - pad;
+        const w = (el.blockWidth || 400) + pad * 2;
+        const h = (el.blockHeight > 0 ? el.blockHeight : m.height) + pad * 2;
+        return { x, y, w, h, ox: el.x, oy: el.y };
+    }
+    let tx = el.x;
+    if (el.center) tx = el.x - m.width / 2;
+    const x = tx - pad;
+    const y = el.y - m.height / 2 - pad;
+    const w = m.width + pad * 2;
+    const h = m.height + pad * 2;
+    return { x, y, w, h, ox: tx, oy: el.y };
+}
+
+function getTransformedCorners(ctx, el, lang, pad = 0) {
+    const { x, y, w, h, ox, oy } = getElementBox(ctx, el, lang, pad);
+    const mat = getElementTransformMatrix(el, ox, oy);
+    const p = getPerspective(el);
+    return {
+        tl: transformPoint(mat, x + p.tl.x, y + p.tl.y),
+        tr: transformPoint(mat, x + w + p.tr.x, y + p.tr.y),
+        bl: transformPoint(mat, x + p.bl.x, y + h + p.bl.y),
+        br: transformPoint(mat, x + w + p.br.x, y + h + p.br.y),
+        mat,
+        x,
+        y,
+        w,
+        h,
+        ox,
+        oy,
+    };
+}
+
 function transformPoint(m, x, y) {
     const p = m.transformPoint(new DOMPoint(x, y));
     return { x: p.x, y: p.y };
@@ -816,40 +888,15 @@ function inverseTransformPoint(m, x, y) {
 }
 
 function getElementBounds(ctx, el, lang) {
-    const m = measureElement(ctx, el, lang);
-    const pad = 8;
-    let x, y, w, h, ox, oy;
-    if (el.type === 'textblock') {
-        x = el.x - pad;
-        y = el.y - pad;
-        w = (el.blockWidth || 400) + pad * 2;
-        h = (el.blockHeight > 0 ? el.blockHeight : m.height) + pad * 2;
-        ox = el.x;
-        oy = el.y;
-    } else {
-        let tx = el.x;
-        if (el.center) tx = el.x - m.width / 2;
-        x = tx - pad;
-        y = el.y - m.height / 2 - pad;
-        w = m.width + pad * 2;
-        h = m.height + pad * 2;
-        ox = tx;
-        oy = el.y;
-    }
-    const mat = getElementTransformMatrix(el, ox, oy);
-    const corners = [
-        transformPoint(mat, x, y),
-        transformPoint(mat, x + w, y),
-        transformPoint(mat, x, y + h),
-        transformPoint(mat, x + w, y + h),
-    ];
-    const xs = corners.map(p => p.x);
-    const ys = corners.map(p => p.y);
+    const c = getTransformedCorners(ctx, el, lang, 8);
+    const corners = [c.tl, c.tr, c.bl, c.br];
+    const xs = corners.map(pt => pt.x);
+    const ys = corners.map(pt => pt.y);
     const minX = Math.min(...xs);
     const maxX = Math.max(...xs);
     const minY = Math.min(...ys);
     const maxY = Math.max(...ys);
-    return { x: minX, y: minY, width: maxX - minX, height: maxY - minY, textX: el.type === 'text' ? ox : el.x, textY: el.y };
+    return { x: minX, y: minY, width: maxX - minX, height: maxY - minY, textX: el.type === 'text' ? c.ox : el.x, textY: el.y };
 }
 
 function hitTest(px, py) {
@@ -863,32 +910,115 @@ function hitTest(px, py) {
     const lang = getCurrentLang();
     for (let i = elements.length - 1; i >= 0; i--) {
         const el = elements[i];
-        const m = measureElement(ctx, el, lang);
-        const pad = 8;
-        let x, y, w, h, ox, oy;
-        if (el.type === 'textblock') {
-            x = el.x; y = el.y;
-            w = el.blockWidth || 400;
-            h = el.blockHeight > 0 ? el.blockHeight : m.height;
-            ox = el.x; oy = el.y;
-        } else {
-            let tx = el.x;
-            if (el.center) tx = el.x - m.width / 2;
-            x = tx; y = el.y - m.height / 2;
-            w = m.width; h = m.height;
-            ox = tx; oy = el.y;
-        }
-        const mat = getElementTransformMatrix(el, ox, oy);
-        const local = inverseTransformPoint(mat, px, py);
-        if (local.x >= x - pad && local.x <= x + w + pad && local.y >= y - pad && local.y <= y + h + pad) {
+        if (pointInElement(ctx, el, lang, px, py, 8)) {
             return i;
         }
     }
     return -1;
 }
 
+function pointInElement(ctx, el, lang, px, py, pad = 0) {
+    if (hasPerspective(el)) {
+        const c = getTransformedCorners(ctx, el, lang, pad);
+        const p = { x: px, y: py };
+        const area = (p1, p2, p3) => (p1.x - p3.x) * (p2.y - p3.y) - (p2.x - p3.x) * (p1.y - p3.y);
+        const pointInTri = (pt, a, b, cc) => {
+            const d1 = area(pt, a, b);
+            const d2 = area(pt, b, cc);
+            const d3 = area(pt, cc, a);
+            const hasNeg = d1 < 0 || d2 < 0 || d3 < 0;
+            const hasPos = d1 > 0 || d2 > 0 || d3 > 0;
+            return !(hasNeg && hasPos);
+        };
+        return pointInTri(p, c.tl, c.tr, c.br) || pointInTri(p, c.tl, c.bl, c.br);
+    }
+    const { x, y, w, h, mat } = getTransformedCorners(ctx, el, lang, 0);
+    const local = inverseTransformPoint(mat, px, py);
+    return local.x >= x - pad && local.x <= x + w + pad && local.y >= y - pad && local.y <= y + h + pad;
+}
+
+function drawImageTriangle(ctx, img, s1, s2, s3, d1, d2, d3) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(d1.x, d1.y);
+    ctx.lineTo(d2.x, d2.y);
+    ctx.lineTo(d3.x, d3.y);
+    ctx.closePath();
+    ctx.clip();
+
+    const det = s1.x * (s2.y - s3.y) + s2.x * (s3.y - s1.y) + s3.x * (s1.y - s2.y);
+    if (Math.abs(det) < 1e-6) {
+        ctx.restore();
+        return;
+    }
+    const a = (d1.x * (s2.y - s3.y) + d2.x * (s3.y - s1.y) + d3.x * (s1.y - s2.y)) / det;
+    const b = (d1.y * (s2.y - s3.y) + d2.y * (s3.y - s1.y) + d3.y * (s1.y - s2.y)) / det;
+    const c = (d1.x * (s3.x - s2.x) + d2.x * (s1.x - s3.x) + d3.x * (s2.x - s1.x)) / det;
+    const d = (d1.y * (s3.x - s2.x) + d2.y * (s1.x - s3.x) + d3.y * (s2.x - s1.x)) / det;
+    const e = (d1.x * (s2.x * s3.y - s3.x * s2.y) + d2.x * (s3.x * s1.y - s1.x * s3.y) + d3.x * (s1.x * s2.y - s2.x * s1.y)) / det;
+    const f = (d1.y * (s2.x * s3.y - s3.x * s2.y) + d2.y * (s3.x * s1.y - s1.x * s3.y) + d3.y * (s1.x * s2.y - s2.x * s1.y)) / det;
+
+    ctx.transform(a, b, c, d, e, f);
+    ctx.drawImage(img, 0, 0);
+    ctx.restore();
+}
+
+function drawPerspectiveText(ctx, el, lang, text, width, height, drawTextFn) {
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.ceil(width));
+    canvas.height = Math.max(1, Math.ceil(height));
+    const cctx = canvas.getContext('2d');
+    drawTextFn(cctx);
+
+    const geom = getTransformedCorners(ctx, el, lang, 0);
+    const srcTL = { x: 0, y: 0 };
+    const srcTR = { x: canvas.width, y: 0 };
+    const srcBL = { x: 0, y: canvas.height };
+    const srcBR = { x: canvas.width, y: canvas.height };
+
+    drawImageTriangle(ctx, canvas, srcTL, srcTR, srcBR, geom.tl, geom.tr, geom.br);
+    drawImageTriangle(ctx, canvas, srcTL, srcBL, srcBR, geom.tl, geom.bl, geom.br);
+}
+
 function drawTextBlock(ctx, el, lang) {
     const text = getTextForKey(lang, el.key, el.defaultText || el.key);
+    const maxWidth = el.blockWidth || 400;
+    const temp = document.createElement('canvas').getContext('2d');
+    temp.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+    const lines = wrapText(temp, text, maxWidth);
+    const lineHeight = el.fontSize * (el.lineHeight || 1.2);
+    const contentHeight = el.blockHeight || 0;
+    const renderHeight = contentHeight > 0 ? contentHeight : lines.length * lineHeight;
+
+    if (hasPerspective(el)) {
+        drawPerspectiveText(ctx, el, lang, text, maxWidth, renderHeight, (pctx) => {
+            pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+            pctx.fillStyle = el.color;
+            pctx.textBaseline = 'top';
+            lines.forEach((line, i) => {
+                const y = i * lineHeight;
+                if (contentHeight > 0 && y + el.fontSize > contentHeight) return;
+                let x = 0;
+                const lineWidth = pctx.measureText(line).width;
+                if (el.textAlign === 'center') x = (maxWidth - lineWidth) / 2;
+                else if (el.textAlign === 'right') x = maxWidth - lineWidth;
+                if (el.outline) {
+                    pctx.strokeStyle = 'rgba(0,0,0,0.85)';
+                    pctx.lineWidth = Math.max(2, el.fontSize / 8);
+                    pctx.strokeText(line, x, y);
+                }
+                if (el.shadow) {
+                    pctx.shadowColor = 'rgba(0,0,0,0.55)';
+                    pctx.shadowBlur = Math.max(4, el.fontSize / 5);
+                    pctx.shadowOffsetX = 2;
+                    pctx.shadowOffsetY = 2;
+                }
+                pctx.fillText(line, x, y);
+            });
+        });
+        return;
+    }
+
     ctx.save();
     const isTransformed = (el.rotation || 0) !== 0 || (el.skewX || 0) !== 0 || (el.skewY || 0) !== 0;
     if (isTransformed) {
@@ -901,10 +1031,7 @@ function drawTextBlock(ctx, el, lang) {
     ctx.fillStyle = el.color;
     ctx.textBaseline = 'top';
 
-    const maxWidth = el.blockWidth || 400;
-    const lines = wrapText(ctx, text, maxWidth);
-    const lineHeight = el.fontSize * (el.lineHeight || 1.2);
-    const maxHeight = el.blockHeight || 0;
+    const maxHeight = contentHeight;
 
     lines.forEach((line, i) => {
         const y = el.y + i * lineHeight;
@@ -941,6 +1068,30 @@ function drawElement(ctx, el, lang) {
         return;
     }
     const { text, width } = measureElement(ctx, el, lang);
+    const height = el.fontSize;
+
+    if (hasPerspective(el)) {
+        drawPerspectiveText(ctx, el, lang, text, width, height, (pctx) => {
+            pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+            pctx.fillStyle = el.color;
+            pctx.textBaseline = 'middle';
+            const y = height / 2;
+            if (el.outline) {
+                pctx.strokeStyle = 'rgba(0,0,0,0.85)';
+                pctx.lineWidth = Math.max(2, el.fontSize / 8);
+                pctx.strokeText(text, 0, y);
+            }
+            if (el.shadow) {
+                pctx.shadowColor = 'rgba(0,0,0,0.55)';
+                pctx.shadowBlur = Math.max(4, el.fontSize / 5);
+                pctx.shadowOffsetX = 2;
+                pctx.shadowOffsetY = 2;
+            }
+            pctx.fillText(text, 0, y);
+        });
+        return;
+    }
+
     ctx.save();
     let x = el.x;
     if (el.center) {
@@ -974,43 +1125,25 @@ function drawElement(ctx, el, lang) {
 }
 
 function drawSelection(ctx, el, lang) {
-    const m = measureElement(ctx, el, lang);
-    const pad = 8;
-    let x, y, w, h, ox, oy;
-    if (el.type === 'textblock') {
-        x = el.x; y = el.y;
-        w = el.blockWidth || 400;
-        h = el.blockHeight > 0 ? el.blockHeight : m.height;
-        ox = el.x; oy = el.y;
-    } else {
-        let tx = el.x;
-        if (el.center) tx = el.x - m.width / 2;
-        x = tx; y = el.y - m.height / 2;
-        w = m.width; h = m.height;
-        ox = tx; oy = el.y;
-    }
-
-    const isTransformed = (el.rotation || 0) !== 0 || (el.skewX || 0) !== 0 || (el.skewY || 0) !== 0;
-
+    const c = getTransformedCorners(ctx, el, lang, 8);
     ctx.save();
-    if (isTransformed) {
-        ctx.translate(ox, oy);
-        ctx.rotate((el.rotation || 0) * Math.PI / 180);
-        ctx.transform(1, Math.tan((el.skewY || 0) * Math.PI / 180), Math.tan((el.skewX || 0) * Math.PI / 180), 1, 0, 0);
-        ctx.translate(-ox, -oy);
-    }
-
     ctx.strokeStyle = '#6366f1';
     ctx.lineWidth = 2;
     ctx.setLineDash([5, 4]);
-    ctx.strokeRect(x - pad, y - pad, w + pad * 2, h + pad * 2);
+    ctx.beginPath();
+    ctx.moveTo(c.tl.x, c.tl.y);
+    ctx.lineTo(c.tr.x, c.tr.y);
+    ctx.lineTo(c.br.x, c.br.y);
+    ctx.lineTo(c.bl.x, c.bl.y);
+    ctx.closePath();
+    ctx.stroke();
     ctx.setLineDash([]);
 
     const handles = [
-        { x: x - pad, y: y - pad },
-        { x: x + w + pad, y: y - pad },
-        { x: x - pad, y: y + h + pad },
-        { x: x + w + pad, y: y + h + pad },
+        { x: c.tl.x, y: c.tl.y },
+        { x: c.tr.x, y: c.tr.y },
+        { x: c.bl.x, y: c.bl.y },
+        { x: c.br.x, y: c.br.y },
     ];
     ctx.fillStyle = '#6366f1';
     handles.forEach(h => {
@@ -1066,27 +1199,12 @@ function getHandleAt(px, py, elIdx) {
     const ctx = canvas.getContext('2d');
     const lang = getCurrentLang();
     const el = elements[elIdx];
-    const m = measureElement(ctx, el, lang);
-    const pad = 8;
-    let x, y, w, h, ox, oy;
-    if (el.type === 'textblock') {
-        x = el.x; y = el.y;
-        w = el.blockWidth || 400;
-        h = el.blockHeight > 0 ? el.blockHeight : m.height;
-        ox = el.x; oy = el.y;
-    } else {
-        let tx = el.x;
-        if (el.center) tx = el.x - m.width / 2;
-        x = tx; y = el.y - m.height / 2;
-        w = m.width; h = m.height;
-        ox = tx; oy = el.y;
-    }
-    const mat = getElementTransformMatrix(el, ox, oy);
+    const c = getTransformedCorners(ctx, el, lang, 8);
     const handles = [
-        { name: 'tl', pt: transformPoint(mat, x - pad, y - pad) },
-        { name: 'tr', pt: transformPoint(mat, x + w + pad, y - pad) },
-        { name: 'bl', pt: transformPoint(mat, x - pad, y + h + pad) },
-        { name: 'br', pt: transformPoint(mat, x + w + pad, y + h + pad) },
+        { name: 'tl', pt: c.tl },
+        { name: 'tr', pt: c.tr },
+        { name: 'bl', pt: c.bl },
+        { name: 'br', pt: c.br },
     ];
     for (const h of handles) {
         if (Math.abs(px - h.pt.x) <= 10 && Math.abs(py - h.pt.y) <= 10) return h.name;
@@ -1102,14 +1220,24 @@ els.previewCanvas.addEventListener('mousedown', (e) => {
         if (h) {
             const el = elements[state.selectedId];
             if (e.shiftKey) {
+                const img = getCurrentImage();
+                if (!img) return;
+                const canvas = document.createElement('canvas');
+                canvas.width = img.img.width;
+                canvas.height = img.img.height;
+                const ctx = canvas.getContext('2d');
+                const lang = getCurrentLang();
+                const geom = getTransformedCorners(ctx, el, lang, 0);
+                const startLocal = inverseTransformPoint(geom.mat, p.x, p.y);
                 state.drag = {
                     type: 'transform',
                     handle: h,
                     idx: state.selectedId,
                     startX: p.x,
                     startY: p.y,
-                    startSkewX: el.skewX || 0,
-                    startSkewY: el.skewY || 0,
+                    startLocal,
+                    transformMatrix: geom.mat,
+                    startPerspective: getPerspective(el),
                 };
                 els.previewCanvas.style.cursor = 'crosshair';
                 e.preventDefault();
@@ -1163,26 +1291,19 @@ window.addEventListener('mousemove', (e) => {
             const dy = p.y - state.drag.startY;
             el.fontSize = Math.max(8, Math.round(state.drag.startFontSize + dy * 0.4));
         } else if (state.drag.type === 'transform') {
-            const dx = p.x - state.drag.startX;
-            const dy = p.y - state.drag.startY;
-            const handle = state.drag.handle;
-            let sx = state.drag.startSkewX;
-            let sy = state.drag.startSkewY;
-            if (handle === 'tl') {
-                sx = state.drag.startSkewX + dy * 0.5;
-                sy = state.drag.startSkewY - dx * 0.5;
-            } else if (handle === 'tr') {
-                sx = state.drag.startSkewX - dy * 0.5;
-                sy = state.drag.startSkewY + dx * 0.5;
-            } else if (handle === 'bl') {
-                sx = state.drag.startSkewX - dy * 0.5;
-                sy = state.drag.startSkewY + dx * 0.5;
-            } else if (handle === 'br') {
-                sx = state.drag.startSkewX + dy * 0.5;
-                sy = state.drag.startSkewY - dx * 0.5;
-            }
-            el.skewX = Math.round(sx * 10) / 10;
-            el.skewY = Math.round(sy * 10) / 10;
+            const local = inverseTransformPoint(state.drag.transformMatrix, p.x, p.y);
+            const dxLocal = local.x - state.drag.startLocal.x;
+            const dyLocal = local.y - state.drag.startLocal.y;
+            const next = {
+                ...state.drag.startPerspective,
+                tl: { ...state.drag.startPerspective.tl },
+                tr: { ...state.drag.startPerspective.tr },
+                bl: { ...state.drag.startPerspective.bl },
+                br: { ...state.drag.startPerspective.br },
+            };
+            next[state.drag.handle].x = Math.round((next[state.drag.handle].x + dxLocal) * 10) / 10;
+            next[state.drag.handle].y = Math.round((next[state.drag.handle].y + dyLocal) * 10) / 10;
+            el.perspective = next;
             updateInspector();
         }
         drawPreview();
@@ -1208,28 +1329,7 @@ window.addEventListener('mousemove', (e) => {
                     const ctx = canvas.getContext('2d');
                     const lang = getCurrentLang();
                     const el = getCurrentElements()[state.selectedId];
-                    if (el) {
-                        const m = measureElement(ctx, el, lang);
-                        const pad = 8;
-                        let x, y, w, h, ox, oy;
-                        if (el.type === 'textblock') {
-                            x = el.x; y = el.y;
-                            w = el.blockWidth || 400;
-                            h = el.blockHeight > 0 ? el.blockHeight : m.height;
-                            ox = el.x; oy = el.y;
-                        } else {
-                            let tx = el.x;
-                            if (el.center) tx = el.x - m.width / 2;
-                            x = tx; y = el.y - m.height / 2;
-                            w = m.width; h = m.height;
-                            ox = tx; oy = el.y;
-                        }
-                        const mat = getElementTransformMatrix(el, ox, oy);
-                        const local = inverseTransformPoint(mat, p.x, p.y);
-                        if (local.x >= x - pad && local.x <= x + w + pad && local.y >= y - pad && local.y <= y + h + pad) {
-                            cursor = 'move';
-                        }
-                    }
+                    if (el && pointInElement(ctx, el, lang, p.x, p.y, 8)) cursor = 'move';
                 }
             }
         } else if (hitTest(p.x, p.y) >= 0) {
