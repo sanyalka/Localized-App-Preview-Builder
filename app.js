@@ -540,7 +540,7 @@ function updateInspector() {
     toggleBlockFields();
     els.inBlockWidth.value = el.blockWidth || 400;
     els.inBlockHeight.value = el.blockHeight || 0;
-    els.inLineHeight.value = el.lineHeight || 1.2;
+    els.inLineHeight.value = getSafeLineHeight(el);
     els.inTextAlign.value = el.textAlign || 'left';
     els.inBold.checked = el.bold;
     els.inShadow.checked = el.shadow;
@@ -580,7 +580,7 @@ function readInspector() {
     if (el.type === 'textblock') {
         el.blockWidth = Math.max(10, parseInt(els.inBlockWidth.value, 10) || 400);
         el.blockHeight = Math.max(0, parseInt(els.inBlockHeight.value, 10) || 0);
-    el.lineHeight = parseFloat(els.inLineHeight.value) || 1.2;
+        el.lineHeight = Math.max(0.1, parseFloat(els.inLineHeight.value) || 1.2);
         el.textAlign = els.inTextAlign.value || 'left';
     }
 
@@ -779,6 +779,11 @@ function updateCanvasVisibility() {
     drawPreview();
 }
 
+function getSafeLineHeight(el) {
+    const lh = Number(el?.lineHeight);
+    return Number.isFinite(lh) && lh > 0 ? lh : 1.2;
+}
+
 function getCanvasPoint(e) {
     const rect = els.previewCanvas.getBoundingClientRect();
     const scale = parseFloat(els.previewScale.value);
@@ -831,7 +836,7 @@ function measureElement(ctx, el, lang) {
     if (el.type === 'textblock') {
         const width = el.blockWidth || 400;
         const lines = wrapText(ctx, text, width);
-        const lineHeight = el.fontSize * (el.lineHeight || 1.2);
+        const lineHeight = el.fontSize * getSafeLineHeight(el);
         const height = lines.length * lineHeight;
         ctx.restore();
         return { text, width, height, lines, lineHeight };
@@ -1013,7 +1018,7 @@ function drawTextBlock(ctx, el, lang) {
     const temp = document.createElement('canvas').getContext('2d');
     temp.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
     const lines = wrapText(temp, text, maxWidth);
-    const lineHeight = el.fontSize * (el.lineHeight || 1.2);
+    const lineHeight = el.fontSize * getSafeLineHeight(el);
     const contentHeight = el.blockHeight || 0;
     const renderHeight = contentHeight > 0 ? contentHeight : lines.length * lineHeight;
 
