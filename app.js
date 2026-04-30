@@ -662,22 +662,20 @@ function readInspector() {
     const typeChanged = prev.type !== el.type && (prev.type === 'text' || prev.type === 'textblock') && (el.type === 'text' || el.type === 'textblock');
     if (typeChanged) {
         const img = getCurrentImage();
-        if (img) {
-            const canvas = document.createElement('canvas');
-            canvas.width = img.img.width;
-            canvas.height = img.img.height;
-            const ctx = canvas.getContext('2d');
-            const lang = getCurrentLang();
+        const canvas = document.createElement('canvas');
+        canvas.width = img?.img?.width || 1;
+        canvas.height = img?.img?.height || 1;
+        const ctx = canvas.getContext('2d');
+        const lang = getCurrentLang();
 
-            el.perspective = getDefaultPerspective();
+        el.perspective = getDefaultPerspective();
 
-            if (el.type === 'textblock') {
-                const measured = measureElement(ctx, { ...el, type: 'text', perspective: getDefaultPerspective() }, lang);
-                el.blockWidth = Math.max(120, Math.ceil(measured.width));
-                el.blockHeight = Math.max(1, Math.ceil(el.fontSize * getSafeLineHeight(el)));
-                const fitted = layoutTextBlock(ctx, el, lang);
-                el.blockHeight = Math.max(1, Math.ceil(fitted.contentHeight));
-            }
+        if (el.type === 'textblock') {
+            const measured = measureElement(ctx, { ...el, type: 'text', perspective: getDefaultPerspective() }, lang);
+            el.blockWidth = Math.max(120, Math.ceil(measured.width));
+            el.blockHeight = Math.max(1, Math.ceil(el.fontSize * getSafeLineHeight(el)));
+            const fitted = layoutTextBlock(ctx, el, lang);
+            el.blockHeight = Math.max(1, Math.ceil(fitted.contentHeight));
         }
     }
     drawPreview();

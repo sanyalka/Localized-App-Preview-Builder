@@ -46,4 +46,5 @@ local.properties
 *.zip
 *.tar.gz
 *.rar
-dist/*
+# Build output
+dist/
