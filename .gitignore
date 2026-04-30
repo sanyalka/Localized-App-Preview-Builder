@@ -47,4 +47,3 @@ local.properties
 *.tar.gz
 *.rar
 dist/*
-dist/assets/*.js
