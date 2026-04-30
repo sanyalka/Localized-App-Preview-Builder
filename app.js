@@ -669,24 +669,15 @@ function readInspector() {
             const ctx = canvas.getContext('2d');
             const lang = getCurrentLang();
 
-            const oldCorners = getTransformedCorners(ctx, prev, lang, 0);
-            const cleanNew = { ...el, perspective: getDefaultPerspective() };
-            const newGeom = getTransformedCorners(ctx, cleanNew, lang, 0);
-            const base = {
-                tl: { x: newGeom.x, y: newGeom.y },
-                tr: { x: newGeom.x + newGeom.w, y: newGeom.y },
-                bl: { x: newGeom.x, y: newGeom.y + newGeom.h },
-                br: { x: newGeom.x + newGeom.w, y: newGeom.y + newGeom.h },
-            };
-            const remap = {};
-            ['tl', 'tr', 'bl', 'br'].forEach((name) => {
-                const local = inverseTransformPoint(newGeom.mat, oldCorners[name].x, oldCorners[name].y);
-                remap[name] = {
-                    x: Math.round((local.x - base[name].x) * 10) / 10,
-                    y: Math.round((local.y - base[name].y) * 10) / 10,
-                };
-            });
-            el.perspective = remap;
+            el.perspective = getDefaultPerspective();
+
+            if (el.type === 'textblock') {
+                const measured = measureElement(ctx, { ...el, type: 'text', perspective: getDefaultPerspective() }, lang);
+                el.blockWidth = Math.max(120, Math.ceil(measured.width));
+                el.blockHeight = Math.max(1, Math.ceil(el.fontSize * getSafeLineHeight(el)));
+                const fitted = layoutTextBlock(ctx, el, lang);
+                el.blockHeight = Math.max(1, Math.ceil(fitted.contentHeight));
+            }
         }
     }
     drawPreview();
