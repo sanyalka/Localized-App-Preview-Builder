@@ -918,38 +918,112 @@ function getCanvasPoint(e) {
 
 function wrapText(ctx, text, maxWidth) {
     if (!text) return [''];
-    const words = text.split(/(\s+)/);
     const lines = [];
-    let currentLine = '';
-    for (let i = 0; i < words.length; i++) {
-        const word = words[i];
-        if (!word) continue;
-        const testLine = currentLine + word;
-        if (ctx.measureText(testLine).width > maxWidth && currentLine !== '') {
-            lines.push(currentLine);
-            currentLine = word;
-        } else {
-            currentLine = testLine;
+    const paragraphs = String(text).split(/\r?\n/);
+
+    const breakLongToken = (token) => {
+        const chunks = [];
+        let chunk = '';
+        for (const char of token) {
+            const next = chunk + char;
+            if (chunk && ctx.measureText(next).width > maxWidth) {
+                chunks.push(chunk);
+                chunk = char;
+            } else {
+                chunk = next;
+            }
         }
-        // If a single word is longer than maxWidth, break it character by character
-        if (ctx.measureText(currentLine).width > maxWidth && currentLine.trim().length > 0) {
-            const longText = currentLine;
-            let chunk = '';
-            currentLine = '';
-            for (const char of longText) {
-                const testChunk = chunk + char;
-                if (ctx.measureText(testChunk).width > maxWidth && chunk !== '') {
-                    lines.push(chunk);
-                    chunk = char;
-                } else {
-                    chunk = testChunk;
+        if (chunk) chunks.push(chunk);
+        return chunks;
+    };
+
+    for (const paragraph of paragraphs) {
+        if (paragraph.length === 0) {
+            lines.push('');
+            continue;
+        }
+        let current = '';
+        const tokens = paragraph.match(/\S+|\s+/g) || [];
+        for (const token of tokens) {
+            if (/^\s+$/.test(token)) {
+                current += token;
+                continue;
+            }
+
+            const candidate = current + token;
+            if (ctx.measureText(candidate).width <= maxWidth || current.trim().length === 0) {
+                if (ctx.measureText(candidate).width <= maxWidth) {
+                    current = candidate;
+                    continue;
                 }
             }
-            currentLine = chunk;
+
+            if (current.trim().length > 0) {
+                lines.push(current.trimEnd());
+                current = '';
+            }
+
+            if (ctx.measureText(token).width <= maxWidth) {
+                current = token;
+            } else {
+                const chunks = breakLongToken(token);
+                lines.push(...chunks.slice(0, -1));
+                current = chunks[chunks.length - 1] || '';
+            }
+        }
+        lines.push(current.trimEnd());
+    }
+
+    return lines.length ? lines : [''];
+}
+
+
+function layoutTextBlock(ctx, el, lang) {
+    const text = getTextForKey(lang, el.key, el.defaultText || el.key);
+    const maxWidth = Math.max(10, el.blockWidth || 400);
+    const targetHeight = Math.max(0, el.blockHeight || 0);
+    const baseSize = Math.max(8, el.fontSize || 24);
+    const minSize = 8;
+
+    const resolveLines = (fontSize) => {
+        ctx.font = `${el.bold ? 'bold ' : ''}${fontSize}px "${el.font}", sans-serif`;
+        const lines = wrapText(ctx, text, maxWidth);
+        const lineHeight = fontSize * getSafeLineHeight(el);
+        const contentHeight = lines.length * lineHeight;
+        return { fontSize, lines, lineHeight, contentHeight };
+    };
+
+    let layout = resolveLines(baseSize);
+    if (targetHeight > 0 && layout.contentHeight > targetHeight) {
+        let lo = minSize;
+        let hi = baseSize;
+        let best = resolveLines(minSize);
+        if (best.contentHeight > targetHeight) {
+            layout = best;
+        } else {
+            for (let i = 0; i < 14; i++) {
+                const mid = (lo + hi) / 2;
+                const probe = resolveLines(mid);
+                if (probe.contentHeight <= targetHeight) {
+                    best = probe;
+                    lo = mid;
+                } else {
+                    hi = mid;
+                }
+            }
+            layout = best;
         }
     }
-    lines.push(currentLine);
-    return lines;
+
+    return {
+        text,
+        width: maxWidth,
+        renderHeight: targetHeight > 0 ? targetHeight : layout.contentHeight,
+        lines: layout.lines,
+        lineHeight: layout.lineHeight,
+        drawFontSize: layout.fontSize,
+        contentHeight: layout.contentHeight,
+    };
 }
 
 function measureElement(ctx, el, lang) {
@@ -957,12 +1031,9 @@ function measureElement(ctx, el, lang) {
     ctx.save();
     ctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
     if (el.type === 'textblock') {
-        const width = el.blockWidth || 400;
-        const lines = wrapText(ctx, text, width);
-        const lineHeight = el.fontSize * (el.lineHeight || 1.2);
-        const height = lines.length * lineHeight;
+        const layout = layoutTextBlock(ctx, el, lang);
         ctx.restore();
-        return { text, width, height, lines, lineHeight };
+        return { text, width: layout.width, height: layout.renderHeight, lines: layout.lines, lineHeight: layout.lineHeight };
     }
     const metrics = ctx.measureText(text);
     ctx.restore();
@@ -990,16 +1061,12 @@ function getDefaultPerspective() {
 
 function getPerspective(el) {
     const p = el.perspective || {};
-    const normalized = {
+    return {
         tl: { x: p.tl?.x || 0, y: p.tl?.y || 0 },
         tr: { x: p.tr?.x || 0, y: p.tr?.y || 0 },
         bl: { x: p.bl?.x || 0, y: p.bl?.y || 0 },
+        br: { x: p.br?.x || 0, y: p.br?.y || 0 },
     };
-    normalized.br = {
-        x: normalized.tr.x + normalized.bl.x - normalized.tl.x,
-        y: normalized.tr.y + normalized.bl.y - normalized.tl.y,
-    };
-    return normalized;
 }
 
 function hasPerspective(el) {
@@ -1126,33 +1193,81 @@ function applyAffineFromCorners(ctx, corners, width, height) {
 
 function drawPerspectiveText(ctx, el, lang, width, height, drawTextFn) {
     const corners = getTransformedCorners(ctx, el, lang, 0);
+    if (width <= 0 || height <= 0) return;
+
+    const buffer = document.createElement('canvas');
+    buffer.width = Math.max(1, Math.ceil(width));
+    buffer.height = Math.max(1, Math.ceil(height));
+    const bctx = buffer.getContext('2d');
+    drawTextFn(bctx);
+
     ctx.save();
-    if (!applyAffineFromCorners(ctx, corners, width, height)) {
+    const slices = Math.min(160, Math.max(24, Math.ceil(width / 6)));
+    for (let i = 0; i < slices; i++) {
+        const u0 = i / slices;
+        const u1 = (i + 1) / slices;
+
+        const top0 = {
+            x: corners.tl.x + (corners.tr.x - corners.tl.x) * u0,
+            y: corners.tl.y + (corners.tr.y - corners.tl.y) * u0,
+        };
+        const top1 = {
+            x: corners.tl.x + (corners.tr.x - corners.tl.x) * u1,
+            y: corners.tl.y + (corners.tr.y - corners.tl.y) * u1,
+        };
+        const bottom0 = {
+            x: corners.bl.x + (corners.br.x - corners.bl.x) * u0,
+            y: corners.bl.y + (corners.br.y - corners.bl.y) * u0,
+        };
+        const bottom1 = {
+            x: corners.bl.x + (corners.br.x - corners.bl.x) * u1,
+            y: corners.bl.y + (corners.br.y - corners.bl.y) * u1,
+        };
+
+        const srcX = u0 * width;
+        const srcW = Math.max(1, (u1 - u0) * width);
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(top0.x, top0.y);
+        ctx.lineTo(top1.x, top1.y);
+        ctx.lineTo(bottom1.x, bottom1.y);
+        ctx.lineTo(bottom0.x, bottom0.y);
+        ctx.closePath();
+        ctx.clip();
+
+        ctx.transform(
+            (top1.x - top0.x) / srcW,
+            (top1.y - top0.y) / srcW,
+            (bottom0.x - top0.x) / height,
+            (bottom0.y - top0.y) / height,
+            top0.x - ((top1.x - top0.x) / srcW) * srcX,
+            top0.y - ((top1.y - top0.y) / srcW) * srcX,
+        );
+
+        ctx.drawImage(buffer, 0, 0);
         ctx.restore();
-        return;
     }
-    drawTextFn(ctx);
     ctx.restore();
 }
 
 function drawTextBlock(ctx, el, lang) {
-    const text = getTextForKey(lang, el.key, el.defaultText || el.key);
-    const maxWidth = el.blockWidth || 400;
     const temp = document.createElement('canvas').getContext('2d');
-    temp.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
-    const lines = wrapText(temp, text, maxWidth);
-    const lineHeight = el.fontSize * (el.lineHeight || 1.2);
+    const layout = layoutTextBlock(temp, el, lang);
+    const maxWidth = layout.width;
+    const lines = layout.lines;
+    const lineHeight = layout.lineHeight;
     const contentHeight = el.blockHeight || 0;
-    const renderHeight = contentHeight > 0 ? contentHeight : lines.length * lineHeight;
+    const renderHeight = layout.renderHeight;
 
     if (hasPerspective(el)) {
         drawPerspectiveText(ctx, el, lang, maxWidth, renderHeight, (pctx) => {
-            pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+            pctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
             pctx.fillStyle = el.color;
             pctx.textBaseline = 'top';
             lines.forEach((line, i) => {
                 const y = i * lineHeight;
-                if (contentHeight > 0 && y + el.fontSize > contentHeight) return;
+                if (contentHeight > 0 && y + layout.drawFontSize > contentHeight) return;
                 let x = 0;
                 const lineWidth = pctx.measureText(line).width;
                 if (el.textAlign === 'center') x = (maxWidth - lineWidth) / 2;
@@ -1182,7 +1297,7 @@ function drawTextBlock(ctx, el, lang) {
         ctx.transform(1, Math.tan((el.skewY || 0) * Math.PI / 180), Math.tan((el.skewX || 0) * Math.PI / 180), 1, 0, 0);
         ctx.translate(-el.x, -el.y);
     }
-    ctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+    ctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
     ctx.fillStyle = el.color;
     ctx.textBaseline = 'top';
 
@@ -1190,7 +1305,7 @@ function drawTextBlock(ctx, el, lang) {
 
     lines.forEach((line, i) => {
         const y = el.y + i * lineHeight;
-        if (maxHeight > 0 && y + el.fontSize > el.y + maxHeight) return;
+        if (maxHeight > 0 && y + layout.drawFontSize > el.y + maxHeight) return;
 
         let x = el.x;
         const lineWidth = ctx.measureText(line).width;
@@ -1227,7 +1342,7 @@ function drawElement(ctx, el, lang) {
 
     if (hasPerspective(el)) {
         drawPerspectiveText(ctx, el, lang, width, height, (pctx) => {
-            pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+    ctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
             pctx.fillStyle = el.color;
             pctx.textBaseline = 'middle';
             const y = height / 2;
@@ -1260,7 +1375,7 @@ function drawElement(ctx, el, lang) {
         ctx.transform(1, Math.tan((el.skewY || 0) * Math.PI / 180), Math.tan((el.skewX || 0) * Math.PI / 180), 1, 0, 0);
         ctx.translate(-x, -y);
     }
-    ctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+    ctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
     ctx.fillStyle = el.color;
     ctx.textBaseline = 'middle';
 
@@ -1459,15 +1574,7 @@ window.addEventListener('mousemove', (e) => {
             next[state.drag.handle].x = next[state.drag.handle].x + dxLocal;
             next[state.drag.handle].y = next[state.drag.handle].y + dyLocal;
 
-            const opposite = { tl: 'br', tr: 'bl', bl: 'tr', br: 'tl' };
-            const sideA = { tl: 'tr', tr: 'tl', bl: 'br', br: 'bl' };
-            const sideB = { tl: 'bl', tr: 'br', bl: 'tl', br: 'tr' };
             const h = state.drag.handle;
-            const o = opposite[h];
-            const a = sideA[h];
-            const b = sideB[h];
-            next[o].x = next[a].x + next[b].x - next[h].x;
-            next[o].y = next[a].y + next[b].y - next[h].y;
 
             next.tl.x = Math.round(next.tl.x * 10) / 10;
             next.tl.y = Math.round(next.tl.y * 10) / 10;
