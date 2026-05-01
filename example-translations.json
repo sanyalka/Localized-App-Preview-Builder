@@ -1,52 +1,4217 @@
 {
-    "ru-RU": {
-        
-    "G-Картинка 1":{
-        "N1-STR1": "ВСТРОЕННАЯ ЧИТАЛКА",
-        "N1-STR2": "И ПРОСМОТРЩИКИ",
-        
-        "G-Текст":{
-            "N1-STR3": "Со вкусом боли - Ирина Пименова",
-            "N1-STR4": "Он не знал, знает ли она. В снах она ждала — чувствовал он такой миг не существовал в реальности, но плакал от счастья во сне.",
-            "N1-STR5": "****",
-            "N1-STR6": "Но чаще просыпался с пустотой в груди, словно кто-то вырезал что-то важное, оставив лишь трепет.",
-            "N1-STR7": "Наяву она смотрела мимо, а он бросал взгляд — и дыхание замирало, а в мыслях крик души: «Не уходи».",
-            "N1-STR8": "Не быть мне рядом с тобой, ведь в жизни — безответная любовь!",
-            "N1-STR9": "И всё же сердце билось, билось, билось — для неё. Всегда для неё."
-            }
+  "az-AZ": {
+    "G-Картинка 1": {
+      "N1-STR1": "DAXİLİ OXUCU",
+      "N1-STR2": "VƏ BAXIŞ PROQRAMLARI",
+      "G-Текст": {
+        "N1-STR3": "Zövqlə ağrı - İrina Pimenova",
+        "N1-STR4": "O bilmirdi, o bilir, ya yox. Yuxularda o gözləyirdi — belə bir anın reallıqda olmadığını hiss edirdi, amma yuxuda xoşbəxtlikdən ağlayırdı.",
+        "N1-STR5": "****",
+        "N1-STR6": "Amma çox vaxt sinəsində boşluqla oyanırdı, sanki kimsə vacib bir şeyi kəsib çıxarmış, yalnız titrəyiş qoymuşdu.",
+        "N1-STR7": "Oyaq vaxtı o yanından baxırdı, o isə göz atırdı — nəfəsi kəsilir, qəlbində bir fəryad: «Getmə».",
+        "N1-STR8": "Sənin yanında ola bilmərəm, çünki həyatda — cavabsız sevgi!",
+        "N1-STR9": "Yenə də ürək döyünürdü, döyünürdü, döyünürdü — onun üçün. Həmişə onun üçün."
+      }
     },
-    "G-Картинка 2":{
-        "N2-STR1": "СОЗДАЙТЕ",
-        "N2-STR2": "приватное хранилище и скрывайте фото, видео", 
-        "N2-STR3": "Хранилище",
-        "N2-STR4": "Контейнер 1",
-        "N2-STR5": "Введите пароль",
-
-        "N3-STR1": "Аудиоплеер",
-        "N3-STR2": "для музыки и аудиокниг", 
-        "N3-STR3": "не понимаешь уровень(Б(П)ИВ)",
-        "N3-STR4": "Экспорт",
-        "N3-STR5": "Удалить"
+    "G-Картинка 2": {
+      "N2-STR1": "YARADIN",
+      "N2-STR2": "şəxsi anbar və foto, videoları gizlədin",
+      "N2-STR3": "Anbar",
+      "N2-STR4": "Konteyner 1",
+      "N2-STR5": "Şifrəni daxil edin"
     },
-    "G-Картинка 3":{
-        "N4-STR1": "ВАШИ ФАЙЛЫ",
-        "N4-STR2": "остаются на устройстве, без отправки в облако", 
-        
-        "G-Кнопки":{
-            "N4-STR4": "Безопасность",
-            "N4-STR5": "Зашита",
-            "N4-STR6": "Шифр",
-            "N4-STR7": "Автоблок",
-            "N4-STR7-1": "10 мин",
-            "N4-STR8": "Экран",
-            "N4-STR8-1": "Блокировка",
-            "N4-STR9": "Память",
-            "N4-STR9-1": "Очистка",
-            "N4-STR10": "Брутфорс",
-            "N4-STR10-1": "5^60c",
-            "N4-STR11": "Пароль восстановления",
-            "N4-STR12": "Заблокировать"
-        }
+    "G-Картинка 3": {
+      "N3-STR1": "Audio pleyer",
+      "N3-STR2": "musiqi və audio kitablar üçün",
+      "N3-STR3": "Səviyyəni anlamırsan (B(P)İV)",
+      "N3-STR3-1": "Səviyyəni anlamırsan (B(P)İV)",
+      "N3-STR4": "Eksport",
+      "N3-STR5": "Sil"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "SİZİN FAYLLARINIZ",
+      "N4-STR2": "cihazda qalır, buluda göndərilmir",
+      "G-Кнопки": {
+        "N4-STR4": "Təhlükəsizlik",
+        "N4-STR5": "Mühafizə",
+        "N4-STR6": "Şifrələmə",
+        "N4-STR7": "Avtoblok",
+        "N4-STR7-1": "10 dəq",
+        "N4-STR8": "Ekran",
+        "N4-STR8-1": "Kilidləmə",
+        "N4-STR9": "Yaddaş",
+        "N4-STR9-1": "Təmizləmə",
+        "N4-STR10": "Brutfors",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Bərpa şifrəsi",
+        "N4-STR12": "Kilidlə"
+      }
     }
-}
+  },
+  "sq": {
+    "G-Картинка 1": {
+      "N1-STR1": "LEXUES I INTEGRUAR",
+      "N1-STR2": "DHE SHIKUES",
+      "G-Текст": {
+        "N1-STR3": "Me shije dhimbjeje - Irina Pimenova",
+        "N1-STR4": "Ai nuk e dinte nëse ajo e dinte. Në ëndrra ajo e priste — ndjente se një moment i tillë nuk ekzistonte në realitet, por qante nga lumturia në ëndërr.",
+        "N1-STR5": "****",
+        "N1-STR6": "Por më shpesh zgjonte me zbrazëti në gji, sikur dikush i kishte prerë diçka të rëndësishme, duke lënë vetëm dridhje.",
+        "N1-STR7": "Në realitet ajo shikonte anash, dhe ai hidhte një vështrim — fryma i ndalej, dhe në mendime një klithmë shpirti: 'Mos u largo'.",
+        "N1-STR8": "S' mund të jem pranë teje, sepse në jetë — dashuri e papërgjigjur!",
+        "N1-STR9": "E megjithatë zemra rrihhte, rrihhte, rrihhte — për të. Gjithmonë për të."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "KRIJONI",
+      "N2-STR2": "depo private dhe fshihni foto, video",
+      "N2-STR3": "Depo",
+      "N2-STR4": "Enë 1",
+      "N2-STR5": "Shkruani fjalëkalimin"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Player audio",
+      "N3-STR2": "për muzikë dhe libra audio",
+      "N3-STR3": "Nuk e kupton nivelin (B(P)IV)",
+      "N3-STR3-1": "Nuk e kupton nivelin (B(P)IV)",
+      "N3-STR4": "Eksporto",
+      "N3-STR5": "Fshije"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "SKEDARËT TUAJ",
+      "N4-STR2": "mbeten në pajisje, pa dërgesë në re",
+      "G-Кнопки": {
+        "N4-STR4": "Siguria",
+        "N4-STR5": "Mbrojtja",
+        "N4-STR6": "Kodimi",
+        "N4-STR7": "Bllokim automatik",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Ekrani",
+        "N4-STR8-1": "Bllokim",
+        "N4-STR9": "Kujtesa",
+        "N4-STR9-1": "Pastro",
+        "N4-STR10": "Forcë brutale",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Fjalëkalimi i rikuperimit",
+        "N4-STR12": "Blloko"
+      }
+    }
+  },
+  "am": {
+    "G-Картинка 1": {
+      "N1-STR1": "ውስጥ አንባቢ",
+      "N1-STR2": "እና ታይቶች",
+      "G-Текст": {
+        "N1-STR3": "ህመም ጣዕም - ኢሪና ፒሜኖቫ",
+        "N1-STR4": "እሱ አያውቅም ነበር እሷ ታውቅ ወይም አታውቅ። በህልም ትጠብቀው ነበር — እሱ እንዲህ ያለ ጊዜ በእውነታ እንደሌለ ይሰማው ነበር፣ ግን በህልም ከደስታ ያለቅስ ነበር።",
+        "N1-STR5": "****",
+        "N1-STR6": "ግን ብዙ ጊዜ በደረቱ ውስጥ ባዶነት ይነቃ ነበር፣ አንድም ሰው አስፈላጊ ነገር እንደቈረጠ፣ ብቻ እንዳስቀረ ስሜት።",
+        "N1-STR7": "ንቁ ሆኖ ሳለ እሷ ዘንግላ ትመለከታለች፣ እሱም አንድ ቁምጥፋት ይሰጣል — ትንፋሹ ይቆማል፣ በአሳቡም ውስጥ የነፍስ ጩኸት፦ «አትሂጂ»።",
+        "N1-STR8": "ከአንቺ ጋር መሆን አልችልም፣ ምክንያቱም በህይወት ውስጥ — መልስ የሌለው ፍቅር!",
+        "N1-STR9": "ቢሆንም ልቤ ይመታ ነበር፣ ይመታ ነበር፣ ይመታ ነበር — ለእሷ። ሁልጊዜ ለእሷ።"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ፍጠር",
+      "N2-STR2": "የግል ማከማቻ እና ፎቶዎችን፣ ቪዲዮዎችን ደብቅ",
+      "N2-STR3": "ማከማቻ",
+      "N2-STR4": "ኮንቴይነር 1",
+      "N2-STR5": "ይለፍ ቃል አስገባ"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "የድምጽ ማጫወቻ",
+      "N3-STR2": "ለሙዚቃ እና የድምጽ መጻሕፍት",
+      "N3-STR3": "ደረጃውን አልገባህም (B(P)IV)",
+      "N3-STR3-1": "ደረጃውን አልገባህም (B(P)IV)",
+      "N3-STR4": "ላክ (ኤክስፖርት)",
+      "N3-STR5": "ሰርዝ"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ፋይሎችህ",
+      "N4-STR2": "በመሳሪያው ላይ ይቀራሉ፣ ወደ ደመና አይላኩም",
+      "G-Кнопки": {
+        "N4-STR4": "ደህንነት",
+        "N4-STR5": "ጥበቃ",
+        "N4-STR6": "ምስጠራ",
+        "N4-STR7": "ራስ-ቆለፍ",
+        "N4-STR7-1": "10 ደቂቃ",
+        "N4-STR8": "ማያ ገጽ",
+        "N4-STR8-1": "መቆለፊያ",
+        "N4-STR9": "ማህደረ ትውስታ",
+        "N4-STR9-1": "ማጽጃ",
+        "N4-STR10": "ብሩትፎርስ",
+        "N4-STR10-1": "5^60 ሰከንድ",
+        "N4-STR11": "መልሶ ማግኛ ይለፍ ቃል",
+        "N4-STR12": "ቆልፍ"
+      }
+    }
+  },
+  "en-IN": {
+    "G-Картинка 1": {
+      "N1-STR1": "IN-BUILT READER",
+      "N1-STR2": "AND VIEWERS",
+      "G-Текст": {
+        "N1-STR3": "With a taste of pain - Irina Pimenova",
+        "N1-STR4": "He didn't know if she knew. In dreams she waited — he felt such a moment didn't exist in reality, but wept with joy in sleep.",
+        "N1-STR5": "****",
+        "N1-STR6": "But more often he woke with emptiness in his chest, as if someone had cut out something important, leaving only a tremor.",
+        "N1-STR7": "Awake, she looked away, and he glanced — his breath would stop, and in his thoughts a cry of the soul: 'Don't go'.",
+        "N1-STR8": "I cannot be with you, because in life — unrequited love!",
+        "N1-STR9": "Yet the heart beat, beat, beat — for her. Always for her."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREATE",
+      "N2-STR2": "a private storage and hide photos, videos",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Enter password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "for music and audiobooks",
+      "N3-STR3": "You don't understand level(B(P)IV)",
+      "N3-STR3-1": "You don't understand level(B(P)IV)",
+      "N3-STR4": "Export",
+      "N3-STR5": "Delete"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "YOUR FILES",
+      "N4-STR2": "stay on device, no cloud upload",
+      "G-Кнопки": {
+        "N4-STR4": "Security",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "Lock",
+        "N4-STR9": "Memory",
+        "N4-STR9-1": "Cleanup",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Recovery password",
+        "N4-STR12": "Lock"
+      }
+    }
+  },
+  "en-SG": {
+    "G-Картинка 1": {
+      "N1-STR1": "IN-BUILT READER",
+      "N1-STR2": "AND VIEWERS",
+      "G-Текст": {
+        "N1-STR3": "With a taste of pain - Irina Pimenova",
+        "N1-STR4": "He didn't know if she knew. In dreams she waited — he felt such a moment didn't exist in reality, but wept with joy in sleep.",
+        "N1-STR5": "****",
+        "N1-STR6": "But more often he woke with emptiness in his chest, as if someone had cut out something important, leaving only a tremor.",
+        "N1-STR7": "Awake, she looked away, and he glanced — his breath would stop, and in his thoughts a cry of the soul: 'Don't go'.",
+        "N1-STR8": "I cannot be with you, because in life — unrequited love!",
+        "N1-STR9": "Yet the heart beat, beat, beat — for her. Always for her."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREATE",
+      "N2-STR2": "a private storage and hide photos, videos",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Enter password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "for music and audiobooks",
+      "N3-STR3": "You don't understand level(B(P)IV)",
+      "N3-STR3-1": "You don't understand level(B(P)IV)",
+      "N3-STR4": "Export",
+      "N3-STR5": "Delete"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "YOUR FILES",
+      "N4-STR2": "stay on device, no cloud upload",
+      "G-Кнопки": {
+        "N4-STR4": "Security",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "Lock",
+        "N4-STR9": "Memory",
+        "N4-STR9-1": "Cleanup",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Recovery password",
+        "N4-STR12": "Lock"
+      }
+    }
+  },
+  "en-ZA": {
+    "G-Картинка 1": {
+      "N1-STR1": "IN-BUILT READER",
+      "N1-STR2": "AND VIEWERS",
+      "G-Текст": {
+        "N1-STR3": "With a taste of pain - Irina Pimenova",
+        "N1-STR4": "He didn't know if she knew. In dreams she waited — he felt such a moment didn't exist in reality, but wept with joy in sleep.",
+        "N1-STR5": "****",
+        "N1-STR6": "But more often he woke with emptiness in his chest, as if someone had cut out something important, leaving only a tremor.",
+        "N1-STR7": "Awake, she looked away, and he glanced — his breath would stop, and in his thoughts a cry of the soul: 'Don't go'.",
+        "N1-STR8": "I cannot be with you, because in life — unrequited love!",
+        "N1-STR9": "Yet the heart beat, beat, beat — for her. Always for her."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREATE",
+      "N2-STR2": "a private storage and hide photos, videos",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Enter password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "for music and audiobooks",
+      "N3-STR3": "You don't understand level(B(P)IV)",
+      "N3-STR3-1": "You don't understand level(B(P)IV)",
+      "N3-STR4": "Export",
+      "N3-STR5": "Delete"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "YOUR FILES",
+      "N4-STR2": "stay on device, no cloud upload",
+      "G-Кнопки": {
+        "N4-STR4": "Security",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "Lock",
+        "N4-STR9": "Memory",
+        "N4-STR9-1": "Cleanup",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Recovery password",
+        "N4-STR12": "Lock"
+      }
+    }
+  },
+  "en-AU": {
+    "G-Картинка 1": {
+      "N1-STR1": "IN-BUILT READER",
+      "N1-STR2": "AND VIEWERS",
+      "G-Текст": {
+        "N1-STR3": "With a taste of pain - Irina Pimenova",
+        "N1-STR4": "He didn't know if she knew. In dreams she waited — he felt such a moment didn't exist in reality, but wept with joy in sleep.",
+        "N1-STR5": "****",
+        "N1-STR6": "But more often he woke with emptiness in his chest, as if someone had cut out something important, leaving only a tremor.",
+        "N1-STR7": "Awake, she looked away, and he glanced — his breath would stop, and in his thoughts a cry of the soul: 'Don't go'.",
+        "N1-STR8": "I cannot be with you, because in life — unrequited love!",
+        "N1-STR9": "Yet the heart beat, beat, beat — for her. Always for her."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREATE",
+      "N2-STR2": "a private storage and hide photos, videos",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Enter password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "for music and audiobooks",
+      "N3-STR3": "You don't understand level(B(P)IV)",
+      "N3-STR3-1": "You don't understand level(B(P)IV)",
+      "N3-STR4": "Export",
+      "N3-STR5": "Delete"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "YOUR FILES",
+      "N4-STR2": "stay on device, no cloud upload",
+      "G-Кнопки": {
+        "N4-STR4": "Security",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "Lock",
+        "N4-STR9": "Memory",
+        "N4-STR9-1": "Cleanup",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Recovery password",
+        "N4-STR12": "Lock"
+      }
+    }
+  },
+  "en-GB": {
+    "G-Картинка 1": {
+      "N1-STR1": "IN-BUILT READER",
+      "N1-STR2": "AND VIEWERS",
+      "G-Текст": {
+        "N1-STR3": "With a taste of pain - Irina Pimenova",
+        "N1-STR4": "He didn't know if she knew. In dreams she waited — he felt such a moment didn't exist in reality, but wept with joy in sleep.",
+        "N1-STR5": "****",
+        "N1-STR6": "But more often he woke with emptiness in his chest, as if someone had cut out something important, leaving only a tremor.",
+        "N1-STR7": "Awake, she looked away, and he glanced — his breath would stop, and in his thoughts a cry of the soul: 'Don't go'.",
+        "N1-STR8": "I cannot be with you, because in life — unrequited love!",
+        "N1-STR9": "Yet the heart beat, beat, beat — for her. Always for her."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREATE",
+      "N2-STR2": "a private storage and hide photos, videos",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Enter password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "for music and audiobooks",
+      "N3-STR3": "You don't understand level(B(P)IV)",
+      "N3-STR3-1": "You don't understand level(B(P)IV)",
+      "N3-STR4": "Export",
+      "N3-STR5": "Delete"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "YOUR FILES",
+      "N4-STR2": "stay on device, no cloud upload",
+      "G-Кнопки": {
+        "N4-STR4": "Security",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "Lock",
+        "N4-STR9": "Memory",
+        "N4-STR9-1": "Cleanup",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Recovery password",
+        "N4-STR12": "Lock"
+      }
+    }
+  },
+  "en-CA": {
+    "G-Картинка 1": {
+      "N1-STR1": "IN-BUILT READER",
+      "N1-STR2": "AND VIEWERS",
+      "G-Текст": {
+        "N1-STR3": "With a taste of pain - Irina Pimenova",
+        "N1-STR4": "He didn't know if she knew. In dreams she waited — he felt such a moment didn't exist in reality, but wept with joy in sleep.",
+        "N1-STR5": "****",
+        "N1-STR6": "But more often he woke with emptiness in his chest, as if someone had cut out something important, leaving only a tremor.",
+        "N1-STR7": "Awake, she looked away, and he glanced — his breath would stop, and in his thoughts a cry of the soul: 'Don't go'.",
+        "N1-STR8": "I cannot be with you, because in life — unrequited love!",
+        "N1-STR9": "Yet the heart beat, beat, beat — for her. Always for her."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREATE",
+      "N2-STR2": "a private storage and hide photos, videos",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Enter password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "for music and audiobooks",
+      "N3-STR3": "You don't understand level(B(P)IV)",
+      "N3-STR3-1": "You don't understand level(B(P)IV)",
+      "N3-STR4": "Export",
+      "N3-STR5": "Delete"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "YOUR FILES",
+      "N4-STR2": "stay on device, no cloud upload",
+      "G-Кнопки": {
+        "N4-STR4": "Security",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "Lock",
+        "N4-STR9": "Memory",
+        "N4-STR9-1": "Cleanup",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Recovery password",
+        "N4-STR12": "Lock"
+      }
+    }
+  },
+  "en-US": {
+    "G-Картинка 1": {
+      "N1-STR1": "IN-BUILT READER",
+      "N1-STR2": "AND VIEWERS",
+      "G-Текст": {
+        "N1-STR3": "With a taste of pain - Irina Pimenova",
+        "N1-STR4": "He didn't know if she knew. In dreams she waited — he felt such a moment didn't exist in reality, but wept with joy in sleep.",
+        "N1-STR5": "****",
+        "N1-STR6": "But more often he woke with emptiness in his chest, as if someone had cut out something important, leaving only a tremor.",
+        "N1-STR7": "Awake, she looked away, and he glanced — his breath would stop, and in his thoughts a cry of the soul: 'Don't go'.",
+        "N1-STR8": "I cannot be with you, because in life — unrequited love!",
+        "N1-STR9": "Yet the heart beat, beat, beat — for her. Always for her."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREATE",
+      "N2-STR2": "a private storage and hide photos, videos",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Enter password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "for music and audiobooks",
+      "N3-STR3": "You don't understand level(B(P)IV)",
+      "N3-STR3-1": "You don't understand level(B(P)IV)",
+      "N3-STR4": "Export",
+      "N3-STR5": "Delete"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "YOUR FILES",
+      "N4-STR2": "stay on device, no cloud upload",
+      "G-Кнопки": {
+        "N4-STR4": "Security",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "Lock",
+        "N4-STR9": "Memory",
+        "N4-STR9-1": "Cleanup",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Recovery password",
+        "N4-STR12": "Lock"
+      }
+    }
+  },
+  "ar": {
+    "G-Картинка 1": {
+      "N1-STR1": "قارئ مدمج",
+      "N1-STR2": "وعارضات",
+      "G-Текст": {
+        "N1-STR3": "بطعم الألم - إيرينا بيمينوفا",
+        "N1-STR4": "لم يكن يعلم إن كانت تعلم. في الأحلام كانت تنتظر — شعر أن مثل هذه اللحظة غير موجودة في الواقع، لكنه بكى من الفرح في المنام.",
+        "N1-STR5": "****",
+        "N1-STR6": "لكنه في الغالب يستيقظ بفراغ في صدره، وكأن أحداً قد استأصل شيئاً مهماً، تاركاً فقط ارتعاشة.",
+        "N1-STR7": "في اليقظة كانت تنظر بعيداً، وهو يلقي نظرة خاطفة — كان أنفاسه تتوقف، وفي أفكاره صرخة روح: 'لا تذهبي'.",
+        "N1-STR8": "لا يمكنني أن أكون معك، لأن في الحياة — حب بلا مقابل!",
+        "N1-STR9": "ومع ذلك كان القلب ينبض، ينبض، ينبض — من أجلها. دائماً من أجلها."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "أنشئ",
+      "N2-STR2": "تخزيناً خاصاً وأخفِ الصور ومقاطع الفيديو",
+      "N2-STR3": "التخزين",
+      "N2-STR4": "حاوية 1",
+      "N2-STR5": "أدخل كلمة المرور"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "مشغل صوتي",
+      "N3-STR2": "للموسيقى والكتب الصوتية",
+      "N3-STR3": "أنت لا تفهم المستوى (B(P)IV)",
+      "N3-STR3-1": "أنت لا تفهم المستوى (B(P)IV)",
+      "N3-STR4": "تصدير",
+      "N3-STR5": "حذف"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ملفاتك",
+      "N4-STR2": "تبقى على الجهاز، بدون رفع إلى السحابة",
+      "G-Кнопки": {
+        "N4-STR4": "الأمان",
+        "N4-STR5": "الحماية",
+        "N4-STR6": "التشفير",
+        "N4-STR7": "قفل تلقائي",
+        "N4-STR7-1": "10 دقائق",
+        "N4-STR8": "الشاشة",
+        "N4-STR8-1": "قفل",
+        "N4-STR9": "الذاكرة",
+        "N4-STR9-1": "تنظيف",
+        "N4-STR10": "هجوم القوة الغاشمة",
+        "N4-STR10-1": "5^60 ثانية",
+        "N4-STR11": "كلمة مرور الاسترداد",
+        "N4-STR12": "قفل"
+      }
+    }
+  },
+  "hy-AM": {
+    "G-Картинка 1": {
+      "N1-STR1": "ՆԵՐԿԱՌՈՒՑՎԱԾ ԸՆԹԵՐՑՈՂ",
+      "N1-STR2": "ԵՎ ԴԻՏԱՐԿՆԵՐ",
+      "G-Текст": {
+        "N1-STR3": "Ճաշակով ցավի - Իրինա Պիմենովա",
+        "N1-STR4": "Նա չգիտեր՝ արդյոք նա գիտի։ Երազներում նա սպասում էր — նա զգում էր, որ այդպիսի պահ գոյություն չունի իրականության մեջ, բայց երազում ուրախությունից լալիս էր։",
+        "N1-STR5": "****",
+        "N1-STR6": "Բայց հաճախ արթնանում էր կրծքավանդակում դատարկությամբ, կարծես ինչ-որ մեկը կտրել էր ինչ-որ կարևոր բան, թողնելով միայն դող։",
+        "N1-STR7": "Արթուն վիճակում նա նայում էր կողք, իսկ նա հայացք էր նետում — շունչը կտրվում էր, իսկ մտքերում հոգու ճիչ՝ «Մի գնա»։",
+        "N1-STR8": "Չեմ կարող քեզ հետ լինել, որովհետև կյանքում — անպատասխան սեր է։",
+        "N1-STR9": "Եվ այնուամենայնիվ սիրտը բաբախում էր, բաբախում էր, բաբախում էր — նրա համար։ Միշտ նրա համար։"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ՍՏԵՂԾԵՔ",
+      "N2-STR2": "անձնական պահոց և թաքցրեք լուսանկարները, տեսանյութերը",
+      "N2-STR3": "Պահոց",
+      "N2-STR4": "Կոնտեյներ 1",
+      "N2-STR5": "Մուտքագրեք գաղտնաբառը"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Աուդիո նվագարկիչ",
+      "N3-STR2": "երաժշտության և աուդիոգրքերի համար",
+      "N3-STR3": "Դուք չեք հասկանում մակարդակը (B(P)IV)",
+      "N3-STR3-1": "Դուք չեք հասկանում մակարդակը (B(P)IV)",
+      "N3-STR4": "Արտահանել",
+      "N3-STR5": "Ջնջել"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ՁԵՐ ՖԱՅԼԵՐԸ",
+      "N4-STR2": "մնում են սարքում, առանց ամպ ուղարկելու",
+      "G-Кнопки": {
+        "N4-STR4": "Անվտանգություն",
+        "N4-STR5": "Պաշտպանություն",
+        "N4-STR6": "Ծածկագիր",
+        "N4-STR7": "Ավտոկողպում",
+        "N4-STR7-1": "10 րոպե",
+        "N4-STR8": "Էկրան",
+        "N4-STR8-1": "Կողպել",
+        "N4-STR9": "Հիշողություն",
+        "N4-STR9-1": "Մաքրում",
+        "N4-STR10": "Բռուտֆորս",
+        "N4-STR10-1": "5^60վ",
+        "N4-STR11": "Վերականգնման գաղտնաբառ",
+        "N4-STR12": "Կողպել"
+      }
+    }
+  },
+  "af": {
+    "G-Картинка 1": {
+      "N1-STR1": "INGEBOUDE LEESDER",
+      "N1-STR2": "EN KYKERS",
+      "G-Текст": {
+        "N1-STR3": "Met 'n smaak van pyn - Irina Pimenova",
+        "N1-STR4": "Hy het nie geweet of sy weet nie. In drome het sy gewag — hy het gevoel so 'n oomblik bestaan nie in werklikheid nie, maar het van vreugde gehuiwer in sy slaap.",
+        "N1-STR5": "****",
+        "N1-STR6": "Maar meer dikwels word hy wakker met leegheid in sy bors, asof iemand iets belangriks uitgesny het, wat net 'n bewing oorlaat.",
+        "N1-STR7": "Wakker het sy weggekyk, en hy het 'n blik gewerp — sy asem het gestop, en in sy gedagtes 'n skreeu van die siel: 'Moenie gaan nie'.",
+        "N1-STR8": "Ek kan nie by jou wees nie, want in die lewe — onbeantwoorde liefde!",
+        "N1-STR9": "Tog het die hart geklop, geklop, geklop — vir haar. Altyd vir haar."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "SKEP",
+      "N2-STR2": "'n privaat berging en steek foto's, video's weg",
+      "N2-STR3": "Berging",
+      "N2-STR4": "Houer 1",
+      "N2-STR5": "Voer wagwoord in"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Oudiospeler",
+      "N3-STR2": "vir musiek en oudioboeke",
+      "N3-STR3": "Jy verstaan nie vlak (B(P)IV) nie",
+      "N3-STR3-1": "Jy verstaan nie vlak (B(P)IV) nie",
+      "N3-STR4": "Uitvoer",
+      "N3-STR5": "Vee uit"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "JOULÉ LÊERS",
+      "N4-STR2": "bly op toestel, geen wolkoplaai nie",
+      "G-Кнопки": {
+        "N4-STR4": "Sekuriteit",
+        "N4-STR5": "Beskerming",
+        "N4-STR6": "Syfer",
+        "N4-STR7": "Outosluit",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Skerm",
+        "N4-STR8-1": "Sluit",
+        "N4-STR9": "Geheue",
+        "N4-STR9-1": "Skoonmaak",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Herstel wagwoord",
+        "N4-STR12": "Sluit"
+      }
+    }
+  },
+  "eu-ES": {
+    "G-Картинка 1": {
+      "N1-STR1": "TXERTAKATUTAKO IRAKURGailua",
+      "N1-STR2": "ETA IKUSTAILEAK",
+      "G-Текст": {
+        "N1-STR3": "Minaren zaporearekin - Irina Pimenova",
+        "N1-STR4": "Ez zekien jakin ote zuen. Ametsetan zain egoten zen — halako unerik errealitatean existitzen ez zela sentitzen zuen, baina zorionetik negar egiten zuen loaldian.",
+        "N1-STR5": "****",
+        "N1-STR6": "Baina maizago esnatzen zen hutsune batekin bularrean, norbait zerbait garrantzitsua moztu balu bezala, dardara bat bakarrik utziz.",
+        "N1-STR7": "Eserita zegoela, hura beste aldera begiratzen zuen, eta hark begirada bat botatzen zuen — arnasa eten egiten zitzaion, eta pentsamenduan arimaren oihua: «Ez zoaz».",
+        "N1-STR8": "Ezin zaitut zurekin izan, bizitzan — maitasunik gabeko maitasuna!",
+        "N1-STR9": "Hala ere, bihotzak taupaka, taupaka, taupaka egiten zuen — berarentzat. Beti berarentzat."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "SORTU",
+      "N2-STR2": "biltegi pribatu bat eta ezkutatu argazkiak, bideoak",
+      "N2-STR3": "Biltegia",
+      "N2-STR4": "Edukiontzia 1",
+      "N2-STR5": "Sartu pasahitza"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio-erreproduzigailua",
+      "N3-STR2": "musika eta audio-liburuetarako",
+      "N3-STR3": "Ez duzu ulertzen maila (B(P)IV)",
+      "N3-STR3-1": "Ez duzu ulertzen maila (B(P)IV)",
+      "N3-STR4": "Esportatu",
+      "N3-STR5": "Ezabatu"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ZURE FITXEROAK",
+      "N4-STR2": "gailuan geratzen dira, cloud-era bidali gabe",
+      "G-Кнопки": {
+        "N4-STR4": "Segurtasuna",
+        "N4-STR5": "Babesa",
+        "N4-STR6": "Zifratzea",
+        "N4-STR7": "Blokeo automatikoa",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Pantaila",
+        "N4-STR8-1": "Blokeatu",
+        "N4-STR9": "Memoria",
+        "N4-STR9-1": "Garbiketa",
+        "N4-STR10": "Brute force",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Berreskuratzeko pasahitza",
+        "N4-STR12": "Blokeatu"
+      }
+    }
+  },
+  "be": {
+    "G-Картинка 1": {
+      "N1-STR1": "УБУДАВАНАЯ ЧЫТАЛКА",
+      "N1-STR2": "І ПРАГЛЯДАЛЬНІКІ",
+      "G-Текст": {
+        "N1-STR3": "Са смакам болю - Ірына Піменава",
+        "N1-STR4": "Ён не ведаў, ці ведае яна. У снах яна чакала — адчуваў, што такі момант не існуе ў рэальнасці, але плакаў ад шчасця ў сне.",
+        "N1-STR5": "****",
+        "N1-STR6": "Але часцей прачынаўся з пустатой у грудзях, быццам хтосьці выразаў нешта важнае, пакінуўшы толькі дрыжанне.",
+        "N1-STR7": "Наяве яна глядзела міма, а ён кідаў погляд — дыханне замірала, а ў думках крык душы: «Не сыходзь».",
+        "N1-STR8": "Не быць мне побач з табой, бо ў жыцці — безадказнае каханне!",
+        "N1-STR9": "І ўсё ж сэрца білася, білася, білася — для яе. Заўсёды для яе."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "СТВАРЫЦЕ",
+      "N2-STR2": "прыватнае сховішча і хавайце фота, відэа",
+      "N2-STR3": "Сховішча",
+      "N2-STR4": "Кантэйнер 1",
+      "N2-STR5": "Увядзіце пароль"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аўдыёплэер",
+      "N3-STR2": "для музыкі і аўдыёкніг",
+      "N3-STR3": "Не разумееш узровень (Б(П)ІВ)",
+      "N3-STR3-1": "Не разумееш узровень (Б(П)ІВ)",
+      "N3-STR4": "Экспарт",
+      "N3-STR5": "Выдаліць"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ВАШЫ ФАЙЛЫ",
+      "N4-STR2": "застаюцца на прыладзе, без адпраўкі ў воблака",
+      "G-Кнопки": {
+        "N4-STR4": "Бяспека",
+        "N4-STR5": "Абарона",
+        "N4-STR6": "Шыфр",
+        "N4-STR7": "Аўтаблакіроўка",
+        "N4-STR7-1": "10 хвіл",
+        "N4-STR8": "Экран",
+        "N4-STR8-1": "Блакіроўка",
+        "N4-STR9": "Памяць",
+        "N4-STR9-1": "Ачыстка",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60с",
+        "N4-STR11": "Пароль аднаўлення",
+        "N4-STR12": "Заблакіраваць"
+      }
+    }
+  },
+  "bn-BD": {
+    "G-Картинка 1": {
+      "N1-STR1": "অন্তর্নির্মিত পাঠক",
+      "N1-STR2": "এবং দর্শক",
+      "G-Текст": {
+        "N1-STR3": "ব্যথার স্বাদ সহ - ইরিনা পিমেনোভা",
+        "N1-STR4": "সে জানত না সে জানে কিনা। স্বপ্নে সে অপেক্ষা করত — সে অনুভব করত এমন একটি মুহূর্ত বাস্তবে নেই, কিন্তু ঘুমের মধ্যে আনন্দে কাঁদত।",
+        "N1-STR5": "****",
+        "N1-STR6": "কিন্তু বেশিরভাগ সময় সে বুকের মধ্যে শূন্যতা নিয়ে জেগে উঠত, যেন কেউ কিছু গুরুত্বপূর্ণ জিনিস কেটে ফেলেছে, শুধু একটি কম্পন রেখে।",
+        "N1-STR7": "জাগ্রত অবস্থায় সে অন্য দিকে তাকাত, আর সে তাকাত — তার নিঃশ্বাস বন্ধ হয়ে যেত, আর মনে আত্মার কান্না: 'যেও না'।",
+        "N1-STR8": "আমি তোমার পাশে থাকতে পারব না, কারণ জীবনে — একতরফা ভালোবাসা!",
+        "N1-STR9": "তবু হৃদয় স্পন্দিত হত, স্পন্দিত হত, স্পন্দিত হত — তার জন্য। সবসময় তার জন্য।"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "তৈরি করুন",
+      "N2-STR2": "একটি ব্যক্তিগত স্টোরেজ এবং ছবি, ভিডিও লুকান",
+      "N2-STR3": "স্টোরেজ",
+      "N2-STR4": "কন্টেইনার ১",
+      "N2-STR5": "পাসওয়ার্ড লিখুন"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "অডিও প্লেয়ার",
+      "N3-STR2": "সঙ্গীত এবং অডিও বইয়ের জন্য",
+      "N3-STR3": "আপনি স্তর বুঝতে পারেন না (B(P)IV)",
+      "N3-STR3-1": "আপনি স্তর বুঝতে পারেন না (B(P)IV)",
+      "N3-STR4": "রপ্তানি করুন",
+      "N3-STR5": "মুছুন"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "আপনার ফাইল",
+      "N4-STR2": "ডিভাইসে থাকে, ক্লাউডে পাঠানো হয় না",
+      "G-Кнопки": {
+        "N4-STR4": "নিরাপত্তা",
+        "N4-STR5": "সুরক্ষা",
+        "N4-STR6": "সাইফার",
+        "N4-STR7": "স্বয়ংক্রিয় লক",
+        "N4-STR7-1": "১০ মিনিট",
+        "N4-STR8": "স্ক্রিন",
+        "N4-STR8-1": "লক",
+        "N4-STR9": "মেমরি",
+        "N4-STR9-1": "পরিষ্কার করা",
+        "N4-STR10": "ব্রুটফোর্স",
+        "N4-STR10-1": "৫^৬০ সেকেন্ড",
+        "N4-STR11": "পুনরুদ্ধার পাসওয়ার্ড",
+        "N4-STR12": "লক করুন"
+      }
+    }
+  },
+  "my-MM": {
+    "G-Картинка 1": {
+      "N1-STR1": "ထည်သွင်းစာဖတ်ကိရိယာ",
+      "N1-STR2": "နှင့်ကြည့်ရှုကိရိယာများ",
+      "G-Текст": {
+        "N1-STR3": "နာကျင်မှုအရသာနှင့် - Irina Pimenova",
+        "N1-STR4": "သူသိလား မသိဘူး။ အိပ်မက်ထဲမှာ သူမစောင့်နေတယ် — ဒီလိုအချိန်မျိုး လက်တွေ့မှာမရှိဘူးလို့ ခံစားရပေမဲ့ အိပ်မက်ထဲမှာ ပျော်လို့ငိုတယ်။",
+        "N1-STR5": "****",
+        "N1-STR6": "ဒါပေမဲ့ မကြာခဏ ရင်ဘတ်ထဲမှာ လွတ်ကင်းမှုနဲ့ နိုးတယ်၊ တစ်ယောက်ယောက်က အရေးကြီးတဲ့အရာကို ဖြတ်ထုတ်လိုက်သလို၊ တုန်ခါမှုတစ်ခုပဲ ကျန်ရစ်တယ်။",
+        "N1-STR7": "နိုးနေချိန်မှာ သူမက ဘေးကြည့်နေတယ်၊ သူက တစ်ချက်ကြည့်လိုက်တယ် — အသက်ရှုရပ်သွားပြီး အတွေးထဲမှာ ဝိညာဉ်ရဲ့အော်သံ- 'မသွားနဲ့'။",
+        "N1-STR8": "မင်းနဲ့အတူ မနေနိုင်ဘူး၊ ဘာလို့လဲဆိုတော့ ဘဝမှာ — အဖြေမဲ့အချစ်။",
+        "N1-STR9": "ဒါပေမယ့် နှလုံးသားက ခုန်တယ်၊ ခုန်တယ်၊ ခုန်တယ် — သူမအတွက်။ အမြဲသူမအတွက်။"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ဖန်တီးပါ",
+      "N2-STR2": "ကိုယ်ပိုင်သိုလှောင်မှုနှင့် ဓာတ်ပုံများ၊ ဗီဒီယိုများကို ဝှက်ထားပါ",
+      "N2-STR3": "သိုလှောင်မှု",
+      "N2-STR4": "ကွန်တိန်နာ ၁",
+      "N2-STR5": "စကားဝှက်ထည့်ပါ"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "အသံဖွင့်စက်",
+      "N3-STR2": "ဂီတနှင့် အသံစာအုပ်များအတွက်",
+      "N3-STR3": "မင်း အဆင့်ကို နားမလည်ဘူး (B(P)IV)",
+      "N3-STR3-1": "မင်း အဆင့်ကို နားမလည်ဘူး (B(P)IV)",
+      "N3-STR4": "တင်ပို့ရန်",
+      "N3-STR5": "ဖျက်ရန်"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "မင်း၏ဖိုင်များ",
+      "N4-STR2": "စက်ပေါ်တွင်ကျန်ရှိသည်၊ ကလောက်သို့မပို့ပါ",
+      "G-Кнопки": {
+        "N4-STR4": "လုံခြုံရေး",
+        "N4-STR5": "ကာကွယ်ရေး",
+        "N4-STR6": "စာဝှက်",
+        "N4-STR7": "အလိုအလျောက်သော့ခတ်ခြင်း",
+        "N4-STR7-1": "၁၀ မိနစ်",
+        "N4-STR8": "မျက်နှာပြင်",
+        "N4-STR8-1": "သော့ခတ်ရန်",
+        "N4-STR9": "မှတ်ဉာဏ်",
+        "N4-STR9-1": "ရှင်းလင်းခြင်း",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "၅^၆၀ စက္ကန့်",
+        "N4-STR11": "ပြန်လည်ရယူရေးစကားဝှက်",
+        "N4-STR12": "သော့ခတ်ရန်"
+      }
+    }
+  },
+  "bg": {
+    "G-Картинка 1": {
+      "N1-STR1": "ВГРАДЕН ЧЕТЕЦ",
+      "N1-STR2": "И ПРЕГЛЕДАЧИ",
+      "G-Текст": {
+        "N1-STR3": "С вкус на болка - Ирина Пименова",
+        "N1-STR4": "Той не знаеше дали тя знае. В сънищата тя го чакаше — чувстваше, че такъв момент не съществува в реалността, но плачеше от щастие насън.",
+        "N1-STR5": "****",
+        "N1-STR6": "Но по-често се събуждаше с празнота в гърдите, сякаш някой бе изрязал нещо важно, оставяйки само трепет.",
+        "N1-STR7": "Наяве тя гледаше настрани, а той хвърляше поглед — дъхът му спираше, а в мислите му вик на душата: 'Не си отивай'.",
+        "N1-STR8": "Да не съм до теб, защото в живота — безотговорна любов!",
+        "N1-STR9": "И все пак сърцето биеше, биеше, биеше — за нея. Винаги за нея."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "СЪЗДАЙТЕ",
+      "N2-STR2": "частно хранилище и скривайте снимки, видео",
+      "N2-STR3": "Хранилище",
+      "N2-STR4": "Контейнер 1",
+      "N2-STR5": "Въведете парола"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аудио плейър",
+      "N3-STR2": "за музика и аудиокниги",
+      "N3-STR3": "Не разбираш ниво (Б(П)ИВ)",
+      "N3-STR3-1": "Ниво не разбираш (Б(П)ИВ)",
+      "N3-STR4": "Експортиране",
+      "N3-STR5": "Изтриване"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ВАШИТЕ ФАЙЛОВЕ",
+      "N4-STR2": "остават на устройството, без изпращане в облак",
+      "G-Кнопки": {
+        "N4-STR4": "Сигурност",
+        "N4-STR5": "Защита",
+        "N4-STR6": "Шифър",
+        "N4-STR7": "Автоблок",
+        "N4-STR7-1": "10 мин",
+        "N4-STR8": "Екран",
+        "N4-STR8-1": "Блокиране",
+        "N4-STR9": "Памет",
+        "N4-STR9-1": "Почистване",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60сек",
+        "N4-STR11": "Парола за възстановяване",
+        "N4-STR12": "Блокирай"
+      }
+    }
+  },
+  "hu-HU": {
+    "G-Картинка 1": {
+      "N1-STR1": "BEÉPÍTETT OLVASÓ",
+      "N1-STR2": "ÉS MEGTEKINTŐK",
+      "G-Текст": {
+        "N1-STR3": "Fájdalom ízével - Irina Pimenova",
+        "N1-STR4": "Nem tudta, tudja-e ő. Álmaiban várt — érezte, hogy ilyen pillanat a valóságban nem létezik, de álmában örömében sírt.",
+        "N1-STR5": "****",
+        "N1-STR6": "De gyakrabban ürességgel ébredt a mellkasában, mintha valaki kivágott volna valami fontosat, csak egy remegést hagyva.",
+        "N1-STR7": "Ébren ő elnézett mellette, ő pedig egy pillantást vetett — lélegzete elakadt, gondolataiban pedig a lélek kiáltása: 'Ne menj'.",
+        "N1-STR8": "Nem lehetek melletted, mert az életben — viszonzatlan szerelem!",
+        "N1-STR9": "Mégis a szív vert, vert, vert — érte. Mindig érte."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "HOZZON LÉTRE",
+      "N2-STR2": "egy privát tárhelyet és rejtse el a fényképeket, videókat",
+      "N2-STR3": "Tárhely",
+      "N2-STR4": "1. konténer",
+      "N2-STR5": "Adja meg a jelszót"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audió lejátszó",
+      "N3-STR2": "zenéhez és hangoskönyvekhez",
+      "N3-STR3": "Nem érted a szintet (B(P)IV)",
+      "N3-STR3-1": "Nem érted a szintet (B(P)IV)",
+      "N3-STR4": "Exportálás",
+      "N3-STR5": "Törlés"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "AZ ÖN FÁJLAI",
+      "N4-STR2": "az eszközön maradnak, felhőbe küldés nélkül",
+      "G-Кнопки": {
+        "N4-STR4": "Biztonság",
+        "N4-STR5": "Védelem",
+        "N4-STR6": "Rejtjel",
+        "N4-STR7": "Automatikus zárolás",
+        "N4-STR7-1": "10 perc",
+        "N4-STR8": "Képernyő",
+        "N4-STR8-1": "Zárolás",
+        "N4-STR9": "Memória",
+        "N4-STR9-1": "Tisztítás",
+        "N4-STR10": "Brute force",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Helyreállítási jelszó",
+        "N4-STR12": "Zárolás"
+      }
+    }
+  },
+  "vi": {
+    "G-Картинка 1": {
+      "N1-STR1": "TRÌNH ĐỌC TÍCH HỢP",
+      "N1-STR2": "VÀ TRÌNH XEM",
+      "G-Текст": {
+        "N1-STR3": "Với hương vị đau đớn - Irina Pimenova",
+        "N1-STR4": "Anh không biết cô có biết không. Trong giấc mơ, cô chờ đợi — anh cảm thấy khoảnh khắc đó không tồn tại trong thực tại, nhưng đã khóc vì hạnh phúc trong giấc ngủ.",
+        "N1-STR5": "****",
+        "N1-STR6": "Nhưng thường thức dậy với sự trống rỗng trong lồng ngực, như thể ai đó đã cắt bỏ thứ gì đó quan trọng, chỉ để lại một sự rung động.",
+        "N1-STR7": "Khi thức, cô nhìn đi chỗ khác, anh liếc nhìn — hơi thở ngừng lại, và trong suy nghĩ là tiếng kêu của tâm hồn: 'Đừng đi'.",
+        "N1-STR8": "Không thể ở bên em, bởi vì trong đời — tình yêu đơn phương!",
+        "N1-STR9": "Thế nhưng trái tim vẫn đập, đập, đập — vì cô. Mãi mãi vì cô."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "TẠO",
+      "N2-STR2": "kho lưu trữ riêng tư và ẩn ảnh, video",
+      "N2-STR3": "Kho lưu trữ",
+      "N2-STR4": "Vùng chứa 1",
+      "N2-STR5": "Nhập mật khẩu"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Trình phát âm thanh",
+      "N3-STR2": "cho nhạc và sách nói",
+      "N3-STR3": "Bạn không hiểu cấp độ (B(P)IV)",
+      "N3-STR3-1": "Bạn không hiểu cấp độ (B(P)IV)",
+      "N3-STR4": "Xuất",
+      "N3-STR5": "Xóa"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TỆP CỦA BẠN",
+      "N4-STR2": "vẫn ở trên thiết bị, không gửi lên đám mây",
+      "G-Кнопки": {
+        "N4-STR4": "Bảo mật",
+        "N4-STR5": "Bảo vệ",
+        "N4-STR6": "Mật mã",
+        "N4-STR7": "Tự động khóa",
+        "N4-STR7-1": "10 phút",
+        "N4-STR8": "Màn hình",
+        "N4-STR8-1": "Khóa",
+        "N4-STR9": "Bộ nhớ",
+        "N4-STR9-1": "Dọn dẹp",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60 giây",
+        "N4-STR11": "Mật khẩu khôi phục",
+        "N4-STR12": "Khóa"
+      }
+    }
+  },
+  "gl-ES": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTOR INTEGRADO",
+      "N1-STR2": "E VISUALIZADORES",
+      "G-Текст": {
+        "N1-STR3": "Con sabor a dor - Irina Pimenova",
+        "N1-STR4": "El non sabía se ela sabía. En soños ela agardaba — el sentía que tal momento non existía na realidade, pero choraba de ledicia no soño.",
+        "N1-STR5": "****",
+        "N1-STR6": "Pero a miúdo espertaba co baleiro no peito, como se alguén cortase algo importante, deixando só un tremor.",
+        "N1-STR7": "Esperta, ela miraba para outro lado, e el botaba unha ollada — a respiración detíñaselle, e nos seus pensamentos un berro da alma: 'Non vaia'.",
+        "N1-STR8": "Non podo estar contigo, porque na vida — amor non correspondido!",
+        "N1-STR9": "E aínda así o corazón latexaba, latexaba, latexaba — por ela. Sempre por ela."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREAR",
+      "N2-STR2": "un almacenamento privado e ocultar fotos, vídeos",
+      "N2-STR3": "Almacenamento",
+      "N2-STR4": "Contedor 1",
+      "N2-STR5": "Introducir contrasinal"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Reprodutor de audio",
+      "N3-STR2": "para música e audiolibros",
+      "N3-STR3": "Non entendes o nivel (B(P)IV)",
+      "N3-STR3-1": "Non entendes o nivel (B(P)IV)",
+      "N3-STR4": "Exportar",
+      "N3-STR5": "Eliminar"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "OS TEUS FICHEIROS",
+      "N4-STR2": "quedan no dispositivo, sen envío á nube",
+      "G-Кнопки": {
+        "N4-STR4": "Seguridade",
+        "N4-STR5": "Protección",
+        "N4-STR6": "Cifrado",
+        "N4-STR7": "Bloqueo automático",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Pantalla",
+        "N4-STR8-1": "Bloquear",
+        "N4-STR9": "Memoria",
+        "N4-STR9-1": "Limpeza",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Contrasinal de recuperación",
+        "N4-STR12": "Bloquear"
+      }
+    }
+  },
+  "el-GR": {
+    "G-Картинка 1": {
+      "N1-STR1": "ΕΝΣΩΜΑΤΩΜΕΝΟΣ ΑΝΑΓΝΩΣΤΗΣ",
+      "N1-STR2": "ΚΑΙ ΠΡΟΒΟΛΕΙΣ",
+      "G-Текст": {
+        "N1-STR3": "Με γεύση πόνου - Ιρίνα Πιμένοβα",
+        "N1-STR4": "Δεν ήξερε αν εκείνη ήξερε. Στα όνειρα τον περίμενε — ένιωθε ότι μια τέτοια στιγμή δεν υπήρχε στην πραγματικότητα, αλλά έκλαιγε από χαρά στον ύπνο.",
+        "N1-STR5": "****",
+        "N1-STR6": "Αλλά πιο συχνά ξυπνούσε με κενό στο στήθος, σαν κάποιος να είχε κόψει κάτι σημαντικό, αφήνοντας μόνο ένα ρίγος.",
+        "N1-STR7": "Στην πραγματικότητα εκείνη κοιτούσε αλλού, κι εκείνος ρίχνει μια ματιά — η ανάσα του σταματούσε, και στις σκέψεις του μια κραυγή ψυχής: 'Μην φύγεις'.",
+        "N1-STR8": "Δεν μπορώ να είμαι μαζί σου, γιατί στη ζωή — απλήρωτος έρωτας!",
+        "N1-STR9": "Και όμως η καρδιά χτυπούσε, χτυπούσε, χτυπούσε — γι' αυτήν. Πάντα γι' αυτήν."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ΔΗΜΙΟΥΡΓΗΣΤΕ",
+      "N2-STR2": "μια ιδιωτική αποθήκη και αποκρύψτε φωτογραφίες, βίντεο",
+      "N2-STR3": "Αποθήκη",
+      "N2-STR4": "Δοχείο 1",
+      "N2-STR5": "Εισαγωγή συνθηματικού"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Αναπαραγωγής ήχου",
+      "N3-STR2": "για μουσική και ηχητικά βιβλία",
+      "N3-STR3": "Δεν καταλαβαίνεις το επίπεδο (B(P)IV)",
+      "N3-STR3-1": "Δεν καταλαβαίνεις το επίπεδο (B(P)IV)",
+      "N3-STR4": "Εξαγωγή",
+      "N3-STR5": "Διαγραφή"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ΤΑ ΑΡΧΕΙΑ ΣΑΣ",
+      "N4-STR2": "παραμένουν στη συσκευή, χωρίς αποστολή στο σύννεφο",
+      "G-Кнопки": {
+        "N4-STR4": "Ασφάλεια",
+        "N4-STR5": "Προστασία",
+        "N4-STR6": "Κρυπτογράφηση",
+        "N4-STR7": "Αυτόματο κλείδωμα",
+        "N4-STR7-1": "10 λεπτά",
+        "N4-STR8": "Οθόνη",
+        "N4-STR8-1": "Κλείδωμα",
+        "N4-STR9": "Μνήμη",
+        "N4-STR9-1": "Καθαρισμός",
+        "N4-STR10": "Ωμή βία",
+        "N4-STR10-1": "5^60δ",
+        "N4-STR11": "Κωδικός ανάκτησης",
+        "N4-STR12": "Κλείδωμα"
+      }
+    }
+  },
+  "ka-GE": {
+    "G-Картинка 1": {
+      "N1-STR1": "ჩაშენებული მკითხველი",
+      "N1-STR2": "და ნახვის საშუალებები",
+      "G-Текст": {
+        "N1-STR3": "ტკივილის გემოთი - ირინა პიმენოვა",
+        "N1-STR4": "მან არ იცოდა, იცოდა თუ არა მან. სიზმრებში ის ელოდა — გრძნობდა, რომ ასეთი მომენტი რეალობაში არ არსებობდა, მაგრამ სიზმარში ბედნიერებისგან ტიროდა.",
+        "N1-STR5": "****",
+        "N1-STR6": "მაგრამ უფრო ხშირად იღვიძებდა სიცარიელით მკერდში, თითქოს ვიღაცამ ამოჭრა რაღაც მნიშვნელოვანი, მხოლოდ კანკალი დატოვა.",
+        "N1-STR7": "ღიად ყოფნისას იგი გვერდზე იყურებოდა, ის კი ერთხელ შეხედავდა — სუნთქვა უჩერდებოდა, და ფიქრებში სულის ძახილი: 'ნუ წახვალ'.",
+        "N1-STR8": "არ შემიძლია შენთან ყოფნა, რადგან ცხოვრებაში — პასუხგაუცემელი სიყვარულია!",
+        "N1-STR9": "და მაინც გული ცემდა, ცემდა, ცემდა — მისთვის. ყოველთვის მისთვის."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "შექმენით",
+      "N2-STR2": "პირადი საცავი და დამალეთ ფოტოები, ვიდეოები",
+      "N2-STR3": "საცავი",
+      "N2-STR4": "კონტეინერი 1",
+      "N2-STR5": "შეიყვანეთ პაროლი"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "აუდიო პლეერი",
+      "N3-STR2": "მუსიკისა და აუდიო წიგნებისთვის",
+      "N3-STR3": "არ გესმის დონე (B(P)IV)",
+      "N3-STR3-1": "არ გესმის დონე (B(P)IV)",
+      "N3-STR4": "ექსპორტი",
+      "N3-STR5": "წაშლა"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "თქვენი ფაილები",
+      "N4-STR2": "რჩება მოწყობილობაზე, ღრუბელში გაგზავნის გარეშე",
+      "G-Кнопки": {
+        "N4-STR4": "უსაფრთხოება",
+        "N4-STR5": "დაცვა",
+        "N4-STR6": "შიფრი",
+        "N4-STR7": "ავტომატური ბლოკირება",
+        "N4-STR7-1": "10 წთ",
+        "N4-STR8": "ეკრანი",
+        "N4-STR8-1": "ბლოკირება",
+        "N4-STR9": "მეხსიერება",
+        "N4-STR9-1": "გაწმენდა",
+        "N4-STR10": "ბრუტფორსი",
+        "N4-STR10-1": "5^60წმ",
+        "N4-STR11": "აღდგენის პაროლი",
+        "N4-STR12": "დაბლოკვა"
+      }
+    }
+  },
+  "gu": {
+    "G-Картинка 1": {
+      "N1-STR1": "બિલ્ટ-ઇન રીડર",
+      "N1-STR2": "અને વ્યૂઅર્સ",
+      "G-Текст": {
+        "N1-STR3": "પીડાના સ્વાદ સાથે - ઇરિના પિમેનોવા",
+        "N1-STR4": "તે જાણતો ન હતો કે તેણી જાણે છે કે નહીં. સપનામાં તે રાહ જોતી હતી — તેણે અનુભવ્યું કે આવી ક્ષણ વાસ્તવિકતામાં અસ્તિત્વમાં નથી, પણ sleepંઘમાં ખુશીથી રડતો હતો.",
+        "N1-STR5": "****",
+        "N1-STR6": "પરંતુ વધુ વખત તે છાતીમાં ખાલીપણું સાથે જાગતો હતો, જાણે કોઈએ કંઈક મહત્વપૂર્ણ કાપી નાખ્યું હોય, ફક્ત એક ધ્રુજારી છોડીને.",
+        "N1-STR7": "જાગતા, તેણી બીજી બાજુ જોતી હતી, અને તેણે એક નજર નાખી — તેનો શ્વાસ અટકી જતો, અને તેના વિચારોમાં આત્માની ચીસ: 'ન જાવ'.",
+        "N1-STR8": "હું તારી સાથે રહી શકતો નથી, કારણ કે જીવનમાં — એકતરફી પ્રેમ!",
+        "N1-STR9": "છતાં હૃદય ધબકતું હતું, ધબકતું હતું, ધબકતું હતું — તેના માટે. હંમેશા તેના માટે."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "બનાવો",
+      "N2-STR2": "ખાનગી સંગ્રહ અને ફોટા, વિડિઓઝ છુપાવો",
+      "N2-STR3": "સંગ્રહ",
+      "N2-STR4": "કન્ટેનર 1",
+      "N2-STR5": "પાસવર્ડ દાખલ કરો"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ઑડિયો પ્લેયર",
+      "N3-STR2": "સંગીત અને ઑડિયોબુક્સ માટે",
+      "N3-STR3": "તમે સ્તર સમજી શકતા નથી (B(P)IV)",
+      "N3-STR3-1": "તમે સ્તર સમજી શકતા નથી (B(P)IV)",
+      "N3-STR4": "એક્સપોર્ટ",
+      "N3-STR5": "કાઢી નાખો"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "તમારી ફાઇલો",
+      "N4-STR2": "ઉપકરણ પર રહે છે, ક્લાઉડ પર મોકલવામાં આવતી નથી",
+      "G-Кнопки": {
+        "N4-STR4": "સુરક્ષા",
+        "N4-STR5": "સંરક્ષણ",
+        "N4-STR6": "સાઇફર",
+        "N4-STR7": "ઓટો-લોક",
+        "N4-STR7-1": "10 મિનિટ",
+        "N4-STR8": "સ્ક્રીન",
+        "N4-STR8-1": "લૉક કરો",
+        "N4-STR9": "મેમરી",
+        "N4-STR9-1": "સફાઈ",
+        "N4-STR10": "બ્રુટફોર્સ",
+        "N4-STR10-1": "5^60 સેકન્ડ",
+        "N4-STR11": "પુનઃપ્રાપ્તિ પાસવર્ડ",
+        "N4-STR12": "લૉક કરો"
+      }
+    }
+  },
+  "da-DK": {
+    "G-Картинка 1": {
+      "N1-STR1": "INDIBYGGET LÆSER",
+      "N1-STR2": "OG VISNINGSPROGRAMMER",
+      "G-Текст": {
+        "N1-STR3": "Med smag af smerte - Irina Pimenova",
+        "N1-STR4": "Han vidste ikke, om hun vidste det. I drømme ventede hun — han følte, at sådan et øjeblik ikke eksisterede i virkeligheden, men græd af glæde i søvne.",
+        "N1-STR5": "****",
+        "N1-STR6": "Men oftere vågnede han med tomhed i brystet, som om nogen havde skåret noget vigtigt ud og kun efterladt en skælven.",
+        "N1-STR7": "Når han var vågen, kiggede hun væk, og han kastede et blik — hans ånde standsede, og i hans tanker et sjæleskrig: 'Gå ikke'.",
+        "N1-STR8": "Jeg kan ikke være sammen med dig, for i livet — ubesvaret kærlighed!",
+        "N1-STR9": "Alligevel bankede hjertet, bankede, bankede — for hende. Altid for hende."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "OPRET",
+      "N2-STR2": "en privat opbevaring og skjul fotos, videoer",
+      "N2-STR3": "Opbevaring",
+      "N2-STR4": "Beholder 1",
+      "N2-STR5": "Indtast adgangskode"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Afspiller",
+      "N3-STR2": "til musik og lydbøger",
+      "N3-STR3": "Du forstår ikke niveau (B(P)IV)",
+      "N3-STR3-1": "Du forstår ikke niveau (B(P)IV)",
+      "N3-STR4": "Eksportér",
+      "N3-STR5": "Slet"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "DINE FILER",
+      "N4-STR2": "bliver på enheden, ingen upload til skyen",
+      "G-Кнопки": {
+        "N4-STR4": "Sikkerhed",
+        "N4-STR5": "Beskyttelse",
+        "N4-STR6": "Chiffer",
+        "N4-STR7": "Autolås",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Skærm",
+        "N4-STR8-1": "Lås",
+        "N4-STR9": "Hukommelse",
+        "N4-STR9-1": "Ryd op",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Gendannelseskode",
+        "N4-STR12": "Lås"
+      }
+    }
+  },
+  "zu": {
+    "G-Картинка 1": {
+      "N1-STR1": "ISIFUNDI ESINGENAKHO",
+      "N1-STR2": "NEZIBUKI",
+      "G-Текст": {
+        "N1-STR3": "Ngokunambitha ubuhlungu - Irina Pimenova",
+        "N1-STR4": "Wayengazi noma yena wayazi. Emaphusheni wayemlindile — wezwa umzuzu onje awukho eqinisweni, kodwa wakhala ngenjabulo elele.",
+        "N1-STR5": "****",
+        "N1-STR6": "Kodwa ngokuvamile wayevuka engenalutho esifubeni, sengathi othile usike okuthile okubalulekile, washiya ukuthuthumela kuphela.",
+        "N1-STR7": "Ephapheme, wayebheka kude, futhi yena waphosa amehlo — umoya wakhe wawuma, futhi emicabangweni yakhe ukukhala komphefumulo: 'Ungahambi'.",
+        "N1-STR8": "Angikwazi ukuba nawe, ngoba empilweni — uthando olungaphenduleki!",
+        "N1-STR9": "Noma kunjalo inhliziyo yayishaya, ishaya, ishaya — ngenxa yakhe. Njalo ngenxa yakhe."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "DALA",
+      "N2-STR2": "isitoreji esiyimfihlo bese ufihla izithombe, amavidiyo",
+      "N2-STR3": "Isitoreji",
+      "N2-STR4": "Isitsha 1",
+      "N2-STR5": "Faka iphasiwedi"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Isidlali somsindo",
+      "N3-STR2": "somculo nezincwadi ezilalelwayo",
+      "N3-STR3": "Awuqondi izinga (B(P)IV)",
+      "N3-STR3-1": "Awuqondi izinga (B(P)IV)",
+      "N3-STR4": "Thekelisa",
+      "N3-STR5": "Susa"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "AMAFALI AKHO",
+      "N4-STR2": "ahlala kudivayisi, akuthunyelwa efwini",
+      "G-Кнопки": {
+        "N4-STR4": "Ezokuphepha",
+        "N4-STR5": "Ukuvikelwa",
+        "N4-STR6": "Ikhodi",
+        "N4-STR7": "Ukuvala okuzenzakalelayo",
+        "N4-STR7-1": "10 imizuzu",
+        "N4-STR8": "Isikrini",
+        "N4-STR8-1": "Vala",
+        "N4-STR9": "Imemori",
+        "N4-STR9-1": "Ukuhlanza",
+        "N4-STR10": "I-Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Iphasiwedi yokubuyisela",
+        "N4-STR12": "Vala"
+      }
+    }
+  },
+  "iw-IL": {
+    "G-Картинка 1": {
+      "N1-STR1": "קורא מובנה",
+      "N1-STR2": "וצופים",
+      "G-Текст": {
+        "N1-STR3": "בטעם של כאב - אירינה פימנובה",
+        "N1-STR4": "הוא לא ידע אם היא יודעת. בחלומות היא חיכתה — הוא הרגיש שרגע כזה לא קיים במציאות, אבל בכה מרוב אושר בשינה.",
+        "N1-STR5": "****",
+        "N1-STR6": "אך לעיתים קרובות יותר התעורר עם ריקנות בחזה, כאילו מישהו חתך משהו חשוב, והותיר רק רעד.",
+        "N1-STR7": "בהקיץ היא הסתכלה הצידה, והוא העיף מבט — נשימתו נעצרה, ובמחשבותיו זעקת נשמה: 'אל תלכי'.",
+        "N1-STR8": "אני לא יכול להיות איתך, כי בחיים — אהבה נכזבת!",
+        "N1-STR9": "ובכל זאת הלם הלב, הלם, הלם — למענה. תמיד למענה."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "צור",
+      "N2-STR2": "אחסון פרטי והסתר תמונות, סרטונים",
+      "N2-STR3": "אחסון",
+      "N2-STR4": "מיכל 1",
+      "N2-STR5": "הכנס סיסמה"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "נגן אודיו",
+      "N3-STR2": "למוזיקה וספרי שמע",
+      "N3-STR3": "אתה לא מבין רמה (B(P)IV)",
+      "N3-STR3-1": "אתה לא מבין רמה (B(P)IV)",
+      "N3-STR4": "ייצוא",
+      "N3-STR5": "מחק"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "הקבצים שלך",
+      "N4-STR2": "נשארים במכשיר, ללא שליחה לענן",
+      "G-Кнопки": {
+        "N4-STR4": "אבטחה",
+        "N4-STR5": "הגנה",
+        "N4-STR6": "צופן",
+        "N4-STR7": "נעילה אוטומטית",
+        "N4-STR7-1": "10 דקות",
+        "N4-STR8": "מסך",
+        "N4-STR8-1": "נעילה",
+        "N4-STR9": "זיכרון",
+        "N4-STR9-1": "ניקוי",
+        "N4-STR10": "כוח גס",
+        "N4-STR10-1": "5^60 שניות",
+        "N4-STR11": "סיסמת שחזור",
+        "N4-STR12": "נעל"
+      }
+    }
+  },
+  "id": {
+    "G-Картинка 1": {
+      "N1-STR1": "PEMBACA TERINTEGRASI",
+      "N1-STR2": "DAN PENAMPIL",
+      "G-Текст": {
+        "N1-STR3": "Dengan rasa sakit - Irina Pimenova",
+        "N1-STR4": "Dia tidak tahu apakah dia tahu. Dalam mimpi dia menunggu — dia merasakan momen seperti itu tidak ada dalam kenyataan, tapi menangis karena bahagia dalam tidurnya.",
+        "N1-STR5": "****",
+        "N1-STR6": "Namun lebih sering dia terbangun dengan kekosongan di dadanya, seolah seseorang telah memotong sesuatu yang penting, hanya menyisakan getaran.",
+        "N1-STR7": "Saat terjaga, dia memandang ke samping, dan dia melirik — napasnya terhenti, dan dalam pikirannya teriakan jiwa: 'Jangan pergi'.",
+        "N1-STR8": "Aku tak bisa bersamamu, karena dalam hidup — cinta tak berbalas!",
+        "N1-STR9": "Namun jantung tetap berdetak, berdetak, berdetak — untuknya. Selalu untuknya."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "BUAT",
+      "N2-STR2": "penyimpanan pribadi dan sembunyikan foto, video",
+      "N2-STR3": "Penyimpanan",
+      "N2-STR4": "Wadah 1",
+      "N2-STR5": "Masukkan kata sandi"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Pemutar audio",
+      "N3-STR2": "untuk musik dan buku audio",
+      "N3-STR3": "Anda tidak mengerti level(B(P)IV)",
+      "N3-STR3-1": "Anda tidak mengerti level(B(P)IV)",
+      "N3-STR4": "Ekspor",
+      "N3-STR5": "Hapus"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "FILE ANDA",
+      "N4-STR2": "tetap di perangkat, tanpa pengiriman ke awan",
+      "G-Кнопки": {
+        "N4-STR4": "Keamanan",
+        "N4-STR5": "Perlindungan",
+        "N4-STR6": "Sandi",
+        "N4-STR7": "Kunci otomatis",
+        "N4-STR7-1": "10 menit",
+        "N4-STR8": "Layar",
+        "N4-STR8-1": "Kunci",
+        "N4-STR9": "Memori",
+        "N4-STR9-1": "Bersihkan",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60 detik",
+        "N4-STR11": "Kata sandi pemulihan",
+        "N4-STR12": "Kunci"
+      }
+    }
+  },
+  "is-IS": {
+    "G-Картинка 1": {
+      "N1-STR1": "INNBYGGÐUR LESI",
+      "N1-STR2": "OG SKOÐARAR",
+      "G-Текст": {
+        "N1-STR3": "Með sársaukabragði - Irina Pimenova",
+        "N1-STR4": "Hann vissi ekki hvort hún vissi. Í draumum beið hún — hann fann að slík stund var ekki til í raunveruleikanum, en grét úr gleði í svefni.",
+        "N1-STR5": "****",
+        "N1-STR6": "En oftar vaknaði hann með tómleika í brjóstinu, eins og einhver hefði skorið út eitthvað mikilvægt, skilið eftir bara skjálfta.",
+        "N1-STR7": "Vakandi horfði hún í burtu, og hann lét líða á — andardrátturinn stöðvaðist, og í hugsunum hans hróp sálarinnar: 'Farðu ekki'.",
+        "N1-STR8": "Ég get ekki verið með þér, því í lífinu — ástfangin án svars!",
+        "N1-STR9": "Samt sló hjartað, sló, sló — fyrir hana. Alltaf fyrir hana."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "BÚA TIL",
+      "N2-STR2": "einkageymslu og fela myndir, myndbönd",
+      "N2-STR3": "Geymsla",
+      "N2-STR4": "Ílát 1",
+      "N2-STR5": "Sláðu inn lykilorð"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Hljóðspilari",
+      "N3-STR2": "fyrir tónlist og hljóðbækur",
+      "N3-STR3": "Þú skilur ekki stig (B(P)IV)",
+      "N3-STR3-1": "Þú skilur ekki stig (B(P)IV)",
+      "N3-STR4": "Flytja út",
+      "N3-STR5": "Eyða"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "SKRÁRINAR ÞÍNAR",
+      "N4-STR2": "verða á tækinu, engin sending í ský",
+      "G-Кнопки": {
+        "N4-STR4": "Öryggi",
+        "N4-STR5": "Vörn",
+        "N4-STR6": "Dulritun",
+        "N4-STR7": "Sjálfvirk læsing",
+        "N4-STR7-1": "10 mín",
+        "N4-STR8": "Skjár",
+        "N4-STR8-1": "Læsa",
+        "N4-STR9": "Minni",
+        "N4-STR9-1": "Hreinsun",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Endurheimtulykilorð",
+        "N4-STR12": "Læsa"
+      }
+    }
+  },
+  "es-ES": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTOR INTEGRADO",
+      "N1-STR2": "Y VISUALIZADORES",
+      "G-Текст": {
+        "N1-STR3": "Con sabor a dolor - Irina Pimenova",
+        "N1-STR4": "Él no sabía si ella sabía. En sueños ella esperaba — sentía que tal momento no existía en la realidad, pero lloraba de alegría en el sueño.",
+        "N1-STR5": "****",
+        "N1-STR6": "Pero más a menudo despertaba con un vacío en el pecho, como si alguien hubiera cortado algo importante, dejando solo un temblor.",
+        "N1-STR7": "Despierta, ella miraba hacia otro lado, y él lanzaba una mirada — la respiración se detenía, y en sus pensamientos un grito del alma: 'No te vayas'.",
+        "N1-STR8": "No puedo estar a tu lado, porque en la vida — ¡amor no correspondido!",
+        "N1-STR9": "Y sin embargo, el corazón latía, latía, latía — por ella. Siempre por ella."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREAR",
+      "N2-STR2": "un almacenamiento privado y ocultar fotos, vídeos",
+      "N2-STR3": "Almacenamiento",
+      "N2-STR4": "Contenedor 1",
+      "N2-STR5": "Introducir contraseña"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Reproductor de audio",
+      "N3-STR2": "para música y audiolibros",
+      "N3-STR3": "No entiendes el nivel (B(P)IV)",
+      "N3-STR3-1": "No entiendes el nivel (B(P)IV)",
+      "N3-STR4": "Exportar",
+      "N3-STR5": "Eliminar"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TUS ARCHIVOS",
+      "N4-STR2": "permanecen en el dispositivo, sin enviar a la nube",
+      "G-Кнопки": {
+        "N4-STR4": "Seguridad",
+        "N4-STR5": "Protección",
+        "N4-STR6": "Cifrado",
+        "N4-STR7": "Bloqueo automático",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Pantalla",
+        "N4-STR8-1": "Bloquear",
+        "N4-STR9": "Memoria",
+        "N4-STR9-1": "Limpieza",
+        "N4-STR10": "Fuerza bruta",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Contraseña de recuperación",
+        "N4-STR12": "Bloquear"
+      }
+    }
+  },
+  "es-419": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTOR INTEGRADO",
+      "N1-STR2": "Y VISUALIZADORES",
+      "G-Текст": {
+        "N1-STR3": "Con sabor a dolor - Irina Pimenova",
+        "N1-STR4": "Él no sabía si ella sabía. En sueños ella esperaba — sentía que tal momento no existía en la realidad, pero lloraba de alegría en el sueño.",
+        "N1-STR5": "****",
+        "N1-STR6": "Pero más seguido despertaba con un vacío en el pecho, como si alguien hubiera cortado algo importante, dejando solo un temblor.",
+        "N1-STR7": "Despierta, ella miraba hacia otro lado, y él lanzaba una mirada — la respiración se detenía, y en sus pensamientos un grito del alma: 'No te vayas'.",
+        "N1-STR8": "No puedo estar a tu lado, porque en la vida — ¡amor no correspondido!",
+        "N1-STR9": "Y sin embargo, el corazón latía, latía, latía — por ella. Siempre por ella."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREAR",
+      "N2-STR2": "un almacenamiento privado y ocultar fotos, vídeos",
+      "N2-STR3": "Almacenamiento",
+      "N2-STR4": "Contenedor 1",
+      "N2-STR5": "Ingresar contraseña"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Reproductor de audio",
+      "N3-STR2": "para música y audiolibros",
+      "N3-STR3": "No entiendes el nivel (B(P)IV)",
+      "N3-STR3-1": "No entiendes el nivel (B(P)IV)",
+      "N3-STR4": "Exportar",
+      "N3-STR5": "Eliminar"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TUS ARCHIVOS",
+      "N4-STR2": "permanecen en el dispositivo, sin enviar a la nube",
+      "G-Кнопки": {
+        "N4-STR4": "Seguridad",
+        "N4-STR5": "Protección",
+        "N4-STR6": "Cifrado",
+        "N4-STR7": "Bloqueo automático",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Pantalla",
+        "N4-STR8-1": "Bloquear",
+        "N4-STR9": "Memoria",
+        "N4-STR9-1": "Limpiar",
+        "N4-STR10": "Fuerza bruta",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Contraseña de recuperación",
+        "N4-STR12": "Bloquear"
+      }
+    }
+  },
+  "es-US": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTOR INTEGRADO",
+      "N1-STR2": "Y VISUALIZADORES",
+      "G-Текст": {
+        "N1-STR3": "Con sabor a dolor - Irina Pimenova",
+        "N1-STR4": "Él no sabía si ella sabía. En sueños ella esperaba — sentía que tal momento no existía en la realidad, pero lloraba de alegría en el sueño.",
+        "N1-STR5": "****",
+        "N1-STR6": "Pero más seguido despertaba con un vacío en el pecho, como si alguien hubiera cortado algo importante, dejando solo un temblor.",
+        "N1-STR7": "Despierta, ella miraba hacia otro lado, y él lanzaba una mirada — la respiración se detenía, y en sus pensamientos un grito del alma: 'No te vayas'.",
+        "N1-STR8": "No puedo estar a tu lado, porque en la vida — ¡amor no correspondido!",
+        "N1-STR9": "Y sin embargo, el corazón latía, latía, latía — por ella. Siempre por ella."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREAR",
+      "N2-STR2": "un almacenamiento privado y ocultar fotos, vídeos",
+      "N2-STR3": "Almacenamiento",
+      "N2-STR4": "Contenedor 1",
+      "N2-STR5": "Ingresar contraseña"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Reproductor de audio",
+      "N3-STR2": "para música y audiolibros",
+      "N3-STR3": "No entiendes el nivel (B(P)IV)",
+      "N3-STR3-1": "No entiendes el nivel (B(P)IV)",
+      "N3-STR4": "Exportar",
+      "N3-STR5": "Eliminar"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TUS ARCHIVOS",
+      "N4-STR2": "permanecen en el dispositivo, sin enviar a la nube",
+      "G-Кнопки": {
+        "N4-STR4": "Seguridad",
+        "N4-STR5": "Protección",
+        "N4-STR6": "Cifrado",
+        "N4-STR7": "Bloqueo automático",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Pantalla",
+        "N4-STR8-1": "Bloquear",
+        "N4-STR9": "Memoria",
+        "N4-STR9-1": "Limpiar",
+        "N4-STR10": "Fuerza bruta",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Contraseña de recuperación",
+        "N4-STR12": "Bloquear"
+      }
+    }
+  },
+  "it-IT": {
+    "G-Картинка 1": {
+      "N1-STR1": "LETTORE INTEGRATO",
+      "N1-STR2": "E VISUALIZZATORI",
+      "G-Текст": {
+        "N1-STR3": "Con gusto di dolore - Irina Pimenova",
+        "N1-STR4": "Lui non sapeva se lei lo sapesse. Nei sogni lei aspettava — sentiva che un momento del genere non esisteva nella realtà, ma piangeva di gioia nel sonno.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ma più spesso si svegliava con un vuoto nel petto, come se qualcuno avesse tagliato via qualcosa di importante, lasciando solo un tremito.",
+        "N1-STR7": "Da sveglia lei guardava altrove, e lui lanciava uno sguardo — il respiro si fermava, e nei suoi pensieri un grido dell'anima: 'Non andare'.",
+        "N1-STR8": "Non posso starti accanto, perché nella vita — amore non corrisposto!",
+        "N1-STR9": "Eppure il cuore batteva, batteva, batteva — per lei. Sempre per lei."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREA",
+      "N2-STR2": "un archivio privato e nascondi foto, video",
+      "N2-STR3": "Archivio",
+      "N2-STR4": "Contenitore 1",
+      "N2-STR5": "Inserisci password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Lettore audio",
+      "N3-STR2": "per musica e audiolibri",
+      "N3-STR3": "Non capisci il livello (B(P)IV)",
+      "N3-STR3-1": "Non capisci il livello (B(P)IV)",
+      "N3-STR4": "Esporta",
+      "N3-STR5": "Elimina"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "I TUOI FILE",
+      "N4-STR2": "rimangono sul dispositivo, senza invio al cloud",
+      "G-Кнопки": {
+        "N4-STR4": "Sicurezza",
+        "N4-STR5": "Protezione",
+        "N4-STR6": "Cifrario",
+        "N4-STR7": "Blocco automatico",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Schermo",
+        "N4-STR8-1": "Blocca",
+        "N4-STR9": "Memoria",
+        "N4-STR9-1": "Pulizia",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60 s",
+        "N4-STR11": "Password di recupero",
+        "N4-STR12": "Blocca"
+      }
+    }
+  },
+  "kk": {
+    "G-Картинка 1": {
+      "N1-STR1": "КІРІКТІРІЛГЕН ОҚУ ҚҰРЫЛҒЫСЫ",
+      "N1-STR2": "ЖӘНЕ ҚАРАУ ҚҰРАЛДАРЫ",
+      "G-Текст": {
+        "N1-STR3": "Ауырсыну дәмімен - Ирина Пименова",
+        "N1-STR4": "Ол білмеді, ол біле ме екен. Түсінде ол күтті — ол мұндай сәттің шындықта жоқ екенін сезді, бірақ ұйқысында қуаныштан жылады.",
+        "N1-STR5": "****",
+        "N1-STR6": "Бірақ көбінесе кеудесінде бос орынмен оянды, біреу маңызды нәрсені кесіп тастағандай, тек діріл қалдырды.",
+        "N1-STR7": "Ояу кезде ол басқа жаққа қарады, ал ол көз тастады — демі тоқтап, ойында жанның айқайы: 'Кетпе'.",
+        "N1-STR8": "Сенімен бірге бола алмаймын, өйткені өмірде — жауапсыз махаббат!",
+        "N1-STR9": "Дегенмен жүрек соқты, соқты, соқты — ол үшін. Әрқашан ол үшін."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ЖАСАҢЫЗ",
+      "N2-STR2": "жеке сақтауыш және фото, бейнелерді жасырыңыз",
+      "N2-STR3": "Сақтауыш",
+      "N2-STR4": "Контейнер 1",
+      "N2-STR5": "Құпия сөзді енгізіңіз"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аудио ойнатқыш",
+      "N3-STR2": "музыка мен аудиокітаптарға арналған",
+      "N3-STR3": "Сіз деңгейді түсінбейсіз (B(P)IV)",
+      "N3-STR3-1": "Сіз деңгейді түсінбейсіз (B(P)IV)",
+      "N3-STR4": "Экспорттау",
+      "N3-STR5": "Жою"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "СІЗДІҢ ФАЙЛДАРЫҢЫЗ",
+      "N4-STR2": "құрылғыда қалады, бұлтқа жіберілмейді",
+      "G-Кнопки": {
+        "N4-STR4": "Қауіпсіздік",
+        "N4-STR5": "Қорғаныс",
+        "N4-STR6": "Шифр",
+        "N4-STR7": "Автоматикалық бұғаттау",
+        "N4-STR7-1": "10 мин",
+        "N4-STR8": "Экран",
+        "N4-STR8-1": "Бұғаттау",
+        "N4-STR9": "Жад",
+        "N4-STR9-1": "Тазарту",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60 с",
+        "N4-STR11": "Қалпына келтіру құпия сөзі",
+        "N4-STR12": "Бұғаттау"
+      }
+    }
+  },
+  "kn-IN": {
+    "G-Картинка 1": {
+      "N1-STR1": "ಅಂತರ್ನಿರ್ಮಿತ ಓದುಗ",
+      "N1-STR2": "ಮತ್ತು ವೀಕ್ಷಕರು",
+      "G-Текст": {
+        "N1-STR3": "ನೋವಿನ ರುಚಿಯೊಂದಿಗೆ - ಇರಿನಾ ಪಿಮೆನೋವಾ",
+        "N1-STR4": "ಅವಳಿಗೆ ಗೊತ್ತೋ ಇಲ್ಲವೋ ಅವನಿಗೆ ಗೊತ್ತಿರಲಿಲ್ಲ. ಕನಸಿನಲ್ಲಿ ಅವಳು ಕಾಯುತ್ತಿದ್ದಳು — ಅಂತಹ ಕ್ಷಣ ವಾಸ್ತವದಲ್ಲಿ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ ಎಂದು ಅವನು ಭಾವಿಸಿದನು, ಆದರೆ ನಿದ್ರೆಯಲ್ಲಿ ಸಂತೋಷದಿಂದ ಅತ್ತನು.",
+        "N1-STR5": "****",
+        "N1-STR6": "ಆದರೆ ಹೆಚ್ಚಾಗಿ ಅವನು ಎದೆಯಲ್ಲಿ ಶೂನ್ಯತೆಯಿಂದ ಎಚ್ಚರಗೊಂಡನು, ಯಾರೋ ಒಬ್ಬರು ಮುಖ್ಯವಾದುದನ್ನು ಕತ್ತರಿಸಿದಂತೆ, ಕೇವಲ ನಡುಕವನ್ನು ಬಿಟ್ಟು.",
+        "N1-STR7": "ಎಚ್ಚರವಾಗಿದ್ದಾಗ, ಅವಳು ಬೇರೆ ಕಡೆ ನೋಡುತ್ತಿದ್ದಳು, ಮತ್ತು ಅವನು ಒಮ್ಮೆ ನೋಡಿದನು — ಅವನ ಉಸಿರು ನಿಂತುಹೋಯಿತು, ಮತ್ತು ಅವನ ಆಲೋಚನೆಗಳಲ್ಲಿ ಆತ್ಮದ ಕೂಗು: 'ಹೋಗಬೇಡ'.",
+        "N1-STR8": "ನಾನು ನಿಮ್ಮೊಂದಿಗೆ ಇರಲು ಸಾಧ್ಯವಿಲ್ಲ, ಏಕೆಂದರೆ ಜೀವನದಲ್ಲಿ — ಅನುತ್ತರ ಪ್ರೇಮ!",
+        "N1-STR9": "ಆದರೂ ಹೃದಯ ಬಡಿಯಿತು, ಬಡಿಯಿತು, ಬಡಿಯಿತು — ಅವಳಿಗಾಗಿ. ಯಾವಾಗಲೂ ಅವಳಿಗಾಗಿ."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ರಚಿಸಿ",
+      "N2-STR2": "ಖಾಸಗಿ ಸಂಗ್ರಹ ಮತ್ತು ಫೋಟೋಗಳು, ವೀಡಿಯೊಗಳನ್ನು ಮರೆಮಾಡಿ",
+      "N2-STR3": "ಸಂಗ್ರಹ",
+      "N2-STR4": "ಕಂಟೇನರ್ 1",
+      "N2-STR5": "ಪಾಸ್ವರ್ಡ್ ನಮೂದಿಸಿ"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ಆಡಿಯೋ ಪ್ಲೇಯರ್",
+      "N3-STR2": "ಸಂಗೀತ ಮತ್ತು ಆಡಿಯೋ ಪುಸ್ತಕಗಳಿಗಾಗಿ",
+      "N3-STR3": "ನೀವು ಮಟ್ಟವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದಿಲ್ಲ (B(P)IV)",
+      "N3-STR3-1": "ನೀವು ಮಟ್ಟವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದಿಲ್ಲ (B(P)IV)",
+      "N3-STR4": "ರಫ್ತು",
+      "N3-STR5": "ಅಳಿಸಿ"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ನಿಮ್ಮ ಫೈಲ್ಗಳು",
+      "N4-STR2": "ಸಾಧನದಲ್ಲಿ ಉಳಿಯುತ್ತವೆ, ಕ್ಲೌಡ್ಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ",
+      "G-Кнопки": {
+        "N4-STR4": "ಭದ್ರತೆ",
+        "N4-STR5": "ರಕ್ಷಣೆ",
+        "N4-STR6": "ಸೈಫರ್",
+        "N4-STR7": "ಸ್ವಯಂ ಲಾಕ್",
+        "N4-STR7-1": "10 ನಿಮಿಷ",
+        "N4-STR8": "ಪರದೆ",
+        "N4-STR8-1": "ಲಾಕ್",
+        "N4-STR9": "ಮೆಮೊರಿ",
+        "N4-STR9-1": "ಸ್ವಚ್ಛಗೊಳಿಸು",
+        "N4-STR10": "ಬ್ರೂಟ್ಫೋರ್ಸ್",
+        "N4-STR10-1": "5^60 ಸೆಕೆಂಡುಗಳು",
+        "N4-STR11": "ಮರುಪಡೆಯುವಿಕೆ ಪಾಸ್ವರ್ಡ್",
+        "N4-STR12": "ಲಾಕ್"
+      }
+    }
+  },
+  "ca": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTOR INTEGRAT",
+      "N1-STR2": "I VISUALITZADORS",
+      "G-Текст": {
+        "N1-STR3": "Amb gust de dolor - Irina Pimenova",
+        "N1-STR4": "Ell no sabia si ella sabia. En somnis ella esperava — sentia que aquest moment no existia a la realitat, però plorava d'alegria en el somni.",
+        "N1-STR5": "****",
+        "N1-STR6": "Però més sovint es despertava amb un buit al pit, com si algú hagués tallat alguna cosa important, deixant només un tremolor.",
+        "N1-STR7": "Despert, ella mirava cap a un altre costat, i ell llançava una mirada — la respiració s'aturava, i en els seus pensaments un crit de l'ànima: 'No te'n vagis'.",
+        "N1-STR8": "No puc estar al teu costat, perquè a la vida — amor no correspost!",
+        "N1-STR9": "I tanmateix, el cor bategava, bategava, bategava — per ella. Sempre per ella."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREA",
+      "N2-STR2": "un emmagatzematge privat i amaga fotos, vídeos",
+      "N2-STR3": "Emmagatzematge",
+      "N2-STR4": "Contenidor 1",
+      "N2-STR5": "Introdueix la contrasenya"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Reproductor d'àudio",
+      "N3-STR2": "per a música i audiollibres",
+      "N3-STR3": "No entens el nivell (B(P)IV)",
+      "N3-STR3-1": "No entens el nivell (B(P)IV)",
+      "N3-STR4": "Exporta",
+      "N3-STR5": "Suprimeix"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ELS TEUS FITXERS",
+      "N4-STR2": "romanen al dispositiu, sense enviament al núvol",
+      "G-Кнопки": {
+        "N4-STR4": "Seguretat",
+        "N4-STR5": "Protecció",
+        "N4-STR6": "Xifratge",
+        "N4-STR7": "Bloqueig automàtic",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Pantalla",
+        "N4-STR8-1": "Bloqueja",
+        "N4-STR9": "Memòria",
+        "N4-STR9-1": "Neteja",
+        "N4-STR10": "Força bruta",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Contrasenya de recuperació",
+        "N4-STR12": "Bloqueja"
+      }
+    }
+  },
+  "ky-KG": {
+    "G-Картинка 1": {
+      "N1-STR1": "КУРУЛГАН ОКУУЧУ",
+      "N1-STR2": "ЖАНА КӨРҮҮЧҮЛӨР",
+      "G-Текст": {
+        "N1-STR3": "Оорунун даамы менен - Ирина Пименова",
+        "N1-STR4": "Ал билеби, билбеди. Түшүндө ал күтүп турду — мындай учур реалдуулукта жок экенин сезди, бирок түшүндө кубанычтан ыйлап жиберди.",
+        "N1-STR5": "****",
+        "N1-STR6": "Бирок көбүнчө көкүрөгүндө боштук менен ойгонду, кимдир бирөө маанилүү нерсени кесип салгандай, дүркүрөктү гана калтырды.",
+        "N1-STR7": "Ойгонуп, ал башка жакка карады, ал болсо көз чаптырды — дем ичине тыгылып, оюнда жандын кыйкырыгы: 'Кетпе'.",
+        "N1-STR8": "Сенин жаныңда боло албайм, анткени турмушта — жоопсуз сүйүү!",
+        "N1-STR9": "Ошого карабаст жүрөк кагды, кагды, кагды — анын үчүн. Ар дайым анын үчүн."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ЖАСАҢЫЗ",
+      "N2-STR2": "жеке сактагыч жана фото, видеолорду жашырыңыз",
+      "N2-STR3": "Сактагыч",
+      "N2-STR4": "Контейнер 1",
+      "N2-STR5": "Сыр сөздү киргизиңиз"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аудио ойноткуч",
+      "N3-STR2": "музыка жана аудиокитептер үчүн",
+      "N3-STR3": "Сиз деңгээлди түшүнбөйсүз (B(P)IV)",
+      "N3-STR3-1": "Сиз деңгээлди түшүнбөйсүз (B(P)IV)",
+      "N3-STR4": "Экспорт",
+      "N3-STR5": "Өчүрүү"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "СИЗДИН ФАЙЛДАРЫҢЫЗ",
+      "N4-STR2": "түзмөктө калат, булутка жөнөтүлбөйт",
+      "G-Кнопки": {
+        "N4-STR4": "Коопсуздук",
+        "N4-STR5": "Коргоо",
+        "N4-STR6": "Шифр",
+        "N4-STR7": "Автоматтык бөгөт",
+        "N4-STR7-1": "10 мүн",
+        "N4-STR8": "Экран",
+        "N4-STR8-1": "Бөгөттөө",
+        "N4-STR9": "Эс тутум",
+        "N4-STR9-1": "Тазалоо",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60с",
+        "N4-STR11": "Калыбына келтирүү сыр сөзү",
+        "N4-STR12": "Бөгөттөө"
+      }
+    }
+  },
+  "zh-HK": {
+    "G-Картинка 1": {
+      "N1-STR1": "內置閱讀器",
+      "N1-STR2": "與檢視器",
+      "G-Текст": {
+        "N1-STR3": "痛苦的滋味 - 伊琳娜·皮梅諾娃",
+        "N1-STR4": "他唔知佢知唔知。夢中佢等緊 — 佢感覺呢種瞬間喺現實唔存在，但喺夢中快樂到喊。",
+        "N1-STR5": "****",
+        "N1-STR6": "但更經常係胸口空虛咁醒嚟，好似有人割走咗重要嘅嘢，淨翻顫抖。",
+        "N1-STR7": "清醒時佢望向另一邊，佢瞥一眼 — 呼吸停頓，心中靈魂呼喊：『唔好走』。",
+        "N1-STR8": "我唔可以喺你身邊，因為現實中 — 冇回報嘅愛！",
+        "N1-STR9": "然而心臟跳動、跳動、跳動 — 為佢。永遠為佢。"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "創建",
+      "N2-STR2": "私人儲存空間並隱藏相片、影片",
+      "N2-STR3": "儲存空間",
+      "N2-STR4": "容器 1",
+      "N2-STR5": "輸入密碼"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "音訊播放器",
+      "N3-STR2": "用於音樂同有聲書",
+      "N3-STR3": "你唔明白等級 (B(P)IV)",
+      "N3-STR3-1": "你唔明白等級 (B(P)IV)",
+      "N3-STR4": "匯出",
+      "N3-STR5": "刪除"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "你的檔案",
+      "N4-STR2": "留在裝置上，唔會上傳到雲端",
+      "G-Кнопки": {
+        "N4-STR4": "安全性",
+        "N4-STR5": "保護",
+        "N4-STR6": "密碼",
+        "N4-STR7": "自動鎖定",
+        "N4-STR7-1": "10 分鐘",
+        "N4-STR8": "螢幕",
+        "N4-STR8-1": "鎖定",
+        "N4-STR9": "記憶體",
+        "N4-STR9-1": "清理",
+        "N4-STR10": "暴力破解",
+        "N4-STR10-1": "5^60 秒",
+        "N4-STR11": "復原密碼",
+        "N4-STR12": "鎖定"
+      }
+    }
+  },
+  "zh-TW": {
+    "G-Картинка 1": {
+      "N1-STR1": "內建閱讀器",
+      "N1-STR2": "與檢視器",
+      "G-Текст": {
+        "N1-STR3": "痛苦的滋味 - 伊琳娜·皮梅諾娃",
+        "N1-STR4": "他不知道她是否知道。夢中她等待 — 他感覺這樣的瞬間在現實不存在，但在夢中快樂到哭泣。",
+        "N1-STR5": "****",
+        "N1-STR6": "但更經常是胸口空虛地醒來，好像有人切掉了重要的東西，只留下顫抖。",
+        "N1-STR7": "清醒時她看向別處，他瞥一眼 — 呼吸停頓，心中靈魂吶喊：『別走』。",
+        "N1-STR8": "我不能在你身邊，因為現實中 — 無回報的愛！",
+        "N1-STR9": "然而心臟跳動、跳動、跳動 — 為她。永遠為她。"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "建立",
+      "N2-STR2": "私人儲存空間並隱藏相片、影片",
+      "N2-STR3": "儲存空間",
+      "N2-STR4": "容器 1",
+      "N2-STR5": "輸入密碼"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "音訊播放器",
+      "N3-STR2": "用於音樂與有聲書",
+      "N3-STR3": "你不明白等級 (B(P)IV)",
+      "N3-STR3-1": "你不明白等級 (B(P)IV)",
+      "N3-STR4": "匯出",
+      "N3-STR5": "刪除"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "你的檔案",
+      "N4-STR2": "留在裝置上，不上傳到雲端",
+      "G-Кнопки": {
+        "N4-STR4": "安全性",
+        "N4-STR5": "保護",
+        "N4-STR6": "密碼",
+        "N4-STR7": "自動鎖定",
+        "N4-STR7-1": "10 分鐘",
+        "N4-STR8": "螢幕",
+        "N4-STR8-1": "鎖定",
+        "N4-STR9": "記憶體",
+        "N4-STR9-1": "清理",
+        "N4-STR10": "暴力破解",
+        "N4-STR10-1": "5^60 秒",
+        "N4-STR11": "復原密碼",
+        "N4-STR12": "鎖定"
+      }
+    }
+  },
+  "zh-CN": {
+    "G-Картинка 1": {
+      "N1-STR1": "内置阅读器",
+      "N1-STR2": "与查看器",
+      "G-Текст": {
+        "N1-STR3": "痛苦的滋味 - 伊琳娜·皮梅诺娃",
+        "N1-STR4": "他不知道她是否知道。梦中她等待 — 他感觉这样的瞬间在现实不存在，但在梦中快乐得哭泣。",
+        "N1-STR5": "****",
+        "N1-STR6": "但更经常是胸口空虚地醒来，好像有人切掉了重要的东西，只留下颤抖。",
+        "N1-STR7": "清醒时她看向别处，他瞥一眼 — 呼吸停顿，心中灵魂呐喊：『别走』。",
+        "N1-STR8": "我不能在你身边，因为现实中 — 无回报的爱！",
+        "N1-STR9": "然而心脏跳动、跳动、跳动 — 为她。永远为她。"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "创建",
+      "N2-STR2": "私人存储并隐藏照片、视频",
+      "N2-STR3": "存储",
+      "N2-STR4": "容器 1",
+      "N2-STR5": "输入密码"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "音频播放器",
+      "N3-STR2": "用于音乐和有声书",
+      "N3-STR3": "你不懂等级 (B(P)IV)",
+      "N3-STR3-1": "你不懂等级 (B(P)IV)",
+      "N3-STR4": "导出",
+      "N3-STR5": "删除"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "您的文件",
+      "N4-STR2": "留在设备上，不上传到云端",
+      "G-Кнопки": {
+        "N4-STR4": "安全性",
+        "N4-STR5": "保护",
+        "N4-STR6": "密码",
+        "N4-STR7": "自动锁定",
+        "N4-STR7-1": "10 分钟",
+        "N4-STR8": "屏幕",
+        "N4-STR8-1": "锁定",
+        "N4-STR9": "内存",
+        "N4-STR9-1": "清理",
+        "N4-STR10": "暴力破解",
+        "N4-STR10-1": "5^60 秒",
+        "N4-STR11": "恢复密码",
+        "N4-STR12": "锁定"
+      }
+    }
+  },
+  "ko-KR": {
+    "G-Картинка 1": {
+      "N1-STR1": "내장형 리더기",
+      "N1-STR2": "및 뷰어",
+      "G-Текст": {
+        "N1-STR3": "고통의 맛으로 - 이리나 피메노바",
+        "N1-STR4": "그는 그녀가 아는지 몰랐다. 꿈에서 그녀는 기다렸다 — 그는 그런 순간이 현실에 존재하지 않는다고 느꼈지만, 잠에서 기쁨으로 울었다.",
+        "N1-STR5": "****",
+        "N1-STR6": "그러나 더 자주 가슴에 공허함을 안고 깨어났다, 누군가 중요한 것을 잘라내고 떨림만 남긴 것처럼.",
+        "N1-STR7": "깨어 있을 때 그녀는 딴 곳을 보았고, 그는 한 번 쳐다보았다 — 숨이 멎었고, 생각 속에 영혼의 외침: '가지 마'.",
+        "N1-STR8": "나는 너와 함께 있을 수 없어, 인생에서 — 보답받지 못하는 사랑이니까!",
+        "N1-STR9": "그럼에도 심장은 뛰었다, 뛰었다, 뛰었다 — 그녀를 위해. 항상 그녀를 위해."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "생성",
+      "N2-STR2": "개인 저장소를 만들고 사진, 비디오 숨기기",
+      "N2-STR3": "저장소",
+      "N2-STR4": "컨테이너 1",
+      "N2-STR5": "암호 입력"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "오디오 플레이어",
+      "N3-STR2": "음악 및 오디오북용",
+      "N3-STR3": "당신은 수준을 이해하지 못합니다 (B(P)IV)",
+      "N3-STR3-1": "당신은 수준을 이해하지 못합니다 (B(P)IV)",
+      "N3-STR4": "내보내기",
+      "N3-STR5": "삭제"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "내 파일",
+      "N4-STR2": "기기에 남아 있으며 클라우드로 전송되지 않음",
+      "G-Кнопки": {
+        "N4-STR4": "보안",
+        "N4-STR5": "보호",
+        "N4-STR6": "암호",
+        "N4-STR7": "자동 잠금",
+        "N4-STR7-1": "10분",
+        "N4-STR8": "화면",
+        "N4-STR8-1": "잠금",
+        "N4-STR9": "메모리",
+        "N4-STR9-1": "정리",
+        "N4-STR10": "무차별 대입",
+        "N4-STR10-1": "5^60초",
+        "N4-STR11": "복구 암호",
+        "N4-STR12": "잠금"
+      }
+    }
+  },
+  "km-KH": {
+    "G-Картинка 1": {
+      "N1-STR1": "អ្នកអានដែលភ្ជាប់មកជាមួយ",
+      "N1-STR2": "និងអ្នកមើល",
+      "G-Текст": {
+        "N1-STR3": "ជាមួយរសជាតិឈឺចាប់ - អ៊ីរីណា ភីមេណូវ៉ា",
+        "N1-STR4": "គាត់មិនដឹងថានាងដឹងទេ។ ក្នុងសុបិននាងរង់ចាំ — គាត់មានអារម្មណ៍ថា ពេលវេលាបែបនេះមិនមាននៅក្នុងការពិតទេ ប៉ុន្តែគាត់យំដោយសេចក្តីសុខក្នុងដំណេក។",
+        "N1-STR5": "****",
+        "N1-STR6": "ប៉ុន្តែច្រើនដងគាត់ភ្ញាក់ឡើងដោយភាពទទេក្នុងទ្រូង ដូចជានរណាម្នាក់បានកាត់អ្វីដែលសំខាន់ចេញ ទុកតែការញាប់ញ័រ។",
+        "N1-STR7": "ភ្ញាក់ពីគេង នាងមើលទៅម្ខាង ហើយគាត់ងក់ក្រឡេកមើល — ដង្ហើមគាត់ឈប់ ហើយក្នុងគំនិតគាត់សម្រែកនៃព្រលឹង: 'កុំទៅ'។",
+        "N1-STR8": "ខ្ញុំមិនអាចនៅក្បែរអ្នកបានទេ ពីព្រោះក្នុងជីវិត — ស្នេហ៏គ្មានតបស្នង!",
+        "N1-STR9": "ប៉ុន្តែបេះដូងនៅតែលោត លោត លោត — សម្រាប់នាង។ ជានិច្ចសម្រាប់នាង។"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "បង្កើត",
+      "N2-STR2": "កន្លែងផ្ទុកឯកជន និងលាក់រូបថត វីដេអូ",
+      "N2-STR3": "កន្លែងផ្ទុក",
+      "N2-STR4": "ធុង ១",
+      "N2-STR5": "បញ្ចូលពាក្យសម្ងាត់"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ឧបករណ៍ចាក់សំឡេង",
+      "N3-STR2": "សម្រាប់តន្ត្រី និងសៀវភៅជាសំឡេង",
+      "N3-STR3": "អ្នកមិនយល់កម្រិត (B(P)IV)",
+      "N3-STR3-1": "អ្នកមិនយល់កម្រិត (B(P)IV)",
+      "N3-STR4": "នាំចេញ",
+      "N3-STR5": "លុប"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ឯកសាររបស់អ្នក",
+      "N4-STR2": "ស្ថិតនៅលើឧបករណ៍ ដោយមិនផ្ញើទៅពពក",
+      "G-Кнопки": {
+        "N4-STR4": "សុវត្ថិភាព",
+        "N4-STR5": "ការការពារ",
+        "N4-STR6": "ស៊ីហ្វ័រ",
+        "N4-STR7": "ចាក់សោរដោយស្វ័យប្រវត្តិ",
+        "N4-STR7-1": "១០ នាទី",
+        "N4-STR8": "អេក្រង់",
+        "N4-STR8-1": "ចាក់សោ",
+        "N4-STR9": "អង្គចងចាំ",
+        "N4-STR9-1": "សម្អាត",
+        "N4-STR10": "ការវាយប្រហារដោយកម្លាំង",
+        "N4-STR10-1": "៥^៦០ វិនាទី",
+        "N4-STR11": "ពាក្យសម្ងាត់ស្តារ",
+        "N4-STR12": "ចាក់សោ"
+      }
+    }
+  },
+  "lo-LA": {
+    "G-Картинка 1": {
+      "N1-STR1": "ຕົວອ່ານໃນຕົວ",
+      "N1-STR2": "ແລະຜູ້ເບິ່ງ",
+      "G-Текст": {
+        "N1-STR3": "ດ້ວຍລົດຊາດແຫ່ງຄວາມເຈັບປວດ - Irina Pimenova",
+        "N1-STR4": "ລາວບໍ່ຮູ້ວ່າລາວຮູ້ຫຼືບໍ່. ໃນຄວາມຝັນລາວລໍຖ້າ — ລາວຮູ້ສຶກວ່າເວລາແບບນັ້ນບໍ່ມີຢູ່ໃນຄວາມເປັນຈິງ, ແຕ່ລາວຮ້ອງໄຫ້ດ້ວຍຄວາມສຸກໃນເວລານອນ.",
+        "N1-STR5": "****",
+        "N1-STR6": "ແຕ່ສ່ວນຫຼາຍລາວຕື່ນນອນດ້ວຍຄວາມວ່າງເປົ່າຢູ່ໃນໜ້າເອິກ, ຄືກັບວ່າມີຄົນຕັດບາງສິ່ງທີ່ສຳຄັນອອກ, ເຫຼືອແຕ່ຄວາມສັ່ນເທົ່ານັ້ນ.",
+        "N1-STR7": "ຕື່ນນອນ, ນາງເບິ່ງໄປທາງອື່ນ, ແລະລາວມອງມາ — ລົມຫາຍໃຈຂອງລາວຢຸດ, ແລະໃນຄວາມຄິດຂອງລາວມີສຽງຮ້ອງຂອງຈິດວິນຍານ: 'ຢ່າໄປ'.",
+        "N1-STR8": "ຂ້ອຍບໍ່ສາມາດຢູ່ກັບເຈົ້າໄດ້, ເພາະວ່າໃນຊີວິດ — ຄວາມຮັກທີ່ບໍ່ໄດ້ຮັບການຕອບແທນ!",
+        "N1-STR9": "ແຕ່ຫົວໃຈຍັງເຕັ້ນ, ເຕັ້ນ, ເຕັ້ນ — ເພື່ອນາງ. ສະເໝີໄປເພື່ອນາງ."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ສ້າງ",
+      "N2-STR2": "ພື້ນທີ່ເກັບຂໍ້ມູນສ່ວນຕົວ ແລະເຊື່ອງຮູບຖ່າຍ, ວິດີໂອ",
+      "N2-STR3": "ພື້ນທີ່ເກັບຂໍ້ມູນ",
+      "N2-STR4": "ພາຊະນະ 1",
+      "N2-STR5": "ໃສ່ລະຫັດຜ່ານ"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ຕົວຫຼິ້ນສຽງ",
+      "N3-STR2": "ສຳລັບເພງ ແລະປຶ້ມສຽງ",
+      "N3-STR3": "ເຈົ້າບໍ່ເຂົ້າໃຈລະດັບ (B(P)IV)",
+      "N3-STR3-1": "ເຈົ້າບໍ່ເຂົ້າໃຈລະດັບ (B(P)IV)",
+      "N3-STR4": "ສົ່ງອອກ",
+      "N3-STR5": "ລຶບ"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ໄຟລ໌ຂອງທ່ານ",
+      "N4-STR2": "ຄົງຢູ່ໃນອຸປະກອນ, ບໍ່ມີການສົ່ງຂຶ້ນຄລາວ",
+      "G-Кнопки": {
+        "N4-STR4": "ຄວາມປອດໄພ",
+        "N4-STR5": "ການປ້ອງກັນ",
+        "N4-STR6": "ລະຫັດຜ່ານ",
+        "N4-STR7": "ລັອກອັດຕະໂນມັດ",
+        "N4-STR7-1": "10 ນາທີ",
+        "N4-STR8": "ໜ້າຈໍ",
+        "N4-STR8-1": "ລັອກ",
+        "N4-STR9": "ຫນ່ວຍຄວາມຈໍາ",
+        "N4-STR9-1": "ທຳຄວາມສະອາດ",
+        "N4-STR10": "ການໂຈມຕີດ້ວຍกำลัง",
+        "N4-STR10-1": "5^60 ວິນາທີ",
+        "N4-STR11": "ລະຫັດຜ່ານສຳລັບການກູ້ຄືນ",
+        "N4-STR12": "ລັອກ"
+      }
+    }
+  },
+  "lv": {
+    "G-Картинка 1": {
+      "N1-STR1": "IEBŪVĒTS LASĪTĀJS",
+      "N1-STR2": "UN SKATĪTĀJI",
+      "G-Текст": {
+        "N1-STR3": "Ar sāpju garšu - Irina Pimenova",
+        "N1-STR4": "Viņš nezināja, vai viņa zina. Sapņos viņa gaidīja — viņš juta, ka šāda brīža realitātē nav, bet aizmigtā raudāja no laimes.",
+        "N1-STR5": "****",
+        "N1-STR6": "Bet biežāk viņš pamodās ar tukšumu krūtīs, it kā kāds būtu izgriezis ko svarīgu, atstājot tikai trīsas.",
+        "N1-STR7": "Nomodā viņa skatījās garām, viņš uzmeta skatienu — elpa apstājās, un domās dvēseles kliedziens: 'Neaizej'.",
+        "N1-STR8": "Nevaru būt tev blakus, jo dzīvē — bezatbildīga mīlestība!",
+        "N1-STR9": "Tomēr sirds pukstēja, pukstēja, pukstēja — viņai. Vienmēr viņai."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "IZVEIDOT",
+      "N2-STR2": "privātu krātuvi un slēpt fotoattēlus, videoklipus",
+      "N2-STR3": "Krātuve",
+      "N2-STR4": "Tvertne 1",
+      "N2-STR5": "Ievadiet paroli"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio atskaņotājs",
+      "N3-STR2": "mūzikai un audiogrāmatām",
+      "N3-STR3": "Tev neizprotams līmenis (B(P)IV)",
+      "N3-STR3-1": "Tev neizprotams līmenis (B(P)IV)",
+      "N3-STR4": "Eksportēt",
+      "N3-STR5": "Dzēst"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "JŪSU FAILI",
+      "N4-STR2": "paliek ierīcē, bez augšupielādes mākonī",
+      "G-Кнопки": {
+        "N4-STR4": "Drošība",
+        "N4-STR5": "Aizsardzība",
+        "N4-STR6": "Šifrs",
+        "N4-STR7": "Auto bloķēšana",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Ekrāns",
+        "N4-STR8-1": "Bloķēt",
+        "N4-STR9": "Atmiņa",
+        "N4-STR9-1": "Tīrīšana",
+        "N4-STR10": "Brutāls uzlauzums",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Atjaunošanas parole",
+        "N4-STR12": "Bloķēt"
+      }
+    }
+  },
+  "lt": {
+    "G-Картинка 1": {
+      "N1-STR1": "ĮTAISYTAS SKAITYTUVAS",
+      "N1-STR2": "IR PERŽIŪROS PROGRAMOS",
+      "G-Текст": {
+        "N1-STR3": "Su skausmo skoniu - Irina Pimenova",
+        "N1-STR4": "Jis nežinojo, ar ji žino. Sapnuose ji laukė — jis jautė, kad tokios akimirkos realybėje nėra, bet sapne verkė iš laimės.",
+        "N1-STR5": "****",
+        "N1-STR6": "Bet dažniau pabudo su tuštuma krūtinėje, tarsi kas būtų išpjovęs kažką svarbaus, palikęs tik virpėjimą.",
+        "N1-STR7": "Prabudusi ji žiūrėjo pro šalį, o jis metė žvilgsnį — kvapas sustodavo, mintyse sielos šauksmas: 'Neik'.",
+        "N1-STR8": "Negaliu būti šalia tavęs, nes gyvenime — neatsakyta meilė!",
+        "N1-STR9": "Ir vis dėlto širdis plakė, plakė, plakė — dėl jos. Visada dėl jos."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "SUKURKITE",
+      "N2-STR2": "privačią saugyklą ir slėpkite nuotraukas, video",
+      "N2-STR3": "Saugykla",
+      "N2-STR4": "Talpykla 1",
+      "N2-STR5": "Įveskite slaptažodį"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Garso grotuvas",
+      "N3-STR2": "muzikai ir audioknygoms",
+      "N3-STR3": "Tu nesupranti lygio (B(P)IV)",
+      "N3-STR3-1": "Tu nesupranti lygio (B(P)IV)",
+      "N3-STR4": "Eksportuoti",
+      "N3-STR5": "Ištrinti"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "JŪSŲ FAILAI",
+      "N4-STR2": "lieka įrenginyje, nesiunčiami į debesį",
+      "G-Кнопки": {
+        "N4-STR4": "Saugumas",
+        "N4-STR5": "Apsauga",
+        "N4-STR6": "Šifras",
+        "N4-STR7": "Auto-užraktas",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Ekranas",
+        "N4-STR8-1": "Užrakinti",
+        "N4-STR9": "Atmintis",
+        "N4-STR9-1": "Valymas",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Atkūrimo slaptažodis",
+        "N4-STR12": "Užrakinti"
+      }
+    }
+  },
+  "mk-MK": {
+    "G-Картинка 1": {
+      "N1-STR1": "ВГРАДЕН ЧИТАЧ",
+      "N1-STR2": "И ПРЕГЛЕДУВАЧИ",
+      "G-Текст": {
+        "N1-STR3": "Со вкус на болка - Ирина Пименова",
+        "N1-STR4": "Тој не знаеше дали таа знае. Во соништата таа чекаше — чувствуваше дека таков миг не постои во реалноста, но плачеше од среќа во сон.",
+        "N1-STR5": "****",
+        "N1-STR6": "Но почесто се будеше со празнина во градите, како некој да исекол нешто важно, оставајќи само трепет.",
+        "N1-STR7": "Најаве таа гледаше настрана, а тој фрлаше поглед — здивот му застануваше, а во мислите крик на душата: 'Не оди'.",
+        "N1-STR8": "Не можам да сум до тебе, затоа што во животот — невратена љубов!",
+        "N1-STR9": "Сепак срцето чукаше, чукаше, чукаше — за неа. Секогаш за неа."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "СОЗДАДЕТЕ",
+      "N2-STR2": "приватно складиште и сокријте фотографии, видеа",
+      "N2-STR3": "Складиште",
+      "N2-STR4": "Контејнер 1",
+      "N2-STR5": "Внесете лозинка"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аудио плеер",
+      "N3-STR2": "за музика и аудиокниги",
+      "N3-STR3": "Не го разбираш нивото (Б(П)ИВ)",
+      "N3-STR3-1": "Не го разбираш нивото (Б(П)ИВ)",
+      "N3-STR4": "Извези",
+      "N3-STR5": "Избриши"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ВАШИТЕ ДАТОТЕКИ",
+      "N4-STR2": "остануваат на уредот, без испраќање во облак",
+      "G-Кнопки": {
+        "N4-STR4": "Безбедност",
+        "N4-STR5": "Заштита",
+        "N4-STR6": "Шифра",
+        "N4-STR7": "Автоблок",
+        "N4-STR7-1": "10 мин",
+        "N4-STR8": "Екран",
+        "N4-STR8-1": "Блокирај",
+        "N4-STR9": "Меморија",
+        "N4-STR9-1": "Чистење",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60с",
+        "N4-STR11": "Лозинка за обновување",
+        "N4-STR12": "Блокирај"
+      }
+    }
+  },
+  "ms": {
+    "G-Картинка 1": {
+      "N1-STR1": "PEMBACA BINAAN",
+      "N1-STR2": "DAN PAPARAN",
+      "G-Текст": {
+        "N1-STR3": "Dengan rasa sakit - Irina Pimenova",
+        "N1-STR4": "Dia tidak tahu sama ada dia tahu. Dalam mimpi dia menunggu — dia merasakan detik sebegitu tidak wujud dalam realiti, tapi menangis kerana gembira dalam tidur.",
+        "N1-STR5": "****",
+        "N1-STR6": "Tetapi lebih kerap dia bangun dengan kekosongan di dada, seolah-olah seseorang telah memotong sesuatu yang penting, hanya meninggalkan getaran.",
+        "N1-STR7": "Sedar, dia memandang ke sisi lain, dan dia melirik — nafasnya terhenti, dan dalam fikirannya jeritan jiwa: 'Jangan pergi'.",
+        "N1-STR8": "Saya tak boleh bersama kamu, kerana dalam hidup — cinta tidak berbalas!",
+        "N1-STR9": "Namun hati berdegup, berdegup, berdegup — untuknya. Sentiasa untuknya."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CIPTA",
+      "N2-STR2": "penyimpanan peribadi dan sembunyikan foto, video",
+      "N2-STR3": "Penyimpanan",
+      "N2-STR4": "Bekas 1",
+      "N2-STR5": "Masukkan kata laluan"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Pemain audio",
+      "N3-STR2": "untuk muzik dan buku audio",
+      "N3-STR3": "Anda tidak faham tahap (B(P)IV)",
+      "N3-STR3-1": "Anda tidak faham tahap (B(P)IV)",
+      "N3-STR4": "Eksport",
+      "N3-STR5": "Padam"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "FAIL ANDA",
+      "N4-STR2": "kekal pada peranti, tanpa hantar ke awan",
+      "G-Кнопки": {
+        "N4-STR4": "Keselamatan",
+        "N4-STR5": "Perlindungan",
+        "N4-STR6": "Sifir",
+        "N4-STR7": "Kunci auto",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Skrin",
+        "N4-STR8-1": "Kunci",
+        "N4-STR9": "Memori",
+        "N4-STR9-1": "Pembersihan",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Kata laluan pemulihan",
+        "N4-STR12": "Kunci"
+      }
+    }
+  },
+  "ms-MY": {
+    "G-Картинка 1": {
+      "N1-STR1": "PEMBACA BINAAN",
+      "N1-STR2": "DAN PAPARAN",
+      "G-Текст": {
+        "N1-STR3": "Dengan rasa sakit - Irina Pimenova",
+        "N1-STR4": "Dia tidak tahu sama ada dia tahu. Dalam mimpi dia menunggu — dia merasakan detik sebegitu tidak wujud dalam realiti, tapi menangis kerana gembira dalam tidur.",
+        "N1-STR5": "****",
+        "N1-STR6": "Tetapi lebih kerap dia bangun dengan kekosongan di dada, seolah-olah seseorang telah memotong sesuatu yang penting, hanya meninggalkan getaran.",
+        "N1-STR7": "Sedar, dia memandang ke sisi lain, dan dia melirik — nafasnya terhenti, dan dalam fikirannya jeritan jiwa: 'Jangan pergi'.",
+        "N1-STR8": "Saya tak boleh bersama kamu, kerana dalam hidup — cinta tidak berbalas!",
+        "N1-STR9": "Namun hati berdegup, berdegup, berdegup — untuknya. Sentiasa untuknya."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CIPTA",
+      "N2-STR2": "penyimpanan peribadi dan sembunyikan foto, video",
+      "N2-STR3": "Penyimpanan",
+      "N2-STR4": "Bekas 1",
+      "N2-STR5": "Masukkan kata laluan"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Pemain audio",
+      "N3-STR2": "untuk muzik dan buku audio",
+      "N3-STR3": "Anda tidak faham tahap (B(P)IV)",
+      "N3-STR3-1": "Anda tidak faham tahap (B(P)IV)",
+      "N3-STR4": "Eksport",
+      "N3-STR5": "Padam"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "FAIL ANDA",
+      "N4-STR2": "kekal pada peranti, tanpa hantar ke awan",
+      "G-Кнопки": {
+        "N4-STR4": "Keselamatan",
+        "N4-STR5": "Perlindungan",
+        "N4-STR6": "Sifir",
+        "N4-STR7": "Kunci auto",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Skrin",
+        "N4-STR8-1": "Kunci",
+        "N4-STR9": "Memori",
+        "N4-STR9-1": "Pembersihan",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Kata laluan pemulihan",
+        "N4-STR12": "Kunci"
+      }
+    }
+  },
+  "ml-IN": {
+    "G-Картинка 1": {
+      "N1-STR1": "ബിൽറ്റ്-ഇൻ റീഡർ",
+      "N1-STR2": "കൂടാതെ വ്യൂവറുകൾ",
+      "G-Текст": {
+        "N1-STR3": "വേദനയുടെ രുചിയോടെ - ഇറിന പിമെനോവ",
+        "N1-STR4": "അവൾക്കറിയാമോ എന്ന് അവനറിയില്ലായിരുന്നു. സ്വപ്നങ്ങളിൽ അവൾ കാത്തിരുന്നു — അത്തരമൊരു നിമിഷം യാഥാർത്ഥ്യത്തിൽ നിലവിലില്ലെന്ന് അവനു തോന്നി, പക്ഷേ ഉറക്കത്തിൽ സന്തോഷത്താൽ കരഞ്ഞു.",
+        "N1-STR5": "****",
+        "N1-STR6": "എന്നാൽ മിക്കപ്പോഴും അവൻ നെഞ്ചിൽ ശൂന്യതയോടെ ഉണർന്നു, ആരോ പ്രധാനപ്പെട്ട എന്തോ മുറിച്ചുമാറ്റിയതുപോലെ, വിറയൽ മാത്രം ബാക്കിയാക്കി.",
+        "N1-STR7": "ഉണർന്നിരിക്കുമ്പോൾ അവൾ മറുവശത്തേക്ക് നോക്കി, അവൻ ഒന്ന് കണ്ണോടിച്ചു — ശ്വാസം നിലച്ചു, ചിന്തകളിൽ ആത്മാവിന്റെ നിലവിളി: 'പോകരുത്'.",
+        "N1-STR8": "എനിക്ക് നിങ്ങളോടൊപ്പമിരിക്കാൻ കഴിയില്ല, കാരണം ജീവിതത്തിൽ — പ്രതിഫലിക്കാത്ത പ്രണയം!",
+        "N1-STR9": "എങ്കിലും ഹൃദയം മിടിച്ചു, മിടിച്ചു, മിടിച്ചു — അവൾക്കായി. എപ്പോഴും അവൾക്കായി."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "സൃഷ്ടിക്കുക",
+      "N2-STR2": "സ്വകാര്യ സംഭരണം, ഫോട്ടോകൾ, വീഡിയോകൾ മറയ്ക്കുക",
+      "N2-STR3": "സംഭരണം",
+      "N2-STR4": "കണ്ടെയ്നർ 1",
+      "N2-STR5": "പാസ്വേഡ് നൽകുക"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ഓഡിയോ പ്ലെയർ",
+      "N3-STR2": "സംഗീതത്തിനും ഓഡിയോ പുസ്തകങ്ങൾക്കുമായി",
+      "N3-STR3": "നിങ്ങൾക്ക് ലെവൽ മനസ്സിലാകുന്നില്ല (B(P)IV)",
+      "N3-STR3-1": "നിങ്ങൾക്ക് ലെവൽ മനസ്സിലാകുന്നില്ല (B(P)IV)",
+      "N3-STR4": "കയറ്റുമതി",
+      "N3-STR5": "ഇല്ലാതാക്കുക"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "നിങ്ങളുടെ ഫയലുകൾ",
+      "N4-STR2": "ഉപകരണത്തിൽ തന്നെ തുടരും, ക്ലൗഡിലേക്ക് അയയ്ക്കില്ല",
+      "G-Кнопки": {
+        "N4-STR4": "സുരക്ഷ",
+        "N4-STR5": "സംരക്ഷണം",
+        "N4-STR6": "സൈഫർ",
+        "N4-STR7": "ഓട്ടോ-ലോക്ക്",
+        "N4-STR7-1": "10 മിനിറ്റ്",
+        "N4-STR8": "സ്ക്രീൻ",
+        "N4-STR8-1": "ലോക്ക്",
+        "N4-STR9": "മെമ്മറി",
+        "N4-STR9-1": "വൃത്തിയാക്കൽ",
+        "N4-STR10": "ബ്രൂട്ട്ഫോഴ്സ്",
+        "N4-STR10-1": "5^60 സെക്കൻഡ്",
+        "N4-STR11": "വീണ്ടെടുക്കൽ പാസ്വേഡ്",
+        "N4-STR12": "ലോക്ക്"
+      }
+    }
+  },
+  "mr-IN": {
+    "G-Картинка 1": {
+      "N1-STR1": "अंगभूत वाचक",
+      "N1-STR2": "आणि दर्शक",
+      "G-Текст": {
+        "N1-STR3": "वेदनेच्या चवीसह - इरिना पिमेनोवा",
+        "N1-STR4": "तिला माहीत आहे की नाही हे त्याला माहीत नव्हते. स्वप्नात ती वाट पाहत होती — अशा क्षणाचे अस्तित्व प्रत्यक्षात नाही असे त्याला वाटले, पण झोपेत आनंदाने रडला.",
+        "N1-STR5": "****",
+        "N1-STR6": "पण बर्याचदा तो छातीत रिकामेपणा घेऊन उठला, जणू कोणीतरी महत्त्वाचे काहीतरी कापून काढले होते, फक्त एक थरकाप उरला होता.",
+        "N1-STR7": "जागे असताना ती दुसरीकडे पाहात असे, आणि तो एक नजर टाकतो — श्वास थांबे, आणि विचारात आत्म्याची आरोळी: 'जाऊ नको'.",
+        "N1-STR8": "मी तुझ्यासोबत राहू शकत नाही, कारण आयुष्यात — एकतर्फी प्रेम!",
+        "N1-STR9": "तरीही हृदय धडधडत होते, धडधडत होते, धडधडत होते — तिच्यासाठी. नेहमी तिच्यासाठी."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "तयार करा",
+      "N2-STR2": "खाजगी संचयन आणि फोटो, व्हिडिओ लपवा",
+      "N2-STR3": "संचयन",
+      "N2-STR4": "कंटेनर 1",
+      "N2-STR5": "पासवर्ड प्रविष्ट करा"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ऑडिओ प्लेअर",
+      "N3-STR2": "संगीत आणि ऑडिओ पुस्तकांसाठी",
+      "N3-STR3": "तुला स्तर समजत नाही (B(P)IV)",
+      "N3-STR3-1": "तुला स्तर समजत नाही (B(P)IV)",
+      "N3-STR4": "निर्यात करा",
+      "N3-STR5": "हटवा"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "तुमच्या फाइल्स",
+      "N4-STR2": "डिव्हाइसवर राहतात, क्लाउडवर पाठवल्या जात नाहीत",
+      "G-Кнопки": {
+        "N4-STR4": "सुरक्षा",
+        "N4-STR5": "संरक्षण",
+        "N4-STR6": "सिफर",
+        "N4-STR7": "ऑटो-लॉक",
+        "N4-STR7-1": "10 मिनिटे",
+        "N4-STR8": "स्क्रीन",
+        "N4-STR8-1": "लॉक करा",
+        "N4-STR9": "मेमरी",
+        "N4-STR9-1": "स्वच्छता",
+        "N4-STR10": "ब्रूटफोर्स",
+        "N4-STR10-1": "5^60 सेकंद",
+        "N4-STR11": "पुनर्प्राप्ती पासवर्ड",
+        "N4-STR12": "लॉक करा"
+      }
+    }
+  },
+  "mn-MN": {
+    "G-Картинка 1": {
+      "N1-STR1": "СУУЛГАТАЙ УНШИГЧ",
+      "N1-STR2": "БА ҮЗЭГЧ",
+      "G-Текст": {
+        "N1-STR3": "Өвдөлтийн амттай - Ирина Пименова",
+        "N1-STR4": "Тэр түүнийг мэдэх эсэхийг мэдэхгүй байв. Зүүдэндээ тэр хүлээж байв — тэр ийм мөч бодит байдалд байхгүй гэдгийг мэдэрч, гэхдээ нойрондоо баярлаж уйлсан.",
+        "N1-STR5": "****",
+        "N1-STR6": "Гэхдээ ихэнхдээ цээжин дотор хоосон зүйлээр сэрдэг, хэн нэгэн чухал зүйлийг тасдаж авсан мэт, зөвхөн чичирхийлэл үлдээсэн.",
+        "N1-STR7": "Сэрүүн үед тэр хажуу тийш харж, тэр нэг харц шиднэ — амьсгал нь зогсч, бодолд нь сэтгэлийн хашгираан: 'Битгий яв'.",
+        "N1-STR8": "Би чамтай хамт байж чадахгүй, учир нь амьдралд — хариу нэхээгүй хайр!",
+        "N1-STR9": "Гэсэн хэдий ч зүрх цохилж, цохилж, цохилж байв — түүний төлөө. Үргэлж түүний төлөө."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ҮҮСГЭХ",
+      "N2-STR2": "хувийн агуулах үүсгэж, зураг, видеонуудыг нуух",
+      "N2-STR3": "Агуулах",
+      "N2-STR4": "Сав 1",
+      "N2-STR5": "Нууц үг оруулна уу"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аудио тоглуулагч",
+      "N3-STR2": "хөгжим, аудио номонд зориулсан",
+      "N3-STR3": "Та түвшинг ойлгохгүй байна (B(P)IV)",
+      "N3-STR3-1": "Та түвшинг ойлгохгүй байна (B(P)IV)",
+      "N3-STR4": "Экспорт",
+      "N3-STR5": "Устгах"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ТАНЫ ФАЙЛУУД",
+      "N4-STR2": "төхөөрөмж дээр үлдэж, үүлэнд илгээгдэхгүй",
+      "G-Кнопки": {
+        "N4-STR4": "Аюулгүй байдал",
+        "N4-STR5": "Хамгаалалт",
+        "N4-STR6": "Шифр",
+        "N4-STR7": "Авто түгжих",
+        "N4-STR7-1": "10 мин",
+        "N4-STR8": "Дэлгэц",
+        "N4-STR8-1": "Түгжих",
+        "N4-STR9": "Санах ой",
+        "N4-STR9-1": "Цэвэрлэх",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60с",
+        "N4-STR11": "Сэргээх нууц үг",
+        "N4-STR12": "Түгжих"
+      }
+    }
+  },
+  "de-DE": {
+    "G-Картинка 1": {
+      "N1-STR1": "INTEGRIERTER LESER",
+      "N1-STR2": "UND BETRACHTER",
+      "G-Текст": {
+        "N1-STR3": "Mit Geschmack von Schmerz - Irina Pimenova",
+        "N1-STR4": "Er wusste nicht, ob sie es wusste. In Träumen wartete sie — er fühlte, dass ein solcher Moment in der Realität nicht existierte, aber im Schlaf vor Freude weinte.",
+        "N1-STR5": "****",
+        "N1-STR6": "Aber häufiger wachte er mit Leere in der Brust auf, als ob jemand etwas Wichtiges herausgeschnitten hätte, nur ein Zittern hinterließ.",
+        "N1-STR7": "Im Wachen schaute sie weg, und er warf einen Blick — sein Atem stockte, und in seinen Gedanken ein Schrei der Seele: 'Geh nicht'.",
+        "N1-STR8": "Ich kann nicht bei dir sein, denn im Leben — unerwiderte Liebe!",
+        "N1-STR9": "Doch das Herz schlug, schlug, schlug — für sie. Immer für sie."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ERSTELLEN SIE",
+      "N2-STR2": "einen privaten Speicher und verstecken Sie Fotos, Videos",
+      "N2-STR3": "Speicher",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Passwort eingeben"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audioplayer",
+      "N3-STR2": "für Musik und Hörbücher",
+      "N3-STR3": "Du verstehst Level nicht (B(P)IV)",
+      "N3-STR3-1": "Du verstehst Level nicht (B(P)IV)",
+      "N3-STR4": "Exportieren",
+      "N3-STR5": "Löschen"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "IHRE DATEIEN",
+      "N4-STR2": "bleiben auf dem Gerät, kein Hochladen in die Cloud",
+      "G-Кнопки": {
+        "N4-STR4": "Sicherheit",
+        "N4-STR5": "Schutz",
+        "N4-STR6": "Chiffre",
+        "N4-STR7": "Automatische Sperre",
+        "N4-STR7-1": "10 Min",
+        "N4-STR8": "Bildschirm",
+        "N4-STR8-1": "Sperren",
+        "N4-STR9": "Speicher",
+        "N4-STR9-1": "Bereinigen",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Wiederherstellungspasswort",
+        "N4-STR12": "Sperren"
+      }
+    }
+  },
+  "ne-NP": {
+    "G-Картинка 1": {
+      "N1-STR1": "अन्तर्निर्मित पाठक",
+      "N1-STR2": "र दर्शकहरू",
+      "G-Текст": {
+        "N1-STR3": "पीडाको स्वाद संग - इरिना पिमेनोभा",
+        "N1-STR4": "उसलाई थाहा थिएन उनलाई थाहा छ कि छैन। सपनामा उनी पर्खन्थिन् — उसले यस्तो क्षण वास्तविकतामा अवस्थित छैन भन्ने महसुस गरे, तर निद्रामा खुशीले रोयो।",
+        "N1-STR5": "****",
+        "N1-STR6": "तर अधिकतर उसको छातीमा शून्यताका साथ ब्युँझन्थ्यो, जस्तो कि कसैले केही महत्त्वपूर्ण कुरा काटेर लगेको थियो, केवल एक कम्पन मात्र छोडेर।",
+        "N1-STR7": "ब्यूँझँदा, उनी अर्कोतिर हेरिन्, र उसले एक नजर हान्यो — सास रोकियो, र उसको विचारमा आत्माको चिच्याइ: 'नजाऊ'।",
+        "N1-STR8": "म तिम्रो साथमा हुन सक्दिन, किनकि जीवनमा — एकतर्फी प्रेम!",
+        "N1-STR9": "तैपनि मुटु धड्कियो, धड्कियो, धड्कियो — उनको निम्ति। सधैं उनको निम्ति।"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "सिर्जना गर्नुहोस्",
+      "N2-STR2": "एक निजी भण्डारण र फोटो, भिडियोहरू लुकाउनुहोस्",
+      "N2-STR3": "भण्डारण",
+      "N2-STR4": "कन्टेनर १",
+      "N2-STR5": "पासवर्ड प्रविष्ट गर्नुहोस्"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "अडियो प्लेयर",
+      "N3-STR2": "संगीत र अडियो पुस्तकहरूको लागि",
+      "N3-STR3": "तपाईं स्तर बुझ्नुहुन्न (B(P)IV)",
+      "N3-STR3-1": "तपाईं स्तर बुझ्नुहुन्न (B(P)IV)",
+      "N3-STR4": "निर्यात गर्नुहोस्",
+      "N3-STR5": "मेटाउनुहोस्"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "तपाईंका फाइलहरू",
+      "N4-STR2": "यन्त्र मा रहन्छन्, क्लाउडमा पठाइँदैन",
+      "G-Кнопки": {
+        "N4-STR4": "सुरक्षा",
+        "N4-STR5": "सुरक्षण",
+        "N4-STR6": "साइफर",
+        "N4-STR7": "स्वत: ताला",
+        "N4-STR7-1": "१० मिनेट",
+        "N4-STR8": "स्क्रिन",
+        "N4-STR8-1": "ताला लगाउनुहोस्",
+        "N4-STR9": "मेमोरी",
+        "N4-STR9-1": "सफाई",
+        "N4-STR10": "ब्रुटफोर्स",
+        "N4-STR10-1": "५^६० सेकेन्ड",
+        "N4-STR11": "पुन:प्राप्ति पासवर्ड",
+        "N4-STR12": "ताला लगाउनुहोस्"
+      }
+    }
+  },
+  "nl-NL": {
+    "G-Картинка 1": {
+      "N1-STR1": "INGEBOUWDE LEZER",
+      "N1-STR2": "EN BEKIKKERS",
+      "G-Текст": {
+        "N1-STR3": "Met een vleugje pijn - Irina Pimenova",
+        "N1-STR4": "Hij wist niet of zij het wist. In dromen wachtte ze — hij voelde dat zoiets niet bestond in de werkelijkheid, maar huilde van vreugde in zijn slaap.",
+        "N1-STR5": "****",
+        "N1-STR6": "Maar vaker werd hij wakker met een leegte in zijn borst, alsof iemand iets belangrijks had weggesneden, alleen een trilling achterlatend.",
+        "N1-STR7": "Wakker keek ze weg, en hij wierp een blik — zijn adem stokte, en in zijn gedachten een schreeuw van de ziel: 'Ga niet'.",
+        "N1-STR8": "Ik kan niet bij je zijn, want in het leven — onbeantwoorde liefde!",
+        "N1-STR9": "Toch klopte het hart, klopte, klopte — voor haar. Altijd voor haar."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "MAAK",
+      "N2-STR2": "een privéopslag en verberg foto's, video's",
+      "N2-STR3": "Opslag",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Voer wachtwoord in"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audiospeler",
+      "N3-STR2": "voor muziek en luisterboeken",
+      "N3-STR3": "Je begrijpt niveau niet (B(P)IV)",
+      "N3-STR3-1": "Je begrijpt niveau niet (B(P)IV)",
+      "N3-STR4": "Exporteren",
+      "N3-STR5": "Verwijderen"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "UW BESTANDEN",
+      "N4-STR2": "blijven op het apparaat, geen upload naar de cloud",
+      "G-Кнопки": {
+        "N4-STR4": "Beveiliging",
+        "N4-STR5": "Bescherming",
+        "N4-STR6": "Cijfer",
+        "N4-STR7": "Automatisch vergrendelen",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Scherm",
+        "N4-STR8-1": "Vergrendelen",
+        "N4-STR9": "Geheugen",
+        "N4-STR9-1": "Opschonen",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Herstelwachtwoord",
+        "N4-STR12": "Vergrendelen"
+      }
+    }
+  },
+  "no-NO": {
+    "G-Картинка 1": {
+      "N1-STR1": "INNEBYGGET LESER",
+      "N1-STR2": "OG VISNINGSPROGRAMMER",
+      "G-Текст": {
+        "N1-STR3": "Med smak av smerte - Irina Pimenova",
+        "N1-STR4": "Han visste ikke om hun visste. I drømmer ventet hun — han følte at et slikt øyeblikk ikke fantes i virkeligheten, men gråt av glede i søvne.",
+        "N1-STR5": "****",
+        "N1-STR6": "Men oftere våknet han med tomhet i brystet, som om noen hadde skåret ut noe viktig, bare etterlot en skjelving.",
+        "N1-STR7": "Våken så hun bort, og han kastet et blikk — pusten stoppet, og i tankene hans et skrik fra sjelen: 'Ikke dra'.",
+        "N1-STR8": "Jeg kan ikke være sammen med deg, for i livet — ubesvart kjærlighet!",
+        "N1-STR9": "Likevel slo hjertet, slo, slo — for henne. Alltid for henne."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "OPPRETT",
+      "N2-STR2": "en privat lagring og skjul bilder, videoer",
+      "N2-STR3": "Lagring",
+      "N2-STR4": "Beholder 1",
+      "N2-STR5": "Skriv inn passord"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audiospiller",
+      "N3-STR2": "for musikk og lydbøker",
+      "N3-STR3": "Du forstår ikke nivå (B(P)IV)",
+      "N3-STR3-1": "Du forstår ikke nivå (B(P)IV)",
+      "N3-STR4": "Eksporter",
+      "N3-STR5": "Slett"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "DINE FILER",
+      "N4-STR2": "blir på enheten, ingen opplasting til skyen",
+      "G-Кнопки": {
+        "N4-STR4": "Sikkerhet",
+        "N4-STR5": "Beskyttelse",
+        "N4-STR6": "Chiffer",
+        "N4-STR7": "Autolås",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Skjerm",
+        "N4-STR8-1": "Lås",
+        "N4-STR9": "Minne",
+        "N4-STR9-1": "Rengjøring",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Gjenopprettingspassord",
+        "N4-STR12": "Lås"
+      }
+    }
+  },
+  "pa": {
+    "G-Картинка 1": {
+      "N1-STR1": "ਅੰਦਰੂਨੀ ਰੀਡਰ",
+      "N1-STR2": "ਅਤੇ ਦਰਸ਼ਕ",
+      "G-Текст": {
+        "N1-STR3": "ਦਰਦ ਦੇ ਸਵਾਦ ਨਾਲ - ਇਰੀਨਾ ਪਿਮੇਨੋਵਾ",
+        "N1-STR4": "ਉਹ ਨਹੀਂ ਜਾਣਦਾ ਸੀ ਕਿ ਉਹ ਜਾਣਦੀ ਹੈ ਜਾਂ ਨਹੀਂ। ਸੁਪਨਿਆਂ ਵਿੱਚ ਉਹ ਉਡੀਕ ਕਰਦੀ ਸੀ — ਉਸਨੇ ਮਹਿਸੂਸ ਕੀਤਾ ਕਿ ਅਜਿਹਾ ਪਲ ਹਕੀਕਤ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਸੀ, ਪਰ ਨੀਂਦ ਵਿੱਚ ਖੁਸ਼ੀ ਨਾਲ ਰੋਇਆ।",
+        "N1-STR5": "****",
+        "N1-STR6": "ਪਰ ਅਕਸਰ ਉਹ ਛਾਤੀ ਵਿੱਚ ਖਾਲੀਪਣ ਨਾਲ ਜਾਗਦਾ ਸੀ, ਜਿਵੇਂ ਕਿਸੇ ਨੇ ਕੁਝ ਮਹੱਤਵਪੂਰਨ ਕੱਟ ਕੇ ਕੱਢ ਦਿੱਤਾ ਹੋਵੇ, ਸਿਰਫ ਇੱਕ ਕੰਬਣੀ ਛੱਡ ਕੇ।",
+        "N1-STR7": "ਜਾਗਦੇ ਹੋਏ, ਉਹ ਦੂਜੇ ਪਾਸੇ ਦੇਖਦੀ ਸੀ, ਅਤੇ ਉਹ ਇੱਕ ਨਜ਼ਰ ਮਾਰਦਾ — ਸਾਹ ਰੁਕ ਜਾਂਦਾ, ਅਤੇ ਉਸਦੇ ਵਿਚਾਰਾਂ ਵਿੱਚ ਰੂਹ ਦੀ ਚੀਕ: 'ਨਾ ਜਾਣਾ'।",
+        "N1-STR8": "ਮੈਂ ਤੁਹਾਡੇ ਨਾਲ ਨਹੀਂ ਰਹਿ ਸਕਦਾ, ਕਿਉਂਕਿ ਜ਼ਿੰਦਗੀ ਵਿੱਚ — ਬੇਜਵਾਬ ਪਿਆਰ!",
+        "N1-STR9": "ਫਿਰ ਵੀ ਦਿਲ ਧੜਕਦਾ ਸੀ, ਧੜਕਦਾ ਸੀ, ਧੜਕਦਾ ਸੀ — ਉਸ ਲਈ। ਹਮੇਸ਼ਾ ਉਸ ਲਈ।"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ਬਣਾਓ",
+      "N2-STR2": "ਇੱਕ ਪ੍ਰਾਈਵੇਟ ਸਟੋਰੇਜ ਅਤੇ ਫੋਟੋਆਂ, ਵੀਡੀਓ ਲੁਕਾਓ",
+      "N2-STR3": "ਸਟੋਰੇਜ",
+      "N2-STR4": "ਕੰਟੇਨਰ 1",
+      "N2-STR5": "ਪਾਸਵਰਡ ਦਾਖਲ ਕਰੋ"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ਆਡੀਓ ਪਲੇਅਰ",
+      "N3-STR2": "ਸੰਗੀਤ ਅਤੇ ਆਡੀਓ ਕਿਤਾਬਾਂ ਲਈ",
+      "N3-STR3": "ਤੁਸੀਂ ਪੱਧਰ ਨਹੀਂ ਸਮਝਦੇ (B(P)IV)",
+      "N3-STR3-1": "ਤੁਸੀਂ ਪੱਧਰ ਨਹੀਂ ਸਮਝਦੇ (B(P)IV)",
+      "N3-STR4": "ਐਕਸਪੋਰਟ",
+      "N3-STR5": "ਮਿਟਾਓ"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ਤੁਹਾਡੀਆਂ ਫਾਈਲਾਂ",
+      "N4-STR2": "ਡਿਵਾਈਸ 'ਤੇ ਰਹਿੰਦੀਆਂ ਹਨ, ਕਲਾਉਡ 'ਤੇ ਨਹੀਂ ਭੇਜੀਆਂ ਜਾਂਦੀਆਂ",
+      "G-Кнопки": {
+        "N4-STR4": "ਸੁਰੱਖਿਆ",
+        "N4-STR5": "ਸੁਰੱਖਿਆ",
+        "N4-STR6": "ਸਿਫਰ",
+        "N4-STR7": "ਆਟੋ-ਲਾਕ",
+        "N4-STR7-1": "10 ਮਿੰਟ",
+        "N4-STR8": "ਸਕ੍ਰੀਨ",
+        "N4-STR8-1": "ਲਾਕ",
+        "N4-STR9": "ਮੈਮੋਰੀ",
+        "N4-STR9-1": "ਸਾਫ਼ ਕਰੋ",
+        "N4-STR10": "ਬਰੂਟਫੋਰਸ",
+        "N4-STR10-1": "5^60 ਸਕਿੰਟ",
+        "N4-STR11": "ਰਿਕਵਰੀ ਪਾਸਵਰਡ",
+        "N4-STR12": "ਲਾਕ"
+      }
+    }
+  },
+  "fa": {
+    "G-Картинка 1": {
+      "N1-STR1": "خواننده توکار",
+      "N1-STR2": "و نمایندگان",
+      "G-Текст": {
+        "N1-STR3": "با طعم درد - ایرینا پیمنوا",
+        "N1-STR4": "او نمی‌دانست آیا او می‌داند. در خواب‌ها او منتظر بود — او احساس می‌کرد چنین لحظه‌ای در واقعیت وجود ندارد، اما در خواب از خوشحالی گریه می‌کرد.",
+        "N1-STR5": "****",
+        "N1-STR6": "اما بیشتر اوقات با تهی‌شدگی در سینه بیدار می‌شد، گویی کسی چیزی مهم را بریده است، فقط یک لرز باقی گذاشته است.",
+        "N1-STR7": "در بیداری او به طرف دیگر نگاه می‌کرد، و او یک نگاه می‌انداخت — نفسش بند می‌آمد، و در افکارش فریاد روح: 'نرو'.",
+        "N1-STR8": "نمی‌توانم کنار تو باشم، زیرا در زندگی — عشق بی‌پاسخ!",
+        "N1-STR9": "با این حال قلب می‌زد، می‌زد، می‌زد — برای او. همیشه برای او."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ایجاد کنید",
+      "N2-STR2": "یک انبار خصوصی و مخفی کردن عکس‌ها، ویدیوها",
+      "N2-STR3": "انبار",
+      "N2-STR4": "ظرف ۱",
+      "N2-STR5": "رمز عبور را وارد کنید"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "پخش‌کننده صوتی",
+      "N3-STR2": "برای موسیقی و کتاب‌های صوتی",
+      "N3-STR3": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR3-1": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR4": "صادرات",
+      "N3-STR5": "حذف"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "فایل‌های شما",
+      "N4-STR2": "روی دستگاه می‌مانند، بدون ارسال به ابر",
+      "G-Кнопки": {
+        "N4-STR4": "امنیت",
+        "N4-STR5": "حفاظت",
+        "N4-STR6": "رمز",
+        "N4-STR7": "قفل خودکار",
+        "N4-STR7-1": "۱۰ دقیقه",
+        "N4-STR8": "صفحه نمایش",
+        "N4-STR8-1": "قفل",
+        "N4-STR9": "حافظه",
+        "N4-STR9-1": "پاکسازی",
+        "N4-STR10": "بروت فورس",
+        "N4-STR10-1": "۵^۶۰ ثانیه",
+        "N4-STR11": "رمز بازیابی",
+        "N4-STR12": "قفل"
+      }
+    }
+  },
+  "fa-AE": {
+    "G-Картинка 1": {
+      "N1-STR1": "خواننده توکار",
+      "N1-STR2": "و نمایندگان",
+      "G-Текст": {
+        "N1-STR3": "با طعم درد - ایرینا پیمنوا",
+        "N1-STR4": "او نمی‌دانست آیا او می‌داند. در خواب‌ها او منتظر بود — او احساس می‌کرد چنین لحظه‌ای در واقعیت وجود ندارد، اما در خواب از خوشحالی گریه می‌کرد.",
+        "N1-STR5": "****",
+        "N1-STR6": "اما بیشتر اوقات با تهی‌شدگی در سینه بیدار می‌شد، گویی کسی چیزی مهم را بریده است، فقط یک لرز باقی گذاشته است.",
+        "N1-STR7": "در بیداری او به طرف دیگر نگاه می‌کرد، و او یک نگاه می‌انداخت — نفسش بند می‌آمد، و در افکارش فریاد روح: 'نرو'.",
+        "N1-STR8": "نمی‌توانم کنار تو باشم، زیرا در زندگی — عشق بی‌پاسخ!",
+        "N1-STR9": "با این حال قلب می‌زد، می‌زد، می‌زد — برای او. همیشه برای او."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ایجاد کنید",
+      "N2-STR2": "یک انبار خصوصی و مخفی کردن عکس‌ها، ویدیوها",
+      "N2-STR3": "انبار",
+      "N2-STR4": "ظرف ۱",
+      "N2-STR5": "رمز عبور را وارد کنید"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "پخش‌کننده صوتی",
+      "N3-STR2": "برای موسیقی و کتاب‌های صوتی",
+      "N3-STR3": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR3-1": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR4": "صادرات",
+      "N3-STR5": "حذف"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "فایل‌های شما",
+      "N4-STR2": "روی دستگاه می‌مانند، بدون ارسال به ابر",
+      "G-Кнопки": {
+        "N4-STR4": "امنیت",
+        "N4-STR5": "حفاظت",
+        "N4-STR6": "رمز",
+        "N4-STR7": "قفل خودکار",
+        "N4-STR7-1": "۱۰ دقیقه",
+        "N4-STR8": "صفحه نمایش",
+        "N4-STR8-1": "قفل",
+        "N4-STR9": "حافظه",
+        "N4-STR9-1": "پاکسازی",
+        "N4-STR10": "بروت فورس",
+        "N4-STR10-1": "۵^۶۰ ثانیه",
+        "N4-STR11": "رمز بازیابی",
+        "N4-STR12": "قفل"
+      }
+    }
+  },
+  "fa-AF": {
+    "G-Картинка 1": {
+      "N1-STR1": "خواننده توکار",
+      "N1-STR2": "و نمایندگان",
+      "G-Текст": {
+        "N1-STR3": "با طعم درد - ایرینا پیمنوا",
+        "N1-STR4": "او نمی‌دانست آیا او می‌داند. در خواب‌ها او منتظر بود — او احساس می‌کرد چنین لحظه‌ای در واقعیت وجود ندارد، اما در خواب از خوشحالی گریه می‌کرد.",
+        "N1-STR5": "****",
+        "N1-STR6": "اما بیشتر اوقات با تهی‌شدگی در سینه بیدار می‌شد، گویی کسی چیزی مهم را بریده است، فقط یک لرز باقی گذاشته است.",
+        "N1-STR7": "در بیداری او به طرف دیگر نگاه می‌کرد، و او یک نگاه می‌انداخت — نفسش بند می‌آمد، و در افکارش فریاد روح: 'نرو'.",
+        "N1-STR8": "نمی‌توانم کنار تو باشم، زیرا در زندگی — عشق بی‌پاسخ!",
+        "N1-STR9": "با این حال قلب می‌زد، می‌زد، می‌زد — برای او. همیشه برای او."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ایجاد کنید",
+      "N2-STR2": "یک انبار خصوصی و مخفی کردن عکس‌ها، ویدیوها",
+      "N2-STR3": "انبار",
+      "N2-STR4": "ظرف ۱",
+      "N2-STR5": "رمز عبور را وارد کنید"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "پخش‌کننده صوتی",
+      "N3-STR2": "برای موسیقی و کتاب‌های صوتی",
+      "N3-STR3": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR3-1": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR4": "صادرات",
+      "N3-STR5": "حذف"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "فایل‌های شما",
+      "N4-STR2": "روی دستگاه می‌مانند، بدون ارسال به ابر",
+      "G-Кнопки": {
+        "N4-STR4": "امنیت",
+        "N4-STR5": "حفاظت",
+        "N4-STR6": "رمز",
+        "N4-STR7": "قفل خودکار",
+        "N4-STR7-1": "۱۰ دقیقه",
+        "N4-STR8": "صفحه نمایش",
+        "N4-STR8-1": "قفل",
+        "N4-STR9": "حافظه",
+        "N4-STR9-1": "پاکسازی",
+        "N4-STR10": "بروت فورس",
+        "N4-STR10-1": "۵^۶۰ ثانیه",
+        "N4-STR11": "رمز بازیابی",
+        "N4-STR12": "قفل"
+      }
+    }
+  },
+  "fa-IR": {
+    "G-Картинка 1": {
+      "N1-STR1": "خواننده توکار",
+      "N1-STR2": "و نمایندگان",
+      "G-Текст": {
+        "N1-STR3": "با طعم درد - ایرینا پیمنوا",
+        "N1-STR4": "او نمی‌دانست آیا او می‌داند. در خواب‌ها او منتظر بود — او احساس می‌کرد چنین لحظه‌ای در واقعیت وجود ندارد، اما در خواب از خوشحالی گریه می‌کرد.",
+        "N1-STR5": "****",
+        "N1-STR6": "اما بیشتر اوقات با تهی‌شدگی در سینه بیدار می‌شد، گویی کسی چیزی مهم را بریده است، فقط یک لرز باقی گذاشته است.",
+        "N1-STR7": "در بیداری او به طرف دیگر نگاه می‌کرد، و او یک نگاه می‌انداخت — نفسش بند می‌آمد، و در افکارش فریاد روح: 'نرو'.",
+        "N1-STR8": "نمی‌توانم کنار تو باشم، زیرا در زندگی — عشق بی‌پاسخ!",
+        "N1-STR9": "با این حال قلب می‌زد، می‌زد، می‌زد — برای او. همیشه برای او."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "ایجاد کنید",
+      "N2-STR2": "یک انبار خصوصی و مخفی کردن عکس‌ها، ویدیوها",
+      "N2-STR3": "انبار",
+      "N2-STR4": "ظرف ۱",
+      "N2-STR5": "رمز عبور را وارد کنید"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "پخش‌کننده صوتی",
+      "N3-STR2": "برای موسیقی و کتاب‌های صوتی",
+      "N3-STR3": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR3-1": "شما سطح را درک نمی‌کنید (B(P)IV)",
+      "N3-STR4": "صادرات",
+      "N3-STR5": "حذف"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "فایل‌های شما",
+      "N4-STR2": "روی دستگاه می‌مانند، بدون ارسال به ابر",
+      "G-Кнопки": {
+        "N4-STR4": "امنیت",
+        "N4-STR5": "حفاظت",
+        "N4-STR6": "رمز",
+        "N4-STR7": "قفل خودکار",
+        "N4-STR7-1": "۱۰ دقیقه",
+        "N4-STR8": "صفحه نمایش",
+        "N4-STR8-1": "قفل",
+        "N4-STR9": "حافظه",
+        "N4-STR9-1": "پاکسازی",
+        "N4-STR10": "بروت فورس",
+        "N4-STR10-1": "۵^۶۰ ثانیه",
+        "N4-STR11": "رمز بازیابی",
+        "N4-STR12": "قفل"
+      }
+    }
+  },
+  "pl-PL": {
+    "G-Картинка 1": {
+      "N1-STR1": "WBU­DOWANY CZYTNIK",
+      "N1-STR2": "I PRZEGLĄDARKI",
+      "G-Текст": {
+        "Название": "Со вкусом боли - Ирина Пименова",
+        "N1-STR3": "Z posmakiem bólu - Irina Pimenova",
+        "N1-STR4": "Nie wiedział, czy ona wie. We śnie czekała — czuł, że taka chwila nie istnieje w rzeczywistości, ale płakał ze szczęścia we śnie.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ale częściej budził się z pustką w piersi, jakby ktoś wyciął coś ważnego, pozostawiając tylko drżenie.",
+        "N1-STR7": "Na jawie patrzyła w bok, a on rzucał spojrzenie — dech zamierał, a w myślach krzyk duszy: 'Nie odchodź'.",
+        "N1-STR8": "Nie mogę być przy tobie, bo w życiu — miłość bez wzajemności!",
+        "N1-STR9": "A jednak serce biło, biło, biło — dla niej. Zawsze dla niej."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "UTWÓRZ",
+      "N2-STR2": "prywatne miejsce przechowywania i ukrywaj zdjęcia, filmy",
+      "N2-STR3": "Miejsce przechowywania",
+      "N2-STR4": "Pojemnik 1",
+      "N2-STR5": "Wprowadź hasło"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Odtwarzacz audio",
+      "N3-STR2": "do muzyki i audiobooków",
+      "N3-STR3": "Nie rozumiesz poziomu (B(P)IV)",
+      "N3-STR3-1": "Nie rozumiesz poziomu (B(P)IV)",
+      "N3-STR4": "Eksportuj",
+      "N3-STR5": "Usuń"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TWOJE PLIKI",
+      "N4-STR2": "pozostają na urządzeniu, bez wysyłania do chmury",
+      "G-Кнопки": {
+        "N4-STR4": "Bezpieczeństwo",
+        "N4-STR5": "Ochrona",
+        "N4-STR6": "Szyfr",
+        "N4-STR7": "Automatyczna blokada",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Ekran",
+        "N4-STR8-1": "Blokada",
+        "N4-STR9": "Pamięć",
+        "N4-STR9-1": "Czyszczenie",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Hasło odzyskiwania",
+        "N4-STR12": "Zablokuj"
+      }
+    }
+  },
+  "pt-BR": {
+    "G-Картинка 1": {
+      "N1-STR1": "LEITOR INTEGRADO",
+      "N1-STR2": "E VISUALIZADORES",
+      "G-Текст": {
+        "N1-STR3": "Com gosto de dor - Irina Pimenova",
+        "N1-STR4": "Ele não sabia se ela sabia. Em sonhos ela esperava — ele sentia que tal momento não existia na realidade, mas chorava de alegria no sono.",
+        "N1-STR5": "****",
+        "N1-STR6": "Mas na maioria das vezes acordava com um vazio no peito, como se alguém tivesse cortado algo importante, deixando apenas um tremor.",
+        "N1-STR7": "Acordada, ela olhava para o lado, e ele lançava um olhar — a respiração parava, e em seus pensamentos um grito da alma: 'Não vá'.",
+        "N1-STR8": "Não posso estar com você, porque na vida — amor não correspondido!",
+        "N1-STR9": "E ainda assim o coração batia, batia, batia — por ela. Sempre por ela."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CRIE",
+      "N2-STR2": "um armazenamento privado e oculte fotos, vídeos",
+      "N2-STR3": "Armazenamento",
+      "N2-STR4": "Recipiente 1",
+      "N2-STR5": "Digite a senha"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Player de áudio",
+      "N3-STR2": "para música e audiolivros",
+      "N3-STR3": "Você não entende o nível (B(P)IV)",
+      "N3-STR3-1": "Você não entende o nível (B(P)IV)",
+      "N3-STR4": "Exportar",
+      "N3-STR5": "Excluir"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "SEUS ARQUIVOS",
+      "N4-STR2": "permanecem no dispositivo, sem envio para a nuvem",
+      "G-Кнопки": {
+        "N4-STR4": "Segurança",
+        "N4-STR5": "Proteção",
+        "N4-STR6": "Cifra",
+        "N4-STR7": "Bloqueio automático",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Tela",
+        "N4-STR8-1": "Bloquear",
+        "N4-STR9": "Memória",
+        "N4-STR9-1": "Limpeza",
+        "N4-STR10": "Força bruta",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Senha de recuperação",
+        "N4-STR12": "Bloquear"
+      }
+    }
+  },
+  "pt-PT": {
+    "G-Картинка 1": {
+      "N1-STR1": "LEITOR INTEGRADO",
+      "N1-STR2": "E VISUALIZADORES",
+      "G-Текст": {
+        "N1-STR3": "Com sabor a dor - Irina Pimenova",
+        "N1-STR4": "Ele não sabia se ela sabia. Em sonhos ela esperava — ele sentia que tal momento não existia na realidade, mas chorava de alegria no sono.",
+        "N1-STR5": "****",
+        "N1-STR6": "Mas mais frequentemente acordava com um vazio no peito, como se alguém tivesse cortado algo importante, deixando apenas um tremor.",
+        "N1-STR7": "Acordada, ela olhava para o lado, e ele lançava um olhar — a respiração parava, e nos seus pensamentos um grito da alma: 'Não vás'.",
+        "N1-STR8": "Não posso estar contigo, porque na vida — amor não correspondido!",
+        "N1-STR9": "E ainda assim o coração batia, batia, batia — por ela. Sempre por ela."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CRIAR",
+      "N2-STR2": "um armazenamento privado e oculte fotos, vídeos",
+      "N2-STR3": "Armazenamento",
+      "N2-STR4": "Contentor 1",
+      "N2-STR5": "Introduzir palavra-passe"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Leitor de áudio",
+      "N3-STR2": "para música e audiolivros",
+      "N3-STR3": "Não compreende o nível (B(P)IV)",
+      "N3-STR3-1": "Não compreende o nível (B(P)IV)",
+      "N3-STR4": "Exportar",
+      "N3-STR5": "Eliminar"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "OS SEUS FICHEIROS",
+      "N4-STR2": "permanecem no dispositivo, sem envio para a nuvem",
+      "G-Кнопки": {
+        "N4-STR4": "Segurança",
+        "N4-STR5": "Proteção",
+        "N4-STR6": "Cifra",
+        "N4-STR7": "Bloqueio automático",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Ecrã",
+        "N4-STR8-1": "Bloquear",
+        "N4-STR9": "Memória",
+        "N4-STR9-1": "Limpeza",
+        "N4-STR10": "Força bruta",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Palavra-passe de recuperação",
+        "N4-STR12": "Bloquear"
+      }
+    }
+  },
+  "rm": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTURER INTEGRÀ",
+      "N1-STR2": "E VISUALISATURS",
+      "G-Текст": {
+        "N1-STR3": "Cun gust da dolur - Irina Pimenova",
+        "N1-STR4": "El na sa che ella sappia. En sogns ella spetgava — el sentiva che in tals muments na datti betg en la realitad, ma el plurava da legria en sien.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ma pli savent el sdreveva cun ina voida en il pèz, sco sche ins avess taglià ora ina chaussa impurtanta, laschond enavos be in tremblament.",
+        "N1-STR7": "Spert el, ella guardava da vart, ed el bittava in egliada — la flad s’arrestava, e en ses pinsers in crid da l’olma: 'Na ir'.",
+        "N1-STR8": "Jau na poss esser sper tai, perquai en la vita — amur senza resposta!",
+        "N1-STR9": "Tutina il cor batteva, batteva, batteva — per ella. Adina per ella."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREAR",
+      "N2-STR2": "in deposit privat e zuppentar fotografias, videos",
+      "N2-STR3": "Deposit",
+      "N2-STR4": "Cuntegnider 1",
+      "N2-STR5": "Endatescha il pled-clav"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Player audio",
+      "N3-STR2": "per musica ed audiolibers",
+      "N3-STR3": "Ti na chapeschas il nivel (B(P)IV)",
+      "N3-STR3-1": "Ti na chapeschas il nivel (B(P)IV)",
+      "N3-STR4": "Exportar",
+      "N3-STR5": "Stizzar"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TIES FAILS",
+      "N4-STR2": "restan sin l’apparat, senza trametter en il nivel",
+      "G-Кнопки": {
+        "N4-STR4": "Sgürezza",
+        "N4-STR5": "Protecziun",
+        "N4-STR6": "Cifra",
+        "N4-STR7": "Auto-serrar",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Visur",
+        "N4-STR8-1": "Serrar",
+        "N4-STR9": "Memoria",
+        "N4-STR9-1": "Pürgar",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Pled-clav da recuperaziun",
+        "N4-STR12": "Serrar"
+      }
+    }
+  },
+  "ro": {
+    "G-Картинка 1": {
+      "N1-STR1": "CITITOR INTEGRAT",
+      "N1-STR2": "ȘI VIZUALIZATOARE",
+      "G-Текст": {
+        "N1-STR3": "Cu gust de durere - Irina Pimenova",
+        "N1-STR4": "Nu știa dacă ea știe. În vise ea aștepta — simțea că un astfel de moment nu există în realitate, dar plângea de bucurie în somn.",
+        "N1-STR5": "****",
+        "N1-STR6": "Dar cel mai adesea se trezea cu un gol în piept, ca și cum cineva tăiase ceva important, lăsând doar un fior.",
+        "N1-STR7": "Trează, ea privea în altă parte, iar el arunca o privire — respirația i se oprea, iar în gândurile sale un strigăt al sufletului: 'Nu pleca'.",
+        "N1-STR8": "Nu pot fi lângă tine, pentru că în viață — iubire neîmpărtășită!",
+        "N1-STR9": "Și totuși inima bătea, bătea, bătea — pentru ea. Întotdeauna pentru ea."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CREAȚI",
+      "N2-STR2": "un depozit privat și ascundeți fotografii, videoclipuri",
+      "N2-STR3": "Depozit",
+      "N2-STR4": "Container 1",
+      "N2-STR5": "Introduceți parola"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Player audio",
+      "N3-STR2": "pentru muzică și cărți audio",
+      "N3-STR3": "Nu înțelegi nivelul (B(P)IV)",
+      "N3-STR3-1": "Nu înțelegi nivelul (B(P)IV)",
+      "N3-STR4": "Exportă",
+      "N3-STR5": "Șterge"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "FIȘIERELE TALE",
+      "N4-STR2": "rămân pe dispozitiv, fără trimitere în nor",
+      "G-Кнопки": {
+        "N4-STR4": "Securitate",
+        "N4-STR5": "Protecție",
+        "N4-STR6": "Cifru",
+        "N4-STR7": "Blocare automată",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Ecran",
+        "N4-STR8-1": "Blochează",
+        "N4-STR9": "Memorie",
+        "N4-STR9-1": "Curățare",
+        "N4-STR10": "Forță brută",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Parola de recuperare",
+        "N4-STR12": "Blochează"
+      }
+    }
+  },
+  "sr": {
+    "G-Картинка 1": {
+      "N1-STR1": "УГРАЂЕНИ ЧИТАЧ",
+      "N1-STR2": "И ПРЕГЛЕДАЧИ",
+      "G-Текст": {
+        "N1-STR3": "Са укусом бола - Ирина Пименова",
+        "N1-STR4": "Није знао да ли она зна. У сновима је чекала — осећао је да такав тренутак не постоји у стварности, али је плакао од среће у сну.",
+        "N1-STR5": "****",
+        "N1-STR6": "Али чешће се будио са празнином у грудима, као да је неко исекао нешто важно, оставивши само трепет.",
+        "N1-STR7": "На јави је гледала поред, а он би бацио поглед — дах му је застајао, а у мислима крик душе: 'Не иди'.",
+        "N1-STR8": "Не могу бити поред тебе, јер у животу — неузвраћена љубав!",
+        "N1-STR9": "Ипак срце је куцало, куцало, куцало — за њу. Увек за њу."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "НАПРАВИТЕ",
+      "N2-STR2": "приватно складиште и сакријте фотографије, видео записе",
+      "N2-STR3": "Складиште",
+      "N2-STR4": "Контејнер 1",
+      "N2-STR5": "Унесите лозинку"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аудио плејер",
+      "N3-STR2": "за музику и аудио књиге",
+      "N3-STR3": "Не разумеш ниво (Б(П)ИВ)",
+      "N3-STR3-1": "Не разумеш ниво (Б(П)ИВ)",
+      "N3-STR4": "Извези",
+      "N3-STR5": "Обриши"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ВАШЕ ДАТОТЕКЕ",
+      "N4-STR2": "остају на уређају, без слања у облак",
+      "G-Кнопки": {
+        "N4-STR4": "Безбедност",
+        "N4-STR5": "Заштита",
+        "N4-STR6": "Шифра",
+        "N4-STR7": "Аутоблок",
+        "N4-STR7-1": "10 мин",
+        "N4-STR8": "Екран",
+        "N4-STR8-1": "Блокирај",
+        "N4-STR9": "Меморија",
+        "N4-STR9-1": "Чишћење",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60с",
+        "N4-STR11": "Лозинка за опоравак",
+        "N4-STR12": "Блокирај"
+      }
+    }
+  },
+  "si-LK": {
+    "G-Картинка 1": {
+      "N1-STR1": "බිල්ට්-ඉන් කියවන්නා",
+      "N1-STR2": "සහ දර්ශක",
+      "G-Текст": {
+        "N1-STR3": "රසය වේදනා සමග - ඉරීනා පිමෙනෝවා",
+        "N1-STR4": "ඇය දන්නවාද කියා ඔහු නොදනී. සිහින වල ඇය බලා සිටියා — ඔහුට දැනුණා එවැනි මොහොතක් යථාර්ථයේ නොපවතින බව, නමුත් නින්දේ ප්‍රීතියෙන් ඇඬුවා.",
+        "N1-STR5": "****",
+        "N1-STR6": "නමුත් බොහෝ විට ඔහු අවදි වූයේ පපුවේ හිස් බවක් සමඟ, යමෙකු වැදගත් දෙයක් කපා ඉවත් කළාක් මෙන්, ඉතිරි කළේ සෙලවීමක් පමණයි.",
+        "N1-STR7": "අවදියෙන් සිටියදී ඇය අනෙක් පැත්තට බැලුවා, ඔහු එක බැල්මක් හෙළුවා — හුස්ම නතර වුණා, සහ ඔහුගේ සිතුවිලි වල ආත්මයේ කෑගැසීම: 'යන්න එපා'.",
+        "N1-STR8": "මට ඔබ ළඟ සිටිය නොහැක, මන්ද ජීවිතයේ — පිළිතුරු නොදෙන ආදරය!",
+        "N1-STR9": "කෙසේ වෙතත් හදවත ස්පන්දනය විය, ස්පන්දනය විය, ස්පන්දනය විය — ඇය වෙනුවෙන්. සැමවිටම ඇය වෙනුවෙන්."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "සාදන්න",
+      "N2-STR2": "පුද්ගලික ගබඩාවක් සහ ඡායාරූප, වීඩියෝ සඟවන්න",
+      "N2-STR3": "ගබඩාව",
+      "N2-STR4": "බහාලුම් 1",
+      "N2-STR5": "මුරපදය ඇතුළත් කරන්න"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ශ්‍රව්‍ය වාදකය",
+      "N3-STR2": "සංගීතයට සහ ශ්‍රව්‍ය පොත් සඳහා",
+      "N3-STR3": "ඔබට මට්ටම තේරෙන්නේ නැහැ (B(P)IV)",
+      "N3-STR3-1": "ඔබට මට්ටම තේරෙන්නේ නැහැ (B(P)IV)",
+      "N3-STR4": "අපනයනය",
+      "N3-STR5": "මකන්න"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ඔබගේ ගොනු",
+      "N4-STR2": "උපාංගයේ රැඳේ, වලාකුළට යවන්නේ නැත",
+      "G-Кнопки": {
+        "N4-STR4": "ආරක්ෂාව",
+        "N4-STR5": "ආරක්ෂණය",
+        "N4-STR6": "සයිෆර්",
+        "N4-STR7": "ස්වයංක්‍රීය අගුල",
+        "N4-STR7-1": "විනාඩි 10",
+        "N4-STR8": "තිරය",
+        "N4-STR8-1": "අගුළු දමන්න",
+        "N4-STR9": "මතකය",
+        "N4-STR9-1": "පිරිසිදු කිරීම",
+        "N4-STR10": "බ්‍රූට්ෆෝර්ස්",
+        "N4-STR10-1": "5^60 තත්පර",
+        "N4-STR11": "ප්‍රතිසාධන මුරපදය",
+        "N4-STR12": "අගුළු දමන්න"
+      }
+    }
+  },
+  "sk": {
+    "G-Картинка 1": {
+      "N1-STR1": "VSTAVANÝ ČÍTAČ",
+      "N1-STR2": "A PREZERAČE",
+      "G-Текст": {
+        "N1-STR3": "S chuťou bolesti - Irina Pimenova",
+        "N1-STR4": "Nevedel, či ona vie. V snoch čakala — cítil, že taký moment v realite neexistuje, ale v spánku plakal od šťastia.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ale častejšie sa zobudil s prázdnotou na hrudi, akoby niekto vyrezal niečo dôležité, zanechajúc len chvenie.",
+        "N1-STR7": "Po bdení sa pozerala inam, a on hodil pohľad — dych sa mu zastavil, a v myšlienkach výkrik duše: 'Neodchádzaj'.",
+        "N1-STR8": "Nemôžem byť pri tebe, pretože v živote — neopätovaná láska!",
+        "N1-STR9": "A predsa srdce bilo, bilo, bilo — pre ňu. Vždy pre ňu."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "VYTVORTE",
+      "N2-STR2": "súkromné úložisko a skryte fotky, videá",
+      "N2-STR3": "Úložisko",
+      "N2-STR4": "Kontejner 1",
+      "N2-STR5": "Zadajte heslo"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio prehrávač",
+      "N3-STR2": "pre hudbu a audioknihy",
+      "N3-STR3": "Nerozumieš úrovni (B(P)IV)",
+      "N3-STR3-1": "Nerozumieš úrovni (B(P)IV)",
+      "N3-STR4": "Exportovať",
+      "N3-STR5": "Odstrániť"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "VAŠE SÚBORY",
+      "N4-STR2": "ostávajú na zariadení, bez odoslania do cloudu",
+      "G-Кнопки": {
+        "N4-STR4": "Bezpečnosť",
+        "N4-STR5": "Ochrana",
+        "N4-STR6": "Šifra",
+        "N4-STR7": "Automatické uzamknutie",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Obrazovka",
+        "N4-STR8-1": "Zamknúť",
+        "N4-STR9": "Pamäť",
+        "N4-STR9-1": "Vyčistenie",
+        "N4-STR10": "Hrubá sila",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Obnovovacie heslo",
+        "N4-STR12": "Zamknúť"
+      }
+    }
+  },
+  "sl": {
+    "G-Картинка 1": {
+      "N1-STR1": "VGRADENI BRALEC",
+      "N1-STR2": "IN OGLEDOVALNIKI",
+      "G-Текст": {
+        "N1-STR3": "Z okusom bolečine - Irina Pimenova",
+        "N1-STR4": "Ni vedel, če ona ve. V sanjah je čakala — čutil je, da tak trenutek v resničnosti ne obstaja, vendar je v spanju jokal od sreče.",
+        "N1-STR5": "****",
+        "N1-STR6": "A pogosteje se je zbudil s praznino v prsih, kot da je nekdo izrezal nekaj pomembnega, pustil le tresenje.",
+        "N1-STR7": "Budna je gledala v stran, in on je vrgel pogled — dih se mu je ustavil, in v njegovih mislih krik duše: 'Ne odidi'.",
+        "N1-STR8": "Ne morem biti s tabo, ker v življenju — neuslišana ljubezen!",
+        "N1-STR9": "In vendar je srce utripalo, utripalo, utripalo — zanjo. Vedno zanjo."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "USTVARITE",
+      "N2-STR2": "zasebno shrambo in skrijte fotografije, videe",
+      "N2-STR3": "Shramba",
+      "N2-STR4": "Zabojnik 1",
+      "N2-STR5": "Vnesite geslo"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Avdio predvajalnik",
+      "N3-STR2": "za glasbo in avdio knjige",
+      "N3-STR3": "Ne razumeš nivoja (B(P)IV)",
+      "N3-STR3-1": "Ne razumeš nivoja (B(P)IV)",
+      "N3-STR4": "Izvozi",
+      "N3-STR5": "Izbriši"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "VAŠE DATOTEKE",
+      "N4-STR2": "ostanejo na napravi, brez pošiljanja v oblak",
+      "G-Кнопки": {
+        "N4-STR4": "Varnost",
+        "N4-STR5": "Zaščita",
+        "N4-STR6": "Šifra",
+        "N4-STR7": "Samodejno zaklepanje",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Zaslon",
+        "N4-STR8-1": "Zakleni",
+        "N4-STR9": "Pomnilnik",
+        "N4-STR9-1": "Čiščenje",
+        "N4-STR10": "Surova sila",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Obnovitveno geslo",
+        "N4-STR12": "Zakleni"
+      }
+    }
+  },
+  "sw": {
+    "G-Картинка 1": {
+      "N1-STR1": "KISOMAJI CHA NDANI",
+      "N1-STR2": "NA WATAZAMIAJI",
+      "G-Текст": {
+        "N1-STR3": "Kwa ladha ya maumivu - Irina Pimenova",
+        "N1-STR4": "Hakujua kama yeye anajua. Katika ndoto alikuwa anasubiri — alihisi wakati kama huo haupo katika ukweli, lakini alilia kwa furaha usingizini.",
+        "N1-STR5": "****",
+        "N1-STR6": "Lakini mara nyingi aliamka na utupu kifuani, kana kwamba mtu amekata kitu muhimu, akiacha kutetemeka tu.",
+        "N1-STR7": "Akiwa macho, alitazama pembeni, naye akatupa jicho — pumzi yake ilisimama, na katika mawazo yake kilio cha roho: 'Usiende'.",
+        "N1-STR8": "Siwezi kuwa nawe, kwa sababu maishani — mapenzi yasiyolipiwa!",
+        "N1-STR9": "Hata hivyo moyo ulipiga, ulipiga, ulipiga — kwa ajili yake. Daima kwa ajili yake."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "UNDA",
+      "N2-STR2": "hifadhi ya kibinafsi na ficha picha, video",
+      "N2-STR3": "Hifadhi",
+      "N2-STR4": "Kontena 1",
+      "N2-STR5": "Weka nenosiri"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Kicheza sauti",
+      "N3-STR2": "kwa muziki na vitabu vya sauti",
+      "N3-STR3": "Huelewi kiwango (B(P)IV)",
+      "N3-STR3-1": "Huelewi kiwango (B(P)IV)",
+      "N3-STR4": "Hamisha",
+      "N3-STR5": "Futa"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "MAFAILI YAKO",
+      "N4-STR2": "hubaki kwenye kifaa, hayatumwi kwenye wingu",
+      "G-Кнопки": {
+        "N4-STR4": "Usalama",
+        "N4-STR5": "Ulinzi",
+        "N4-STR6": "Sifa",
+        "N4-STR7": "Kufunga kiotomatiki",
+        "N4-STR7-1": "10 dk",
+        "N4-STR8": "Skrini",
+        "N4-STR8-1": "Funga",
+        "N4-STR9": "Kumbukumbu",
+        "N4-STR9-1": "Kusafisha",
+        "N4-STR10": "Nguvu ya kuvunja",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Nenosiri la kurejesha",
+        "N4-STR12": "Funga"
+      }
+    }
+  },
+  "th": {
+    "G-Картинка 1": {
+      "N1-STR1": "เครื่องอ่านในตัว",
+      "N1-STR2": "และโปรแกรมดู",
+      "G-Текст": {
+        "N1-STR3": "ด้วยรสชาติของความเจ็บปวด - Irina Pimenova",
+        "N1-STR4": "เขาไม่รู้ว่าเธอรู้หรือไม่ ในฝันเธอรอ — เขารู้สึกว่าช่วงเวลาเช่นนั้นไม่มีอยู่ในความเป็นจริง แต่ร้องไห้ด้วยความสุขในขณะหลับ",
+        "N1-STR5": "****",
+        "N1-STR6": "แต่ส่วนใหญ่เขาตื่นขึ้นมาพร้อมกับความว่างเปล่าในอก ราวกับมีคนตัดบางสิ่งที่สำคัญออกไป เหลือเพียงการสั่นไหว",
+        "N1-STR7": "ในยามตื่นเธอมองไปทางอื่น และเขาก็เหลือบมอง — ลมหายใจหยุดชะงัก และในความคิดของเขาก็มีเสียงร้องของวิญญาณ: 'อย่าไป'",
+        "N1-STR8": "ฉันไม่สามารถอยู่ข้างคุณได้ เพราะในชีวิต — ความรักที่ไม่ได้รับคำตอบ!",
+        "N1-STR9": "แต่หัวใจยังคงเต้น เต้น เต้น — เพื่อเธอ เสมอเพื่อเธอ"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "สร้าง",
+      "N2-STR2": "พื้นที่เก็บข้อมูลส่วนตัวและซ่อนรูปภาพ วิดีโอ",
+      "N2-STR3": "ที่เก็บข้อมูล",
+      "N2-STR4": "คอนเทนเนอร์ 1",
+      "N2-STR5": "ป้อนรหัสผ่าน"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "เครื่องเล่นเสียง",
+      "N3-STR2": "สำหรับเพลงและหนังสือเสียง",
+      "N3-STR3": "คุณไม่เข้าใจระดับ (B(P)IV)",
+      "N3-STR3-1": "คุณไม่เข้าใจระดับ (B(P)IV)",
+      "N3-STR4": "ส่งออก",
+      "N3-STR5": "ลบ"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ไฟล์ของคุณ",
+      "N4-STR2": "อยู่บนอุปกรณ์ ไม่ส่งไปยังคลาวด์",
+      "G-Кнопки": {
+        "N4-STR4": "ความปลอดภัย",
+        "N4-STR5": "การป้องกัน",
+        "N4-STR6": "รหัส",
+        "N4-STR7": "ล็อคอัตโนมัติ",
+        "N4-STR7-1": "10 นาที",
+        "N4-STR8": "หน้าจอ",
+        "N4-STR8-1": "ล็อค",
+        "N4-STR9": "หน่วยความจำ",
+        "N4-STR9-1": "ทำความสะอาด",
+        "N4-STR10": "บรูทฟอร์ซ",
+        "N4-STR10-1": "5^60 วินาที",
+        "N4-STR11": "รหัสผ่านกู้คืน",
+        "N4-STR12": "ล็อค"
+      }
+    }
+  },
+  "ta-IN": {
+    "G-Картинка 1": {
+      "N1-STR1": "உள்ளமை வாசிப்பான்",
+      "N1-STR2": "மற்றும் காட்சியாளர்கள்",
+      "G-Текст": {
+        "N1-STR3": "வலியின் சுவையுடன் - இரினா பிமெனோவா",
+        "N1-STR4": "அவளுக்குத் தெரியுமா என்று அவனுக்குத் தெரியாது. கனவுகளில் அவள் காத்திருந்தாள் — அத்தகைய ஒரு கணம் உண்மையில் இல்லை என்று அவன் உணர்ந்தான், ஆனால் தூக்கத்தில் மகிழ்ச்சியால் அழுதான்.",
+        "N1-STR5": "****",
+        "N1-STR6": "ஆனால் பெரும்பாலும் அவன் மார்பில் வெறுமையுடன் எழுந்தான், யாரோ முக்கியமான ஒன்றை வெட்டி எடுத்தது போல, ஒரு நடுக்கத்தை மட்டுமே விட்டுச் சென்றார்.",
+        "N1-STR7": "விழித்திருக்கும் போது அவள் வேறு பக்கம் பார்த்தாள், அவன் ஒரு பார்வை பார்த்தான் — மூச்சு நின்றது, மற்றும் அவனது எண்ணங்களில் ஆத்மாவின் அழுகை: 'போகாதே'.",
+        "N1-STR8": "நான் உன்னுடன் இருக்க முடியாது, ஏனெனில் வாழ்க்கையில் — பதிலளிக்காத காதல்!",
+        "N1-STR9": "இருந்தாலும் இதயம் துடித்தது, துடித்தது, துடித்தது — அவளுக்காக. எப்போதும் அவளுக்காக."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "உருவாக்கு",
+      "N2-STR2": "தனிப்பட்ட சேமிப்பகம் மற்றும் புகைப்படங்கள், வீடியோக்களை மறை",
+      "N2-STR3": "சேமிப்பகம்",
+      "N2-STR4": "கொள்கலன் 1",
+      "N2-STR5": "கடவுச்சொல்லை உள்ளிடுக"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ஆடியோ பிளேயர்",
+      "N3-STR2": "இசை மற்றும் ஆடியோ புத்தகங்களுக்கு",
+      "N3-STR3": "நிலை உங்களுக்குப் புரியவில்லை (B(P)IV)",
+      "N3-STR3-1": "நிலை உங்களுக்குப் புரியவில்லை (B(P)IV)",
+      "N3-STR4": "ஏற்றுமதி",
+      "N3-STR5": "நீக்கு"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "உங்கள் கோப்புகள்",
+      "N4-STR2": "சாதனத்தில் இருக்கும், மேகத்திற்கு அனுப்பப்படாது",
+      "G-Кнопки": {
+        "N4-STR4": "பாதுகாப்பு",
+        "N4-STR5": "பாதுகாப்பு",
+        "N4-STR6": "சைஃபர்",
+        "N4-STR7": "தானியங்கி பூட்டு",
+        "N4-STR7-1": "10 நிமிடம்",
+        "N4-STR8": "திரை",
+        "N4-STR8-1": "பூட்டு",
+        "N4-STR9": "நினைவகம்",
+        "N4-STR9-1": "சுத்தம்",
+        "N4-STR10": "ப்ரூட்ஃபோர்ஸ்",
+        "N4-STR10-1": "5^60 விநாடி",
+        "N4-STR11": "மீட்புக் கடவுச்சொல்",
+        "N4-STR12": "பூட்டு"
+      }
+    }
+  },
+  "te-IN": {
+    "G-Картинка 1": {
+      "N1-STR1": "బిల్ట్-ఇన్ రీడర్",
+      "N1-STR2": "మరియు వ్యూయర్లు",
+      "G-Текст": {
+        "N1-STR3": "బాధ రుచితో - ఇరినా పిమెనోవా",
+        "N1-STR4": "ఆమెకు తెలుసా లేదా అని అతనికి తెలియదు. కలలలో ఆమె వేచి ఉంది — అలాంటి క్షణం వాస్తవంలో లేదని అతను భావించాడు, కానీ నిద్రలో సంతోషంతో ఏడ్చాడు.",
+        "N1-STR5": "****",
+        "N1-STR6": "కానీ చాలా తరచుగా అతను ఛాతీలో శూన్యతతో మేల్కొన్నాడు, ఎవరో ముఖ్యమైన దాన్ని కత్తిరించినట్లు, కేవలం వణుకు మాత్రమే మిగిల్చాడు.",
+        "N1-STR7": "మేల్కొని ఉన్నప్పుడు ఆమె మరొక వైపు చూసింది, మరియు అతను ఒక చూపు వేశాడు — శ్వాస ఆగిపోయింది, మరియు అతని ఆలోచనలలో ఆత్మ యొక్క కేక: 'వెళ్లకు'.",
+        "N1-STR8": "నేను మీతో ఉండలేను, ఎందుకంటే జీవితంలో — ప్రతిఫలించని ప్రేమ!",
+        "N1-STR9": "ఇంకా గుండె కొట్టుకుంది, కొట్టుకుంది, కొట్టుకుంది — ఆమె కోసం. ఎప్పుడూ ఆమె కోసం."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "సృష్టించండి",
+      "N2-STR2": "ప్రైవేట్ నిల్వ మరియు ఫోటోలు, వీడియోలను దాచండి",
+      "N2-STR3": "నిల్వ",
+      "N2-STR4": "కంటైనర్ 1",
+      "N2-STR5": "పాస్వర్డ్ నమోదు చేయండి"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ఆడియో ప్లేయర్",
+      "N3-STR2": "సంగీతం మరియు ఆడియో పుస్తకాల కోసం",
+      "N3-STR3": "మీరు స్థాయిని అర్థం చేసుకోలేరు (B(P)IV)",
+      "N3-STR3-1": "మీరు స్థాయిని అర్థం చేసుకోలేరు (B(P)IV)",
+      "N3-STR4": "ఎగుమతి",
+      "N3-STR5": "తొలగించు"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "మీ ఫైల్లు",
+      "N4-STR2": "పరికరంలో ఉంటాయి, క్లౌడ్కి పంపబడవు",
+      "G-Кнопки": {
+        "N4-STR4": "భద్రత",
+        "N4-STR5": "రక్షణ",
+        "N4-STR6": "సైఫర్",
+        "N4-STR7": "ఆటో-లాక్",
+        "N4-STR7-1": "10 నిమిషాలు",
+        "N4-STR8": "స్క్రీన్",
+        "N4-STR8-1": "లాక్",
+        "N4-STR9": "మెమరీ",
+        "N4-STR9-1": "శుభ్రపరచడం",
+        "N4-STR10": "బ్రూట్ఫోర్స్",
+        "N4-STR10-1": "5^60 సెకన్లు",
+        "N4-STR11": "రికవరీ పాస్వర్డ్",
+        "N4-STR12": "లాక్"
+      }
+    }
+  },
+  "tr-TR": {
+    "G-Картинка 1": {
+      "N1-STR1": "DAHİLİ OKUYUCU",
+      "N1-STR2": "VE GÖRÜNTÜLEYİCİLER",
+      "G-Текст": {
+        "N1-STR3": "Acının tadıyla - Irina Pimenova",
+        "N1-STR4": "Bilip bilmediğini bilmiyordu. Rüyalarda bekledi — böyle bir anın gerçekte olmadığını hissetti, ama uykuda mutluluktan ağladı.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ama çoğu zaman göğsünde bir boşlukla uyandı, sanki biri önemli bir şeyi kesip çıkarmış, sadece bir titreme bırakmıştı.",
+        "N1-STR7": "Uyanıkken başka tarafa bakıyordu, o bir bakış fırlattı — nefesi kesildi ve düşüncelerinde bir ruh çığlığı: 'Gitme'.",
+        "N1-STR8": "Senin yanında olamam, çünkü hayatta — karşılıksız aşk!",
+        "N1-STR9": "Yine de kalp attı, attı, attı — onun için. Her zaman onun için."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "OLUŞTURUN",
+      "N2-STR2": "özel bir depolama alanı ve fotoğrafları, videoları gizleyin",
+      "N2-STR3": "Depolama",
+      "N2-STR4": "Konteyner 1",
+      "N2-STR5": "Şifreyi girin"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Ses çalar",
+      "N3-STR2": "müzik ve sesli kitaplar için",
+      "N3-STR3": "Seviyeyi anlamıyorsun (B(P)IV)",
+      "N3-STR3-1": "Seviyeyi anlamıyorsun (B(P)IV)",
+      "N3-STR4": "Dışa aktar",
+      "N3-STR5": "Sil"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "DOSYALARINIZ",
+      "N4-STR2": "cihazda kalır, buluta gönderilmez",
+      "G-Кнопки": {
+        "N4-STR4": "Güvenlik",
+        "N4-STR5": "Koruma",
+        "N4-STR6": "Şifre",
+        "N4-STR7": "Otomatik kilit",
+        "N4-STR7-1": "10 dk",
+        "N4-STR8": "Ekran",
+        "N4-STR8-1": "Kilitle",
+        "N4-STR9": "Bellek",
+        "N4-STR9-1": "Temizlik",
+        "N4-STR10": "Brute force",
+        "N4-STR10-1": "5^60 sn",
+        "N4-STR11": "Kurtarma şifresi",
+        "N4-STR12": "Kilitle"
+      }
+    }
+  },
+  "uk": {
+    "G-Картинка 1": {
+      "N1-STR1": "ВБУДОВАНА ЧИТАЛКА",
+      "N1-STR2": "І ПЕРЕГЛЯДАЧІ",
+      "G-Текст": {
+        "N1-STR3": "Зі смаком болю - Ірина Піменова",
+        "N1-STR4": "Він не знав, чи знає вона. У снах вона чекала — він відчував, що такої миті не існує в реальності, але плакав від щастя уві сні.",
+        "N1-STR5": "****",
+        "N1-STR6": "Але частіше прокидався з порожнечею в грудях, ніби хтось вирізав щось важливе, залишивши лише трепет.",
+        "N1-STR7": "Наяву вона дивилася повз, а він кидав погляд — дихання завмирало, а в думках крик душі: «Не йди».",
+        "N1-STR8": "Не бути мені поруч із тобою, адже в житті — безвідповідне кохання!",
+        "N1-STR9": "І все ж серце билося, билося, билося — для неї. Завжди для неї."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "СТВОРІТЬ",
+      "N2-STR2": "приватне сховище і ховайте фото, відео",
+      "N2-STR3": "Сховище",
+      "N2-STR4": "Контейнер 1",
+      "N2-STR5": "Введіть пароль"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Аудіоплеєр",
+      "N3-STR2": "для музики та аудіокниг",
+      "N3-STR3": "Не розумієш рівень (Б(П)ІВ)",
+      "N3-STR3-1": "Не розумієш рівень (Б(П)ІВ)",
+      "N3-STR4": "Експорт",
+      "N3-STR5": "Видалити"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ВАШІ ФАЙЛИ",
+      "N4-STR2": "залишаються на пристрої, без відправлення в хмару",
+      "G-Кнопки": {
+        "N4-STR4": "Безпека",
+        "N4-STR5": "Захист",
+        "N4-STR6": "Шифр",
+        "N4-STR7": "Автоблокування",
+        "N4-STR7-1": "10 хв",
+        "N4-STR8": "Екран",
+        "N4-STR8-1": "Блокування",
+        "N4-STR9": "Пам'ять",
+        "N4-STR9-1": "Очищення",
+        "N4-STR10": "Брутфорс",
+        "N4-STR10-1": "5^60с",
+        "N4-STR11": "Пароль відновлення",
+        "N4-STR12": "Заблокувати"
+      }
+    }
+  },
+  "ur": {
+    "G-Картинка 1": {
+      "N1-STR1": "بلٹ ان ریڈر",
+      "N1-STR2": "اور دیکھنے والے",
+      "G-Текст": {
+        "N1-STR3": "درد کے ذائقے کے ساتھ - ارینا پیمینووا",
+        "N1-STR4": "وہ نہیں جانتا تھا کہ وہ جانتی ہے یا نہیں۔ خوابوں میں وہ انتظار کرتی تھی — اسے محسوس ہوتا تھا کہ ایسا لمحہ حقیقت میں موجود نہیں، لیکن نیند میں خوشی سے روتا تھا۔",
+        "N1-STR5": "****",
+        "N1-STR6": "لیکن اکثر وہ سینے میں خالی پن کے ساتھ بیدار ہوتا، جیسے کسی نے کوئی اہم چیز کاٹ کر نکال دی ہو، صرف ایک کپکپی چھوڑ دی ہو۔",
+        "N1-STR7": "بیداری میں وہ دوسری طرف دیکھتی، اور وہ ایک نظر ڈالتا — سانس رک جاتی، اور اس کے خیالات میں روح کی چیخ: 'مت جانا'۔",
+        "N1-STR8": "میں تمہارے ساتھ نہیں رہ سکتا، کیونکہ زندگی میں — بے جواب محبت!",
+        "N1-STR9": "پھر بھی دل دھڑکتا تھا، دھڑکتا تھا، دھڑکتا تھا — اس کے لیے۔ ہمیشہ اس کے لیے۔"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "بنائیں",
+      "N2-STR2": "ایک نجی ذخیرہ اور تصاویر، ویڈیوز چھپائیں",
+      "N2-STR3": "ذخیرہ",
+      "N2-STR4": "کنٹینر 1",
+      "N2-STR5": "پاس ورڈ درج کریں"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "آڈیو پلیئر",
+      "N3-STR2": "موسیقی اور آڈیو کتابوں کے لیے",
+      "N3-STR3": "آپ سطح نہیں سمجھتے (B(P)IV)",
+      "N3-STR3-1": "آپ سطح نہیں سمجھتے (B(P)IV)",
+      "N3-STR4": "برآمد کریں",
+      "N3-STR5": "حذف کریں"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "آپ کی فائلیں",
+      "N4-STR2": "آلے پر رہتی ہیں، کلاؤڈ پر نہیں بھیجی جاتیں",
+      "G-Кнопки": {
+        "N4-STR4": "سیکورٹی",
+        "N4-STR5": "تحفظ",
+        "N4-STR6": "سائفر",
+        "N4-STR7": "آٹو لاک",
+        "N4-STR7-1": "10 منٹ",
+        "N4-STR8": "سکرین",
+        "N4-STR8-1": "لاک",
+        "N4-STR9": "میموری",
+        "N4-STR9-1": "صفائی",
+        "N4-STR10": "بروٹ فورس",
+        "N4-STR10-1": "5^60 سیکنڈ",
+        "N4-STR11": "بازیابی کا پاس ورڈ",
+        "N4-STR12": "لاک"
+      }
+    }
+  },
+  "fil": {
+    "G-Картинка 1": {
+      "N1-STR1": "BUILT-IN READER",
+      "N1-STR2": "AT MGA VIEWER",
+      "G-Текст": {
+        "N1-STR3": "May lasa ng sakit - Irina Pimenova",
+        "N1-STR4": "Hindi niya alam kung alam niya. Sa panaginip naghihintay siya — naramdaman niyang ang sandaling iyon ay wala sa katotohanan, ngunit umiyak sa galak sa kanyang pagtulog.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ngunit mas madalas siyang gumising na may kawalan sa kanyang dibdib, para bang may pumutol ng isang mahalagang bagay, naiwan lamang ang panginginig.",
+        "N1-STR7": "Gising, tumingin siya sa ibang direksyon, at siya ay sumulyap — tumigil ang kanyang hininga, at sa kanyang mga iniisip isang sigaw ng kaluluwa: 'Huwag kang umalis'.",
+        "N1-STR8": "Hindi ako maaaring makasama mo, dahil sa buhay — walang katumbas na pag-ibig!",
+        "N1-STR9": "Gayunpaman ang puso ay tumibok, tumibok, tumibok — para sa kanya. Lagi para sa kanya."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "GUMAWA",
+      "N2-STR2": "isang pribadong storage at itago ang mga larawan, video",
+      "N2-STR3": "Storage",
+      "N2-STR4": "Lalagyan 1",
+      "N2-STR5": "Ilagay ang password"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "para sa musika at mga audiobook",
+      "N3-STR3": "Hindi mo naiintindihan ang antas (B(P)IV)",
+      "N3-STR3-1": "Hindi mo naiintindihan ang antas (B(P)IV)",
+      "N3-STR4": "I-export",
+      "N3-STR5": "Burahin"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "ANG IYONG MGA FILE",
+      "N4-STR2": "manatili sa device, hindi ipapadala sa cloud",
+      "G-Кнопки": {
+        "N4-STR4": "Seguridad",
+        "N4-STR5": "Proteksyon",
+        "N4-STR6": "Cipher",
+        "N4-STR7": "Auto-lock",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Screen",
+        "N4-STR8-1": "I-lock",
+        "N4-STR9": "Memorya",
+        "N4-STR9-1": "Paglilinis",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Password sa pagbawi",
+        "N4-STR12": "I-lock"
+      }
+    }
+  },
+  "fi-FI": {
+    "G-Картинка 1": {
+      "N1-STR1": "SISÄÄNR AKENNETTU LUKIJ A",
+      "N1-STR2": "JA KATSOJAT",
+      "G-Текст": {
+        "N1-STR3": "Kivun makuisesti - Irina Pimenova",
+        "N1-STR4": "Hän ei tiennyt tiesikö hän. Unissa hän odotti — hän tunsi ettei sellaista hetkeä ole olemassa todellisuudessa, mutta itki onnesta unessa.",
+        "N1-STR5": "****",
+        "N1-STR6": "Mutta useammin hän heräsi tyhjyydellä rinnassaan, ikään kuin joku olisi leikannut pois jotain tärkeää, jättäen vain vapinan.",
+        "N1-STR7": "Valveilla ollessaan hän katsoi ohi, ja hän vilkaisi — hengitys pysähtyi, ja hänen ajatuksissaan sielun huuto: 'Älä mene'.",
+        "N1-STR8": "En voi olla kanssasi, koska elämässä — vastikkeeton rakkaus!",
+        "N1-STR9": "Silti sydän löi, löi, löi — hänen vuokseen. Aina hänen vuokseen."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "LUO",
+      "N2-STR2": "yksityinen tallennustila ja piilota valokuvat, videot",
+      "N2-STR3": "Tallennustila",
+      "N2-STR4": "Säiliö 1",
+      "N2-STR5": "Anna salasana"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Äänisoitin",
+      "N3-STR2": "musiikille ja äänikirjoille",
+      "N3-STR3": "Et ymmärrä tasoa (B(P)IV)",
+      "N3-STR3-1": "Et ymmärrä tasoa (B(P)IV)",
+      "N3-STR4": "Vie",
+      "N3-STR5": "Poista"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TIEDOSTOSI",
+      "N4-STR2": "pysyvät laitteella, ei pilvilatausta",
+      "G-Кнопки": {
+        "N4-STR4": "Turvallisuus",
+        "N4-STR5": "Suojaus",
+        "N4-STR6": "Salakirjoitus",
+        "N4-STR7": "Automaattilukitus",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Näyttö",
+        "N4-STR8-1": "Lukitse",
+        "N4-STR9": "Muisti",
+        "N4-STR9-1": "Puhdistus",
+        "N4-STR10": "Raaka voima",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Palautussalasana",
+        "N4-STR12": "Lukitse"
+      }
+    }
+  },
+  "fr-CA": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTEUR INTÉGRÉ",
+      "N1-STR2": "ET VISUALISEURS",
+      "G-Текст": {
+        "N1-STR3": "Avec un goût de douleur - Irina Pimenova",
+        "N1-STR4": "Il ne savait pas si elle savait. Dans les rêves, elle attendait — il sentait qu'un tel moment n'existait pas dans la réalité, mais pleurait de joie en dormant.",
+        "N1-STR5": "****",
+        "N1-STR6": "Mais plus souvent, il se réveillait avec un vide dans la poitrine, comme si quelqu'un avait découpé quelque chose d'important, ne laissant qu'un frémissement.",
+        "N1-STR7": "Éveillée, elle regardait ailleurs, et il jetait un coup d'œil — son souffle s'arrêtait, et dans ses pensées un cri de l'âme : 'Ne pars pas'.",
+        "N1-STR8": "Je ne peux pas être avec toi, car dans la vie — amour sans retour !",
+        "N1-STR9": "Et pourtant le cœur battait, battait, battait — pour elle. Toujours pour elle."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CRÉER",
+      "N2-STR2": "un espace de stockage privé et cacher des photos, vidéos",
+      "N2-STR3": "Stockage",
+      "N2-STR4": "Conteneur 1",
+      "N2-STR5": "Entrer le mot de passe"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Lecteur audio",
+      "N3-STR2": "pour la musique et les livres audio",
+      "N3-STR3": "Tu ne comprends pas le niveau (B(P)IV)",
+      "N3-STR3-1": "Tu ne comprends pas le niveau (B(P)IV)",
+      "N3-STR4": "Exporter",
+      "N3-STR5": "Supprimer"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "VOS FICHIERS",
+      "N4-STR2": "restent sur l'appareil, sans envoi vers le nuage",
+      "G-Кнопки": {
+        "N4-STR4": "Sécurité",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Chiffre",
+        "N4-STR7": "Verrouillage auto",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Écran",
+        "N4-STR8-1": "Verrouiller",
+        "N4-STR9": "Mémoire",
+        "N4-STR9-1": "Nettoyage",
+        "N4-STR10": "Force brute",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Mot de passe de récupération",
+        "N4-STR12": "Verrouiller"
+      }
+    }
+  },
+  "fr-FR": {
+    "G-Картинка 1": {
+      "N1-STR1": "LECTEUR INTÉGRÉ",
+      "N1-STR2": "ET VISUALISEURS",
+      "G-Текст": {
+        "N1-STR3": "Avec un goût de douleur - Irina Pimenova",
+        "N1-STR4": "Il ne savait pas si elle savait. Dans les rêves, elle attendait — il sentait qu'un tel moment n'existait pas dans la réalité, mais pleurait de joie en dormant.",
+        "N1-STR5": "****",
+        "N1-STR6": "Mais plus souvent, il se réveillait avec un vide dans la poitrine, comme si quelqu'un avait découpé quelque chose d'important, ne laissant qu'un frémissement.",
+        "N1-STR7": "Éveillée, elle regardait ailleurs, et il jetait un coup d'œil — son souffle s'arrêtait, et dans ses pensées un cri de l'âme : 'Ne pars pas'.",
+        "N1-STR8": "Je ne peux pas être avec toi, car dans la vie — amour sans retour !",
+        "N1-STR9": "Et pourtant le cœur battait, battait, battait — pour elle. Toujours pour elle."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "CRÉER",
+      "N2-STR2": "un espace de stockage privé et cacher des photos, vidéos",
+      "N2-STR3": "Stockage",
+      "N2-STR4": "Conteneur 1",
+      "N2-STR5": "Entrer le mot de passe"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Lecteur audio",
+      "N3-STR2": "pour la musique et les livres audio",
+      "N3-STR3": "Tu ne comprends pas le niveau (B(P)IV)",
+      "N3-STR3-1": "Tu ne comprends pas le niveau (B(P)IV)",
+      "N3-STR4": "Exporter",
+      "N3-STR5": "Supprimer"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "VOS FICHIERS",
+      "N4-STR2": "restent sur l'appareil, sans envoi vers le nuage",
+      "G-Кнопки": {
+        "N4-STR4": "Sécurité",
+        "N4-STR5": "Protection",
+        "N4-STR6": "Chiffre",
+        "N4-STR7": "Verrouillage auto",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Écran",
+        "N4-STR8-1": "Verrouiller",
+        "N4-STR9": "Mémoire",
+        "N4-STR9-1": "Nettoyage",
+        "N4-STR10": "Force brute",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Mot de passe de récupération",
+        "N4-STR12": "Verrouiller"
+      }
+    }
+  },
+  "hi-IN": {
+    "G-Картинка 1": {
+      "N1-STR1": "अंतर्निहित पाठक",
+      "N1-STR2": "और दर्शक",
+      "G-Текст": {
+        "N1-STR3": "दर्द के स्वाद के साथ - इरीना पिमेनोवा",
+        "N1-STR4": "वह नहीं जानता था कि वह जानती है या नहीं। सपनों में वह इंतजार करती थी — उसने महसूस किया कि ऐसा क्षण वास्तविकता में मौजूद नहीं है, लेकिन नींद में खुशी से रोया।",
+        "N1-STR5": "****",
+        "N1-STR6": "लेकिन अक्सर वह छाती में खालीपन के साथ जागता था, जैसे किसी ने कुछ महत्वपूर्ण काट दिया हो, केवल एक कंपकंपी छोड़ दी हो।",
+        "N1-STR7": "जागते हुए, वह दूसरी ओर देखती थी, और वह एक नज़र डालता — साँस रुक जाती, और उसके विचारों में आत्मा की चीख: 'मत जाओ'।",
+        "N1-STR8": "मैं तुम्हारे साथ नहीं रह सकता, क्योंकि जीवन में — बेजवाब प्यार!",
+        "N1-STR9": "फिर भी दिल धड़कता था, धड़कता था, धड़कता था — उसके लिए। हमेशा उसके लिए।"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "बनाएँ",
+      "N2-STR2": "एक निजी भंडारण और फ़ोटो, वीडियो छुपाएं",
+      "N2-STR3": "भंडारण",
+      "N2-STR4": "कंटेनर 1",
+      "N2-STR5": "पासवर्ड डालें"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "ऑडियो प्लेयर",
+      "N3-STR2": "संगीत और ऑडियो पुस्तकों के लिए",
+      "N3-STR3": "आप स्तर नहीं समझते (B(P)IV)",
+      "N3-STR3-1": "आप स्तर नहीं समझते (B(P)IV)",
+      "N3-STR4": "निर्यात करें",
+      "N3-STR5": "हटाएँ"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "आपकी फ़ाइलें",
+      "N4-STR2": "डिवाइस पर रहती हैं, क्लाउड पर नहीं भेजी जातीं",
+      "G-Кнопки": {
+        "N4-STR4": "सुरक्षा",
+        "N4-STR5": "सुरक्षा",
+        "N4-STR6": "सिफर",
+        "N4-STR7": "ऑटो-लॉक",
+        "N4-STR7-1": "10 मिनट",
+        "N4-STR8": "स्क्रीन",
+        "N4-STR8-1": "लॉक करें",
+        "N4-STR9": "मेमोरी",
+        "N4-STR9-1": "सफाई",
+        "N4-STR10": "ब्रूटफोर्स",
+        "N4-STR10-1": "5^60 सेकंड",
+        "N4-STR11": "पुनर्प्राप्ति पासवर्ड",
+        "N4-STR12": "लॉक करें"
+      }
+    }
+  },
+  "hr": {
+    "G-Картинка 1": {
+      "N1-STR1": "UGRAĐENI ČITAČ",
+      "N1-STR2": "I PREGLEDNICI",
+      "G-Текст": {
+        "N1-STR3": "S okusom boli - Irina Pimenova",
+        "N1-STR4": "Nije znao zna li ona. U snovima je čekala — osjećao je da takav trenutak ne postoji u stvarnosti, ali je plakao od sreće u snu.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ali češće se budio s prazninom u prsima, kao da je netko izrezao nešto važno, ostavivši samo drhtaj.",
+        "N1-STR7": "Budna je gledala u stranu, a on bacio pogled — dah bi mu stao, a u mislima krik duše: 'Ne idi'.",
+        "N1-STR8": "Ne mogu biti s tobom, jer u životu — neuzvraćena ljubav!",
+        "N1-STR9": "Ipak srce je kucalo, kucalo, kucalo — za nju. Uvijek za nju."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "STVORITE",
+      "N2-STR2": "privatno spremište i sakrijte fotografije, videozapise",
+      "N2-STR3": "Spremište",
+      "N2-STR4": "Spremnik 1",
+      "N2-STR5": "Unesite lozinku"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio player",
+      "N3-STR2": "za glazbu i audioknjige",
+      "N3-STR3": "Ne razumiješ razinu (B(P)IV)",
+      "N3-STR3-1": "Ne razumiješ razinu (B(P)IV)",
+      "N3-STR4": "Izvoz",
+      "N3-STR5": "Izbriši"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "VAŠE DATOTEKE",
+      "N4-STR2": "ostaju na uređaju, bez slanja u oblak",
+      "G-Кнопки": {
+        "N4-STR4": "Sigurnost",
+        "N4-STR5": "Zaštita",
+        "N4-STR6": "Šifra",
+        "N4-STR7": "Automatsko zaključavanje",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Zaslon",
+        "N4-STR8-1": "Zaključaj",
+        "N4-STR9": "Memorija",
+        "N4-STR9-1": "Čišćenje",
+        "N4-STR10": "Gruba sila",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Lozinka za oporavak",
+        "N4-STR12": "Zaključaj"
+      }
+    }
+  },
+  "cs-CZ": {
+    "G-Картинка 1": {
+      "N1-STR1": "VESTAVĚNÁ ČÍTAČKA",
+      "N1-STR2": "A PROHLÍŽEČE",
+      "G-Текст": {
+        "N1-STR3": "S chutí bolesti - Irina Pimenova",
+        "N1-STR4": "Nevěděl, jestli ona ví. Ve snech čekala — cítil, že takový okamžik v realitě neexistuje, ale v spánku plakal štěstím.",
+        "N1-STR5": "****",
+        "N1-STR6": "Ale častěji se probouzel s prázdnotou na hrudi, jako by někdo vyřízl něco důležitého, zanechávaje jen chvění.",
+        "N1-STR7": "V bdělosti se dívala jinam, a on hodil pohled — dech se mu zastavil a v myšlenkách křik duše: 'Neodcházej'.",
+        "N1-STR8": "Nemohu být s tebou, protože v životě — neopětovaná láska!",
+        "N1-STR9": "Přesto srdce bilo, bilo, bilo — pro ni. Vždy pro ni."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "VYTVOŘTE",
+      "N2-STR2": "soukromé úložiště a skryjte fotky, videa",
+      "N2-STR3": "Úložiště",
+      "N2-STR4": "Kontejner 1",
+      "N2-STR5": "Zadejte heslo"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Audio přehrávač",
+      "N3-STR2": "pro hudbu a audioknihy",
+      "N3-STR3": "Nerozumíš úrovni (B(P)IV)",
+      "N3-STR3-1": "Nerozumíš úrovni (B(P)IV)",
+      "N3-STR4": "Exportovat",
+      "N3-STR5": "Smazat"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "VAŠE SOUBORY",
+      "N4-STR2": "zůstávají na zařízení, bez odeslání do cloudu",
+      "G-Кнопки": {
+        "N4-STR4": "Zabezpečení",
+        "N4-STR5": "Ochrana",
+        "N4-STR6": "Šifra",
+        "N4-STR7": "Automatické zamčení",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Obrazovka",
+        "N4-STR8-1": "Zamknout",
+        "N4-STR9": "Paměť",
+        "N4-STR9-1": "Vyčištění",
+        "N4-STR10": "Hrubá síla",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Obnovovací heslo",
+        "N4-STR12": "Zamknout"
+      }
+    }
+  },
+  "sv-SE": {
+    "G-Картинка 1": {
+      "N1-STR1": "INBYGGD LÄSARE",
+      "N1-STR2": "OCH VISNINGSPROGRAM",
+      "G-Текст": {
+        "N1-STR3": "Med smak av smärta - Irina Pimenova",
+        "N1-STR4": "Han visste inte om hon visste. I drömmar väntade hon — han kände att ett sådant ögonblick inte fanns i verkligheten, men grät av glädje i sömnen.",
+        "N1-STR5": "****",
+        "N1-STR6": "Men oftare vaknade han med tomhet i bröstet, som om någon hade skurit ut något viktigt, bara lämnat en darrning.",
+        "N1-STR7": "Vaken tittade hon bort, och han kastade en blick — andan hölls tillbaka, och i hans tankar ett rop från själen: 'Gå inte'.",
+        "N1-STR8": "Jag kan inte vara med dig, för i livet — obesvarad kärlek!",
+        "N1-STR9": "Ändå slog hjärtat, slog, slog — för henne. Alltid för henne."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "SKAPA",
+      "N2-STR2": "en privat lagring och göm foton, videor",
+      "N2-STR3": "Lagring",
+      "N2-STR4": "Behållare 1",
+      "N2-STR5": "Ange lösenord"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Ljudspelare",
+      "N3-STR2": "för musik och ljudböcker",
+      "N3-STR3": "Du förstår inte nivå (B(P)IV)",
+      "N3-STR3-1": "Du förstår inte nivå (B(P)IV)",
+      "N3-STR4": "Exportera",
+      "N3-STR5": "Radera"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "DINA FILER",
+      "N4-STR2": "stannar på enheten, ingen uppladdning till molnet",
+      "G-Кнопки": {
+        "N4-STR4": "Säkerhet",
+        "N4-STR5": "Skydd",
+        "N4-STR6": "Chiffer",
+        "N4-STR7": "Autolås",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Skärm",
+        "N4-STR8-1": "Lås",
+        "N4-STR9": "Minne",
+        "N4-STR9-1": "Rensa",
+        "N4-STR10": "Bruteforce",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Återställningslösenord",
+        "N4-STR12": "Lås"
+      }
+    }
+  },
+  "et": {
+    "G-Картинка 1": {
+      "N1-STR1": "SISSEHITATUD LUGER",
+      "N1-STR2": "JA VAATARID",
+      "G-Текст": {
+        "N1-STR3": "Valuga maitsestatud - Irina Pimenova",
+        "N1-STR4": "Ta ei teadnud, kas tema teab. Unes ta ootas — ta tundis, et sellist hetke reaalsuses pole, aga magades nuttis õnnest.",
+        "N1-STR5": "****",
+        "N1-STR6": "Kuid sagedamini ärkas ta tühjusega rinnus, justkui keegi oleks lõiganud välja midagi olulist, jättes vaid värisemise.",
+        "N1-STR7": "Olles ärkvel, vaatas ta kõrvale, ja ta heitis pilgu — hing kinni, ja tema mõtetes hinge karje: 'Ära mine'.",
+        "N1-STR8": "Ma ei saa olla sinu kõrval, sest elus — vastuseta armastus!",
+        "N1-STR9": "Siiski süda lõi, lõi, lõi — tema pärast. Alati tema pärast."
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "LOO",
+      "N2-STR2": "privaatne hoidla ja peida fotod, videod",
+      "N2-STR3": "Hoidla",
+      "N2-STR4": "Mahuti 1",
+      "N2-STR5": "Sisesta parool"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "Heliesitaja",
+      "N3-STR2": "muusika ja audioraamatute jaoks",
+      "N3-STR3": "Sa ei saa aru tasemest (B(P)IV)",
+      "N3-STR3-1": "Sa ei saa aru tasemest (B(P)IV)",
+      "N3-STR4": "Ekspordi",
+      "N3-STR5": "Kustuta"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "TEIE FAILID",
+      "N4-STR2": "jäävad seadmesse, pilve ei saadeta",
+      "G-Кнопки": {
+        "N4-STR4": "Turvalisus",
+        "N4-STR5": "Kaitse",
+        "N4-STR6": "Šiffer",
+        "N4-STR7": "Automaatne lukustus",
+        "N4-STR7-1": "10 min",
+        "N4-STR8": "Ekraan",
+        "N4-STR8-1": "Lukusta",
+        "N4-STR9": "Mälu",
+        "N4-STR9-1": "Puhastus",
+        "N4-STR10": "Toore jõuga murdmine",
+        "N4-STR10-1": "5^60s",
+        "N4-STR11": "Taasteparool",
+        "N4-STR12": "Lukusta"
+      }
+    }
+  },
+  "ja-JP": {
+    "G-Картинка 1": {
+      "N1-STR1": "内蔵リーダー",
+      "N1-STR2": "とビューア",
+      "G-Текст": {
+        "N1-STR3": "痛みの味を添えて - イリーナ・ピメノワ",
+        "N1-STR4": "彼は彼女が知っているかどうかを知らなかった。夢の中で彼女は待っていた — 彼はそんな瞬間が現実には存在しないと感じたが、眠りの中で喜びのあまり泣いた。",
+        "N1-STR5": "****",
+        "N1-STR6": "しかし、たいていは胸の空虚感で目を覚ました。誰かが何か大事なものを切り取り、震えだけを残したかのように。",
+        "N1-STR7": "目を覚ますと、彼女はそらした目を、彼はちらりと見る — 息が止まり、心の中で魂の叫び: 『行かないで』。",
+        "N1-STR8": "あなたのそばにいられない、人生は — 報われない愛だから！",
+        "N1-STR9": "それでも心臓は鼓動した、鼓動した、鼓動した — 彼女のために。いつも彼女のために。"
+      }
+    },
+    "G-Картинка 2": {
+      "N2-STR1": "作成",
+      "N2-STR2": "プライベートストレージを作成し、写真やビデオを隠す",
+      "N2-STR3": "ストレージ",
+      "N2-STR4": "コンテナ 1",
+      "N2-STR5": "パスワードを入力"
+    },
+    "G-Картинка 3": {
+      "N3-STR1": "オーディオプレーヤー",
+      "N3-STR2": "音楽やオーディオブック用",
+      "N3-STR3": "あなたはレベルを理解していない (B(P)IV)",
+      "N3-STR3-1": "あなたはレベルを理解していない (B(P)IV)",
+      "N3-STR4": "書き出し",
+      "N3-STR5": "削除"
+    },
+    "G-Картинка 4": {
+      "N4-STR1": "あなたのファイル",
+      "N4-STR2": "端末に残り、クラウドには送信されません",
+      "G-Кнопки": {
+        "N4-STR4": "セキュリティ",
+        "N4-STR5": "保護",
+        "N4-STR6": "暗号",
+        "N4-STR7": "自動ロック",
+        "N4-STR7-1": "10分",
+        "N4-STR8": "画面",
+        "N4-STR8-1": "ロック",
+        "N4-STR9": "メモリ",
+        "N4-STR9-1": "クリーンアップ",
+        "N4-STR10": "総当たり攻撃",
+        "N4-STR10-1": "5^60秒",
+        "N4-STR11": "復旧パスワード",
+        "N4-STR12": "ロック"
+      }
+    }
+  }
 }

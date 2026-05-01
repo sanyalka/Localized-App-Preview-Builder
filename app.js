@@ -125,9 +125,30 @@ function getLangs() {
     return Object.keys(state.translations);
 }
 
+function findValueInObject(obj, key) {
+    if (!obj || typeof obj !== 'object') return undefined;
+    // Прямой поиск
+    if (obj[key] != null) return obj[key];
+    // Рекурсивный поиск во вложенных объектах
+    for (const value of Object.values(obj)) {
+        if (value && typeof value === 'object' && !Array.isArray(value)) {
+            const found = findValueInObject(value, key);
+            if (found != null) return found;
+        }
+    }
+    return undefined;
+}
+
 function getTextForKey(lang, key, fallback) {
     const map = state.translations[lang];
-    if (map && map[key] != null) return String(map[key]);
+    // Временный отладочный вывод
+    if (key.startsWith('N1-') || key.startsWith('N2-') || key.startsWith('N3-') || key.startsWith('N4-')) {
+        console.log('DEBUG getTextForKey:', { lang, key, hasMap: !!map, fallback });
+    }
+    if (map) {
+        const value = findValueInObject(map, key);
+        if (value != null) return String(value);
+    }
     if (fallback != null) return String(fallback);
     return key;
 }
@@ -213,6 +234,10 @@ function updateTemplateSelect() {
         opt.textContent = img.name;
         els.previewTemplate.appendChild(opt);
     });
+    // Ensure a template is selected
+    if (state.images.length > 0) {
+        els.previewTemplate.value = '0';
+    }
 }
 
 function applyJsonData(data) {
@@ -286,6 +311,10 @@ function updateLangSelect() {
         opt.textContent = lang;
         els.previewLang.appendChild(opt);
     });
+    // Ensure a language is selected
+    if (langs.length > 0) {
+        els.previewLang.value = langs[0];
+    }
 }
 
 function extractKeys(map, group = null) {
@@ -297,7 +326,8 @@ function extractKeys(map, group = null) {
                 : group;
             result.push(...extractKeys(v, newGroup));
         } else if (v != null) {
-            result.push({ key: k, group, defaultText: String(v) });
+            // Не устанавливаем defaultText, чтобы при отсутствии перевода показывался ключ
+            result.push({ key: k, group });
         }
     }
     return result;
@@ -312,7 +342,7 @@ function autoCreateElementsFromKeys() {
     if (extracted.length === 0) return;
 
     let changed = false;
-    extracted.forEach(({ key, group, defaultText }) => {
+    extracted.forEach(({ key, group }) => {
         const existing = state.allKeys.find(k => k.key === key);
         if (existing) {
             // Update metadata for existing keys so text changes in JSON are reflected
@@ -320,24 +350,13 @@ function autoCreateElementsFromKeys() {
                 existing.group = group;
                 changed = true;
             }
-            if (existing.defaultText !== defaultText) {
-                existing.defaultText = defaultText;
-                // Also update any template elements using this key
-                Object.values(state.templateElements).forEach(elements => {
-                    elements.forEach(el => {
-                        if (el.key === key) {
-                            el.defaultText = defaultText;
-                        }
-                    });
-                });
-                changed = true;
-            }
+            // Не обновляем defaultText, чтобы при отсутствии перевода показывался ключ
             return;
         }
         state.allKeys.push({
             key,
             group,
-            defaultText,
+            // Не устанавливаем defaultText
             fontSize: key.length > 20 ? 32 : 48,
             color: '#ffffff',
             font: 'Inter',
@@ -655,9 +674,9 @@ function readInspector() {
     if (el.type === 'textblock') {
         el.blockWidth = Math.max(10, parseInt(els.inBlockWidth.value, 10) || 400);
         el.blockHeight = Math.max(0, parseInt(els.inBlockHeight.value, 10) || 0);
-    el.lineHeight = parseFloat(els.inLineHeight.value) || 1.2;
-        el.textAlign = els.inTextAlign.value || 'left';
+        el.lineHeight = parseFloat(els.inLineHeight.value) || 1.2;
     }
+    el.textAlign = els.inTextAlign.value || 'left';
 
     const typeChanged = prev.type !== el.type && (prev.type === 'text' || prev.type === 'textblock') && (el.type === 'text' || el.type === 'textblock');
     if (typeChanged) {
@@ -1181,8 +1200,13 @@ function getElementBox(ctx, el, lang, pad = 0) {
         const h = blockHeight + pad * 2;
         return { x, y, w, h, ox: tx + blockWidth / 2, oy: ty + blockHeight / 2 };
     }
+    const textAlign = el.textAlign || (el.center ? 'center' : 'left');
     let tx = el.x;
-    if (el.center) tx = el.x - m.width / 2;
+    if (textAlign === 'center') {
+        tx = el.x - m.width / 2;
+    } else if (textAlign === 'right') {
+        tx = el.x - m.width;
+    }
     const x = tx - pad;
     const y = el.y - m.height / 2 - pad;
     const w = m.width + pad * 2;
@@ -1481,9 +1505,12 @@ function drawElement(ctx, el, lang) {
         }
 
         ctx.save();
+        const textAlign = el.textAlign || (el.center ? 'center' : 'left');
         let x = el.x;
-        if (el.center) {
+        if (textAlign === 'center') {
             x = el.x - width / 2;
+        } else if (textAlign === 'right') {
+            x = el.x - width;
         }
         const y = el.y;
         const isTransformed = (el.rotation || 0) !== 0 || (el.skewX || 0) !== 0 || (el.skewY || 0) !== 0;
@@ -1579,7 +1606,10 @@ function drawPreview() {
     }
 }
 
-els.previewLang.addEventListener('change', drawPreview);
+els.previewLang.addEventListener('change', (e) => {
+    console.log('Language changed to:', e.target.value, 'current lang:', getCurrentLang());
+    drawPreview();
+});
 els.previewTemplate.addEventListener('change', () => {
     state.selectedId = null;
     renderElementsList();
