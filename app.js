@@ -982,13 +982,13 @@ function layoutTextBlock(ctx, el, lang) {
         return { fontSize, lines, lineHeight, contentHeight };
     };
 
-    let layout = resolveLines(baseSize);
-    if (targetHeight > 0 && layout.contentHeight > targetHeight) {
+    let blockLayout = resolveLines(baseSize);
+    if (targetHeight > 0 && blockLayout.contentHeight > targetHeight) {
         let lo = minSize;
         let hi = baseSize;
         let best = resolveLines(minSize);
         if (best.contentHeight > targetHeight) {
-            layout = best;
+            blockLayout = best;
         } else {
             for (let i = 0; i < 14; i++) {
                 const mid = (lo + hi) / 2;
@@ -1000,18 +1000,18 @@ function layoutTextBlock(ctx, el, lang) {
                     hi = mid;
                 }
             }
-            layout = best;
+            blockLayout = best;
         }
     }
 
     return {
         text,
         width: maxWidth,
-        renderHeight: targetHeight > 0 ? targetHeight : layout.contentHeight,
-        lines: layout.lines,
-        lineHeight: layout.lineHeight,
-        drawFontSize: layout.fontSize,
-        contentHeight: layout.contentHeight,
+        renderHeight: targetHeight > 0 ? targetHeight : blockLayout.contentHeight,
+        lines: blockLayout.lines,
+        lineHeight: blockLayout.lineHeight,
+        drawFontSize: blockLayout.fontSize,
+        contentHeight: blockLayout.contentHeight,
     };
 }
 
@@ -1020,9 +1020,9 @@ function measureElement(ctx, el, lang) {
     ctx.save();
     ctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
     if (el.type === 'textblock') {
-        const layout = layoutTextBlock(ctx, el, lang);
+        const blockLayout = layoutTextBlock(ctx, el, lang);
         ctx.restore();
-        return { text, width: layout.width, height: layout.renderHeight, lines: layout.lines, lineHeight: layout.lineHeight };
+        return { text, width: blockLayout.width, height: blockLayout.renderHeight, lines: blockLayout.lines, lineHeight: blockLayout.lineHeight };
     }
     const metrics = ctx.measureText(text);
     ctx.restore();
@@ -1242,21 +1242,21 @@ function drawPerspectiveText(ctx, el, lang, width, height, drawTextFn) {
 
 function drawTextBlock(ctx, el, lang) {
     const temp = document.createElement('canvas').getContext('2d');
-    const layout = layoutTextBlock(temp, el, lang);
-    const maxWidth = layout.width;
-    const lines = layout.lines;
-    const lineHeight = layout.lineHeight;
+    const blockLayout = layoutTextBlock(temp, el, lang);
+    const maxWidth = blockLayout.width;
+    const lines = blockLayout.lines;
+    const lineHeight = blockLayout.lineHeight;
     const contentHeight = el.blockHeight || 0;
-    const renderHeight = layout.renderHeight;
+    const renderHeight = blockLayout.renderHeight;
 
     if (hasPerspective(el)) {
         drawPerspectiveText(ctx, el, lang, maxWidth, renderHeight, (pctx) => {
-            pctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
+            pctx.font = `${el.bold ? 'bold ' : ''}${blockLayout.drawFontSize}px "${el.font}", sans-serif`;
             pctx.fillStyle = el.color;
             pctx.textBaseline = 'top';
             lines.forEach((line, i) => {
                 const y = i * lineHeight;
-                if (contentHeight > 0 && y + layout.drawFontSize > contentHeight) return;
+                if (contentHeight > 0 && y + blockLayout.drawFontSize > contentHeight) return;
                 let x = 0;
                 const lineWidth = pctx.measureText(line).width;
                 if (el.textAlign === 'center') x = (maxWidth - lineWidth) / 2;
@@ -1294,7 +1294,7 @@ function drawTextBlock(ctx, el, lang) {
 
     lines.forEach((line, i) => {
         const y = el.y + i * lineHeight;
-        if (maxHeight > 0 && y + layout.drawFontSize > el.y + maxHeight) return;
+        if (maxHeight > 0 && y + blockLayout.drawFontSize > el.y + maxHeight) return;
 
         let x = el.x;
         const lineWidth = ctx.measureText(line).width;
