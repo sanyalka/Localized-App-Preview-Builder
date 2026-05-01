@@ -1270,7 +1270,7 @@ function drawPerspectiveText(ctx, el, lang, width, height, drawTextFn) {
     drawTextFn(bctx);
 
     ctx.save();
-    const slices = Math.min(160, Math.max(24, Math.ceil(width / 6)));
+    const slices = Math.min(96, Math.max(16, Math.ceil(width / 10)));
     for (let i = 0; i < slices; i++) {
         const u0 = i / slices;
         const u1 = (i + 1) / slices;
@@ -1462,7 +1462,19 @@ function drawElement(ctx, el, lang) {
         ctx.fillText(text, x, y);
         ctx.restore();
     } catch (drawErr) {
-        console.error('drawElement failed for element:', el, drawErr);
+        if (!el._drawErrorLogged) {
+            console.error('drawElement failed for element:', el, drawErr);
+            el._drawErrorLogged = true;
+        }
+        // Fallback to a safe plain-text draw mode so one legacy/broken element
+        // does not keep throwing every frame and freezing the UI.
+        el.perspective = getDefaultPerspective();
+        if (el.type !== 'text' && el.type !== 'textblock') el.type = 'text';
+        if (el.type === 'textblock') {
+            el.blockWidth = Math.max(10, Number(el.blockWidth) || 400);
+            el.blockHeight = Math.max(0, Number(el.blockHeight) || 0);
+            el.lineHeight = Math.max(0.1, Number(el.lineHeight) || 1.2);
+        }
     }
 }
 
