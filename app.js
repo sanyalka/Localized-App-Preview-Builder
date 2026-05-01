@@ -61,7 +61,56 @@ const els = {
     saveProjectBtn: document.getElementById('saveProjectBtn'),
     loadProjectBtn: document.getElementById('loadProjectBtn'),
     loadProjectInput: document.getElementById('loadProjectInput'),
+    openJsonEditor: document.getElementById('openJsonEditor'),
+    jsonModal: document.getElementById('jsonModal'),
+    closeJsonModal: document.getElementById('closeJsonModal'),
+    jsonEditor: document.getElementById('jsonEditor'),
+    formatJson: document.getElementById('formatJson'),
+    applyJson: document.getElementById('applyJson'),
 };
+
+let jsonCodeMirror = null;
+
+async function initJsonEditor(initialText) {
+    if (jsonCodeMirror) return;
+    const [{ EditorView, basicSetup }, { json }, { oneDark }, { keymap }] = await Promise.all([
+        import('codemirror'),
+        import('@codemirror/lang-json'),
+        import('@codemirror/theme-one-dark'),
+        import('@codemirror/view'),
+    ]);
+    jsonCodeMirror = new EditorView({
+        doc: initialText,
+        extensions: [
+            basicSetup,
+            json(),
+            oneDark,
+            keymap.of([{
+                key: 'Ctrl-Shift-f',
+                mac: 'Cmd-Shift-f',
+                run: () => {
+                    formatJsonEditor();
+                    return true;
+                },
+            }]),
+            EditorView.theme({
+                '&': { height: '100%' },
+                '.cm-scroller': { overflow: 'auto' },
+            }),
+        ],
+        parent: els.jsonEditor,
+    });
+}
+
+function formatJsonEditor() {
+    try {
+        const text = getJsonEditorText();
+        const data = JSON.parse(text);
+        setJsonEditorText(JSON.stringify(data, null, 2));
+    } catch (err) {
+        alert('Ошибка форматирования: ' + err.message);
+    }
+}
 
 function loadImage(file) {
     return new Promise((resolve, reject) => {
@@ -166,6 +215,28 @@ function updateTemplateSelect() {
     });
 }
 
+function applyJsonData(data) {
+    if (data && typeof data === 'object' && !Array.isArray(data)) {
+        const normalized = {};
+        for (const [lang, map] of Object.entries(data)) {
+            if (map && typeof map === 'object' && !Array.isArray(map)) {
+                normalized[lang] = map;
+            }
+        }
+        state.translations = normalized;
+    } else {
+        alert('JSON должен быть объектом с языками');
+        return false;
+    }
+    renderLangInfo();
+    updateLangSelect();
+    autoCreateElementsFromKeys();
+    applyPendingTemplateElements();
+    updateGenerateButton();
+    drawPreview();
+    return true;
+}
+
 // JSON
 els.jsonInput.addEventListener('change', async (e) => {
     const file = e.target.files[0];
@@ -173,23 +244,7 @@ els.jsonInput.addEventListener('change', async (e) => {
     try {
         const text = await file.text();
         const data = JSON.parse(text);
-        if (data && typeof data === 'object' && !Array.isArray(data)) {
-            const normalized = {};
-            for (const [lang, map] of Object.entries(data)) {
-                if (map && typeof map === 'object' && !Array.isArray(map)) {
-                    normalized[lang] = map;
-                }
-            }
-            state.translations = normalized;
-        } else {
-            alert('JSON должен быть объектом с языками');
-            return;
-        }
-        renderLangInfo();
-        updateLangSelect();
-        autoCreateElementsFromKeys();
-        applyPendingTemplateElements();
-        updateGenerateButton();
+        applyJsonData(data);
     } catch (err) {
         alert('Ошибка чтения JSON: ' + err.message);
     }
@@ -233,32 +288,52 @@ function updateLangSelect() {
     });
 }
 
+function extractKeys(map, group = null) {
+    const result = [];
+    for (const [k, v] of Object.entries(map)) {
+        if (v && typeof v === 'object' && !Array.isArray(v)) {
+            const newGroup = k.startsWith('G-')
+                ? (group ? group + '/' + k.slice(2) : k.slice(2))
+                : group;
+            result.push(...extractKeys(v, newGroup));
+        } else if (v != null) {
+            result.push({ key: k, group, defaultText: String(v) });
+        }
+    }
+    return result;
+}
+
 function autoCreateElementsFromKeys() {
     const langs = getLangs();
     if (langs.length === 0) return;
     const firstLang = state.translations[langs[0]];
 
-    function extract(map, group = null) {
-        const result = [];
-        for (const [k, v] of Object.entries(map)) {
-            if (v && typeof v === 'object' && !Array.isArray(v)) {
-                const newGroup = k.startsWith('G-')
-                    ? (group ? group + '/' + k.slice(2) : k.slice(2))
-                    : group;
-                result.push(...extract(v, newGroup));
-            } else if (v != null) {
-                result.push({ key: k, group, defaultText: String(v) });
-            }
-        }
-        return result;
-    }
-
-    const extracted = extract(firstLang || {});
+    const extracted = extractKeys(firstLang || {});
     if (extracted.length === 0) return;
 
-    let added = false;
+    let changed = false;
     extracted.forEach(({ key, group, defaultText }) => {
-        if (state.allKeys.find(k => k.key === key)) return;
+        const existing = state.allKeys.find(k => k.key === key);
+        if (existing) {
+            // Update metadata for existing keys so text changes in JSON are reflected
+            if (existing.group !== group) {
+                existing.group = group;
+                changed = true;
+            }
+            if (existing.defaultText !== defaultText) {
+                existing.defaultText = defaultText;
+                // Also update any template elements using this key
+                Object.values(state.templateElements).forEach(elements => {
+                    elements.forEach(el => {
+                        if (el.key === key) {
+                            el.defaultText = defaultText;
+                        }
+                    });
+                });
+                changed = true;
+            }
+            return;
+        }
         state.allKeys.push({
             key,
             group,
@@ -275,9 +350,9 @@ function autoCreateElementsFromKeys() {
             skewY: 0,
             perspective: getDefaultPerspective(),
         });
-        added = true;
+        changed = true;
     });
-    if (added) renderElementsList();
+    if (changed) renderElementsList();
 }
 
 function addElementToTemplate(key) {
@@ -540,7 +615,7 @@ function updateInspector() {
     toggleBlockFields();
     els.inBlockWidth.value = el.blockWidth || 400;
     els.inBlockHeight.value = el.blockHeight || 0;
-    els.inLineHeight.value = getSafeLineHeight(el);
+    els.inLineHeight.value = el.lineHeight || 1.2;
     els.inTextAlign.value = el.textAlign || 'left';
     els.inBold.checked = el.bold;
     els.inShadow.checked = el.shadow;
@@ -580,7 +655,7 @@ function readInspector() {
     if (el.type === 'textblock') {
         el.blockWidth = Math.max(10, parseInt(els.inBlockWidth.value, 10) || 400);
         el.blockHeight = Math.max(0, parseInt(els.inBlockHeight.value, 10) || 0);
-        el.lineHeight = Math.max(0.1, parseFloat(els.inLineHeight.value) || 1.2);
+    el.lineHeight = parseFloat(els.inLineHeight.value) || 1.2;
         el.textAlign = els.inTextAlign.value || 'left';
     }
 
@@ -689,6 +764,59 @@ els.saveProjectBtn.addEventListener('click', async () => {
 
 els.loadProjectBtn.addEventListener('click', () => {
     els.loadProjectInput.click();
+});
+
+// JSON Editor modal
+function getJsonEditorText() {
+    return jsonCodeMirror ? jsonCodeMirror.state.doc.toString() : '{}';
+}
+
+async function setJsonEditorText(text) {
+    if (!jsonCodeMirror) {
+        await initJsonEditor(text);
+    } else {
+        jsonCodeMirror.dispatch({
+            changes: { from: 0, to: jsonCodeMirror.state.doc.length, insert: text },
+        });
+    }
+}
+
+async function openJsonModal() {
+    await setJsonEditorText(JSON.stringify(state.translations, null, 2));
+    els.jsonModal.classList.remove('hidden');
+    setTimeout(() => {
+        if (jsonCodeMirror) jsonCodeMirror.focus();
+    }, 10);
+}
+
+function closeJsonModal() {
+    els.jsonModal.classList.add('hidden');
+}
+
+els.openJsonEditor.addEventListener('click', openJsonModal);
+els.closeJsonModal.addEventListener('click', closeJsonModal);
+els.jsonModal.querySelector('.json-modal-backdrop').addEventListener('click', closeJsonModal);
+
+els.formatJson.addEventListener('click', () => {
+    if (!confirm('Переформатировать JSON? Текущие отступы и переносы строк будут заменены.')) return;
+    formatJsonEditor();
+});
+
+els.applyJson.addEventListener('click', () => {
+    try {
+        const data = JSON.parse(getJsonEditorText());
+        if (applyJsonData(data)) {
+            closeJsonModal();
+        }
+    } catch (err) {
+        alert('Ошибка парсинга JSON: ' + err.message);
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !els.jsonModal.classList.contains('hidden')) {
+        closeJsonModal();
+    }
 });
 
 els.loadProjectInput.addEventListener('change', async (e) => {
@@ -845,11 +973,6 @@ function updateCanvasVisibility() {
     els.previewCanvas.style.display = 'block';
     els.canvasPlaceholder.classList.add('hidden');
     drawPreview();
-}
-
-function getSafeLineHeight(el) {
-    const lh = Number(el?.lineHeight);
-    return Number.isFinite(lh) && lh > 0 ? lh : 1.2;
 }
 
 function getCanvasPoint(e) {
@@ -1242,7 +1365,7 @@ function drawTextBlock(ctx, el, lang) {
         ctx.transform(1, Math.tan((el.skewY || 0) * Math.PI / 180), Math.tan((el.skewX || 0) * Math.PI / 180), 1, 0, 0);
         ctx.translate(-el.x, -el.y);
     }
-    ctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+    ctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
     ctx.fillStyle = el.color;
     ctx.textBaseline = 'top';
 
