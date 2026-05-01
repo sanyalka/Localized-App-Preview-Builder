@@ -893,7 +893,12 @@ function applyPendingTemplateElements() {
             if (found) saved = found[1];
         }
         if (saved) {
-            state.templateElements[img.id] = saved.map(migrateLegacyElement);
+            const rawElements = Array.isArray(saved)
+                ? saved
+                : (saved && typeof saved === 'object' ? Object.values(saved) : []);
+            state.templateElements[img.id] = rawElements
+                .filter(Boolean)
+                .map(migrateLegacyElement);
         }
     });
     delete state.pendingTemplateElements;
@@ -929,10 +934,14 @@ function migrateLegacyElement(raw) {
     const blockHeight = Math.max(0, readNum(e.blockHeight, 0));
     const lineHeight = Math.max(0.1, readNum(e.lineHeight, 1.2));
 
+    const legacyDefaultText = e.defaultText ?? e.text ?? e.value ?? '';
+    const normalizedKey = String(e.key ?? e.id ?? '').trim();
+
     return {
         ...e,
         type,
-        key: String(e.key || ''),
+        key: normalizedKey,
+        defaultText: String(legacyDefaultText || normalizedKey),
         x: readNum(e.x, 100),
         y: readNum(e.y, 100),
         color: e.color || '#ffffff',
