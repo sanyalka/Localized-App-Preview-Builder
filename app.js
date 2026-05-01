@@ -587,31 +587,20 @@ function readInspector() {
     const typeChanged = prev.type !== el.type && (prev.type === 'text' || prev.type === 'textblock') && (el.type === 'text' || el.type === 'textblock');
     if (typeChanged) {
         const img = getCurrentImage();
-        if (img) {
-            const canvas = document.createElement('canvas');
-            canvas.width = img.img.width;
-            canvas.height = img.img.height;
-            const ctx = canvas.getContext('2d');
-            const lang = getCurrentLang();
+        const canvas = document.createElement('canvas');
+        canvas.width = img?.img?.width || 1;
+        canvas.height = img?.img?.height || 1;
+        const ctx = canvas.getContext('2d');
+        const lang = getCurrentLang();
 
-            const oldCorners = getTransformedCorners(ctx, prev, lang, 0);
-            const cleanNew = { ...el, perspective: getDefaultPerspective() };
-            const newGeom = getTransformedCorners(ctx, cleanNew, lang, 0);
-            const base = {
-                tl: { x: newGeom.x, y: newGeom.y },
-                tr: { x: newGeom.x + newGeom.w, y: newGeom.y },
-                bl: { x: newGeom.x, y: newGeom.y + newGeom.h },
-                br: { x: newGeom.x + newGeom.w, y: newGeom.y + newGeom.h },
-            };
-            const remap = {};
-            ['tl', 'tr', 'bl', 'br'].forEach((name) => {
-                const local = inverseTransformPoint(newGeom.mat, oldCorners[name].x, oldCorners[name].y);
-                remap[name] = {
-                    x: Math.round((local.x - base[name].x) * 10) / 10,
-                    y: Math.round((local.y - base[name].y) * 10) / 10,
-                };
-            });
-            el.perspective = remap;
+        el.perspective = getDefaultPerspective();
+
+        if (el.type === 'textblock') {
+            const measured = measureElement(ctx, { ...el, type: 'text', perspective: getDefaultPerspective() }, lang);
+            el.blockWidth = Math.max(120, Math.ceil(measured.width));
+            el.blockHeight = Math.max(1, Math.ceil(el.fontSize * getSafeLineHeight(el)));
+            const fitted = layoutTextBlock(ctx, el, lang);
+            el.blockHeight = Math.max(1, Math.ceil(fitted.contentHeight));
         }
     }
     drawPreview();
@@ -720,14 +709,20 @@ els.loadProjectInput.addEventListener('change', async (e) => {
         state.nextId = 1;
         state.selectedId = null;
 
-        // Restore images
+        // Restore images (legacy-safe: skip broken image records instead of aborting whole project load)
         if (data.images && Array.isArray(data.images)) {
             for (const imgData of data.images) {
-                const fileObj = dataUrlToFile(imgData.base64, imgData.name);
-                const img = await loadImage(fileObj);
-                const id = state.nextId++;
-                state.images.push({ id, name: imgData.name, file: fileObj, img });
-                state.templateElements[id] = [];
+                try {
+                    if (!imgData || typeof imgData.base64 !== 'string') continue;
+                    const imgName = String(imgData.name || `image-${state.nextId}.png`);
+                    const fileObj = dataUrlToFile(imgData.base64, imgName);
+                    const img = await loadImage(fileObj);
+                    const id = state.nextId++;
+                    state.images.push({ id, name: imgName, file: fileObj, img });
+                    state.templateElements[id] = [];
+                } catch (imageErr) {
+                    console.warn('Skip invalid image from project file:', imgData?.name, imageErr);
+                }
             }
         }
 
@@ -754,16 +749,80 @@ els.loadProjectInput.addEventListener('change', async (e) => {
 
 function applyPendingTemplateElements() {
     if (!state.pendingTemplateElements) return;
+    const pending = state.pendingTemplateElements || {};
+    const pendingEntries = pending && typeof pending === 'object' ? Object.entries(pending) : [];
+    const normalizeName = (v) => String(v || '').trim().toLowerCase();
+
     state.images.forEach(img => {
-        const saved = state.pendingTemplateElements[img.name];
+        // Match by exact name (current format), case-insensitive name (legacy/manual edits),
+        // and numeric image id string (older project variants).
+        const exactByName = pending[img.name];
+        const exactById = pending[String(img.id)];
+        let saved = exactByName || exactById;
+        if (!saved) {
+            const nameNorm = normalizeName(img.name);
+            const found = pendingEntries.find(([key]) => normalizeName(key) === nameNorm);
+            if (found) saved = found[1];
+        }
         if (saved) {
-            state.templateElements[img.id] = saved.map(e => ({
-                ...e,
-                perspective: e.perspective ? getPerspective(e) : getDefaultPerspective(),
-            }));
+            state.templateElements[img.id] = saved.map(migrateLegacyElement);
         }
     });
     delete state.pendingTemplateElements;
+}
+
+function migrateLegacyElement(raw) {
+    const e = { ...(raw || {}) };
+    const legacyLayout = e.layout && typeof e.layout === 'object' ? e.layout : null;
+
+    const readNum = (v, fallback) => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : fallback;
+    };
+    const readBool = (v, fallback = false) => typeof v === 'boolean' ? v : fallback;
+
+    // Legacy files may keep sizing/position data inside `layout`.
+    if (legacyLayout) {
+        if (e.x == null) e.x = legacyLayout.x;
+        if (e.y == null) e.y = legacyLayout.y;
+        if (e.fontSize == null) e.fontSize = legacyLayout.fontSize;
+        if (e.blockWidth == null) e.blockWidth = legacyLayout.blockWidth;
+        if (e.blockHeight == null) e.blockHeight = legacyLayout.blockHeight;
+        if (e.lineHeight == null) e.lineHeight = legacyLayout.lineHeight;
+        if (e.textAlign == null) e.textAlign = legacyLayout.textAlign;
+        if (e.rotation == null) e.rotation = legacyLayout.rotation;
+        if (e.skewX == null) e.skewX = legacyLayout.skewX;
+        if (e.skewY == null) e.skewY = legacyLayout.skewY;
+    }
+
+    const type = e.type === 'textblock' ? 'textblock' : 'text';
+    const fontSize = Math.max(8, readNum(e.fontSize, 24));
+    const blockWidth = Math.max(10, readNum(e.blockWidth, 400));
+    const blockHeight = Math.max(0, readNum(e.blockHeight, 0));
+    const lineHeight = Math.max(0.1, readNum(e.lineHeight, 1.2));
+
+    return {
+        ...e,
+        type,
+        key: String(e.key || ''),
+        x: readNum(e.x, 100),
+        y: readNum(e.y, 100),
+        color: e.color || '#ffffff',
+        font: e.font || 'Inter',
+        fontSize,
+        blockWidth,
+        blockHeight,
+        lineHeight,
+        textAlign: ['left', 'center', 'right'].includes(e.textAlign) ? e.textAlign : 'left',
+        bold: readBool(e.bold),
+        shadow: readBool(e.shadow),
+        outline: readBool(e.outline),
+        center: readBool(e.center),
+        rotation: readNum(e.rotation, 0),
+        skewX: readNum(e.skewX, 0),
+        skewY: readNum(e.skewY, 0),
+        perspective: e.perspective ? getPerspective(e) : getDefaultPerspective(),
+    };
 }
 
 // Canvas
@@ -795,38 +854,112 @@ function getCanvasPoint(e) {
 
 function wrapText(ctx, text, maxWidth) {
     if (!text) return [''];
-    const words = text.split(/(\s+)/);
     const lines = [];
-    let currentLine = '';
-    for (let i = 0; i < words.length; i++) {
-        const word = words[i];
-        if (!word) continue;
-        const testLine = currentLine + word;
-        if (ctx.measureText(testLine).width > maxWidth && currentLine !== '') {
-            lines.push(currentLine);
-            currentLine = word;
-        } else {
-            currentLine = testLine;
+    const paragraphs = String(text).split(/\r?\n/);
+
+    const breakLongToken = (token) => {
+        const chunks = [];
+        let chunk = '';
+        for (const char of token) {
+            const next = chunk + char;
+            if (chunk && ctx.measureText(next).width > maxWidth) {
+                chunks.push(chunk);
+                chunk = char;
+            } else {
+                chunk = next;
+            }
         }
-        // If a single word is longer than maxWidth, break it character by character
-        if (ctx.measureText(currentLine).width > maxWidth && currentLine.trim().length > 0) {
-            const longText = currentLine;
-            let chunk = '';
-            currentLine = '';
-            for (const char of longText) {
-                const testChunk = chunk + char;
-                if (ctx.measureText(testChunk).width > maxWidth && chunk !== '') {
-                    lines.push(chunk);
-                    chunk = char;
-                } else {
-                    chunk = testChunk;
+        if (chunk) chunks.push(chunk);
+        return chunks;
+    };
+
+    for (const paragraph of paragraphs) {
+        if (paragraph.length === 0) {
+            lines.push('');
+            continue;
+        }
+        let current = '';
+        const tokens = paragraph.match(/\S+|\s+/g) || [];
+        for (const token of tokens) {
+            if (/^\s+$/.test(token)) {
+                current += token;
+                continue;
+            }
+
+            const candidate = current + token;
+            if (ctx.measureText(candidate).width <= maxWidth || current.trim().length === 0) {
+                if (ctx.measureText(candidate).width <= maxWidth) {
+                    current = candidate;
+                    continue;
                 }
             }
-            currentLine = chunk;
+
+            if (current.trim().length > 0) {
+                lines.push(current.trimEnd());
+                current = '';
+            }
+
+            if (ctx.measureText(token).width <= maxWidth) {
+                current = token;
+            } else {
+                const chunks = breakLongToken(token);
+                lines.push(...chunks.slice(0, -1));
+                current = chunks[chunks.length - 1] || '';
+            }
+        }
+        lines.push(current.trimEnd());
+    }
+
+    return lines.length ? lines : [''];
+}
+
+
+function layoutTextBlock(ctx, el, lang) {
+    const text = getTextForKey(lang, el.key, el.defaultText || el.key);
+    const maxWidth = Math.max(10, el.blockWidth || 400);
+    const targetHeight = Math.max(0, el.blockHeight || 0);
+    const baseSize = Math.max(8, el.fontSize || 24);
+    const minSize = 8;
+
+    const resolveLines = (fontSize) => {
+        ctx.font = `${el.bold ? 'bold ' : ''}${fontSize}px "${el.font}", sans-serif`;
+        const lines = wrapText(ctx, text, maxWidth);
+        const lineHeight = fontSize * getSafeLineHeight(el);
+        const contentHeight = lines.length * lineHeight;
+        return { fontSize, lines, lineHeight, contentHeight };
+    };
+
+    let blockLayout = resolveLines(baseSize);
+    if (targetHeight > 0 && blockLayout.contentHeight > targetHeight) {
+        let lo = minSize;
+        let hi = baseSize;
+        let best = resolveLines(minSize);
+        if (best.contentHeight > targetHeight) {
+            blockLayout = best;
+        } else {
+            for (let i = 0; i < 14; i++) {
+                const mid = (lo + hi) / 2;
+                const probe = resolveLines(mid);
+                if (probe.contentHeight <= targetHeight) {
+                    best = probe;
+                    lo = mid;
+                } else {
+                    hi = mid;
+                }
+            }
+            blockLayout = best;
         }
     }
-    lines.push(currentLine);
-    return lines;
+
+    return {
+        text,
+        width: maxWidth,
+        renderHeight: targetHeight > 0 ? targetHeight : blockLayout.contentHeight,
+        lines: blockLayout.lines,
+        lineHeight: blockLayout.lineHeight,
+        drawFontSize: blockLayout.fontSize,
+        contentHeight: blockLayout.contentHeight,
+    };
 }
 
 function measureElement(ctx, el, lang) {
@@ -834,12 +967,9 @@ function measureElement(ctx, el, lang) {
     ctx.save();
     ctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
     if (el.type === 'textblock') {
-        const width = el.blockWidth || 400;
-        const lines = wrapText(ctx, text, width);
-        const lineHeight = el.fontSize * getSafeLineHeight(el);
-        const height = lines.length * lineHeight;
+        const blockLayout = layoutTextBlock(ctx, el, lang);
         ctx.restore();
-        return { text, width, height, lines, lineHeight };
+        return { text, width: blockLayout.width, height: blockLayout.renderHeight, lines: blockLayout.lines, lineHeight: blockLayout.lineHeight };
     }
     const metrics = ctx.measureText(text);
     ctx.restore();
@@ -867,16 +997,12 @@ function getDefaultPerspective() {
 
 function getPerspective(el) {
     const p = el.perspective || {};
-    const normalized = {
+    return {
         tl: { x: p.tl?.x || 0, y: p.tl?.y || 0 },
         tr: { x: p.tr?.x || 0, y: p.tr?.y || 0 },
         bl: { x: p.bl?.x || 0, y: p.bl?.y || 0 },
+        br: { x: p.br?.x || 0, y: p.br?.y || 0 },
     };
-    normalized.br = {
-        x: normalized.tr.x + normalized.bl.x - normalized.tl.x,
-        y: normalized.tr.y + normalized.bl.y - normalized.tl.y,
-    };
-    return normalized;
 }
 
 function hasPerspective(el) {
@@ -1003,33 +1129,81 @@ function applyAffineFromCorners(ctx, corners, width, height) {
 
 function drawPerspectiveText(ctx, el, lang, width, height, drawTextFn) {
     const corners = getTransformedCorners(ctx, el, lang, 0);
+    if (width <= 0 || height <= 0) return;
+
+    const buffer = document.createElement('canvas');
+    buffer.width = Math.max(1, Math.ceil(width));
+    buffer.height = Math.max(1, Math.ceil(height));
+    const bctx = buffer.getContext('2d');
+    drawTextFn(bctx);
+
     ctx.save();
-    if (!applyAffineFromCorners(ctx, corners, width, height)) {
+    const slices = Math.min(160, Math.max(24, Math.ceil(width / 6)));
+    for (let i = 0; i < slices; i++) {
+        const u0 = i / slices;
+        const u1 = (i + 1) / slices;
+
+        const top0 = {
+            x: corners.tl.x + (corners.tr.x - corners.tl.x) * u0,
+            y: corners.tl.y + (corners.tr.y - corners.tl.y) * u0,
+        };
+        const top1 = {
+            x: corners.tl.x + (corners.tr.x - corners.tl.x) * u1,
+            y: corners.tl.y + (corners.tr.y - corners.tl.y) * u1,
+        };
+        const bottom0 = {
+            x: corners.bl.x + (corners.br.x - corners.bl.x) * u0,
+            y: corners.bl.y + (corners.br.y - corners.bl.y) * u0,
+        };
+        const bottom1 = {
+            x: corners.bl.x + (corners.br.x - corners.bl.x) * u1,
+            y: corners.bl.y + (corners.br.y - corners.bl.y) * u1,
+        };
+
+        const srcX = u0 * width;
+        const srcW = Math.max(1, (u1 - u0) * width);
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(top0.x, top0.y);
+        ctx.lineTo(top1.x, top1.y);
+        ctx.lineTo(bottom1.x, bottom1.y);
+        ctx.lineTo(bottom0.x, bottom0.y);
+        ctx.closePath();
+        ctx.clip();
+
+        ctx.transform(
+            (top1.x - top0.x) / srcW,
+            (top1.y - top0.y) / srcW,
+            (bottom0.x - top0.x) / height,
+            (bottom0.y - top0.y) / height,
+            top0.x - ((top1.x - top0.x) / srcW) * srcX,
+            top0.y - ((top1.y - top0.y) / srcW) * srcX,
+        );
+
+        ctx.drawImage(buffer, 0, 0);
         ctx.restore();
-        return;
     }
-    drawTextFn(ctx);
     ctx.restore();
 }
 
 function drawTextBlock(ctx, el, lang) {
-    const text = getTextForKey(lang, el.key, el.defaultText || el.key);
-    const maxWidth = el.blockWidth || 400;
     const temp = document.createElement('canvas').getContext('2d');
-    temp.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
-    const lines = wrapText(temp, text, maxWidth);
-    const lineHeight = el.fontSize * getSafeLineHeight(el);
+    const blockLayout = layoutTextBlock(temp, el, lang);
+    const maxWidth = blockLayout.width;
+    const lines = blockLayout.lines;
+    const lineHeight = blockLayout.lineHeight;
     const contentHeight = el.blockHeight || 0;
-    const renderHeight = contentHeight > 0 ? contentHeight : lines.length * lineHeight;
+    const renderHeight = blockLayout.renderHeight;
 
     if (hasPerspective(el)) {
         drawPerspectiveText(ctx, el, lang, maxWidth, renderHeight, (pctx) => {
-            pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+            pctx.font = `${el.bold ? 'bold ' : ''}${blockLayout.drawFontSize}px "${el.font}", sans-serif`;
             pctx.fillStyle = el.color;
             pctx.textBaseline = 'top';
             lines.forEach((line, i) => {
                 const y = i * lineHeight;
-                if (contentHeight > 0 && y + el.fontSize > contentHeight) return;
+                if (contentHeight > 0 && y + blockLayout.drawFontSize > contentHeight) return;
                 let x = 0;
                 const lineWidth = pctx.measureText(line).width;
                 if (el.textAlign === 'center') x = (maxWidth - lineWidth) / 2;
@@ -1067,7 +1241,7 @@ function drawTextBlock(ctx, el, lang) {
 
     lines.forEach((line, i) => {
         const y = el.y + i * lineHeight;
-        if (maxHeight > 0 && y + el.fontSize > el.y + maxHeight) return;
+        if (maxHeight > 0 && y + blockLayout.drawFontSize > el.y + maxHeight) return;
 
         let x = el.x;
         const lineWidth = ctx.measureText(line).width;
@@ -1336,15 +1510,7 @@ window.addEventListener('mousemove', (e) => {
             next[state.drag.handle].x = next[state.drag.handle].x + dxLocal;
             next[state.drag.handle].y = next[state.drag.handle].y + dyLocal;
 
-            const opposite = { tl: 'br', tr: 'bl', bl: 'tr', br: 'tl' };
-            const sideA = { tl: 'tr', tr: 'tl', bl: 'br', br: 'bl' };
-            const sideB = { tl: 'bl', tr: 'br', bl: 'tl', br: 'tr' };
             const h = state.drag.handle;
-            const o = opposite[h];
-            const a = sideA[h];
-            const b = sideB[h];
-            next[o].x = next[a].x + next[b].x - next[h].x;
-            next[o].y = next[a].y + next[b].y - next[h].y;
 
             next.tl.x = Math.round(next.tl.x * 10) / 10;
             next.tl.y = Math.round(next.tl.y * 10) / 10;
