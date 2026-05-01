@@ -984,64 +984,82 @@ function getCanvasPoint(e) {
     };
 }
 
+/**
+ * Get safe line height multiplier for an element
+ * @param {Object} el - Element object
+ * @returns {number} Line height multiplier (default 1.2)
+ */
+function getSafeLineHeight(el) {
+    return Math.max(0.1, parseFloat(el.lineHeight) || 1.2);
+}
+
+/**
+ * Improved text wrapping algorithm that handles word wrapping and long words gracefully
+ * @param {CanvasRenderingContext2D} ctx - Canvas context
+ * @param {string} text - Text to wrap
+ * @param {number} maxWidth - Maximum width in pixels
+ * @returns {string[]} Array of lines
+ */
 function wrapText(ctx, text, maxWidth) {
-    if (!text) return [''];
+    if (!text || maxWidth <= 0) return [''];
+    
     const lines = [];
     const paragraphs = String(text).split(/\r?\n/);
-
-    const breakLongToken = (token) => {
-        const chunks = [];
-        let chunk = '';
-        for (const char of token) {
-            const next = chunk + char;
-            if (chunk && ctx.measureText(next).width > maxWidth) {
-                chunks.push(chunk);
-                chunk = char;
-            } else {
-                chunk = next;
-            }
-        }
-        if (chunk) chunks.push(chunk);
-        return chunks;
-    };
-
+    
     for (const paragraph of paragraphs) {
-        if (paragraph.length === 0) {
+        if (paragraph === '') {
             lines.push('');
             continue;
         }
-        let current = '';
-        const tokens = paragraph.match(/\S+|\s+/g) || [];
-        for (const token of tokens) {
-            if (/^\s+$/.test(token)) {
-                current += token;
-                continue;
-            }
-
-            const candidate = current + token;
-            if (ctx.measureText(candidate).width <= maxWidth || current.trim().length === 0) {
-                if (ctx.measureText(candidate).width <= maxWidth) {
-                    current = candidate;
-                    continue;
+        
+        const words = paragraph.split(/\s+/);
+        let currentLine = '';
+        
+        for (let i = 0; i < words.length; i++) {
+            const word = words[i];
+            const testLine = currentLine ? currentLine + ' ' + word : word;
+            const metrics = ctx.measureText(testLine);
+            
+            if (metrics.width <= maxWidth) {
+                currentLine = testLine;
+            } else {
+                // Word doesn't fit on current line
+                if (currentLine) {
+                    lines.push(currentLine);
+                }
+                
+                // Check if the word itself is too long for the maxWidth
+                const wordWidth = ctx.measureText(word).width;
+                if (wordWidth <= maxWidth) {
+                    currentLine = word;
+                } else {
+                    // Word is too long - break it by characters
+                    let currentWordPart = '';
+                    for (const char of word) {
+                        const testChar = currentWordPart + char;
+                        if (ctx.measureText(testChar).width <= maxWidth) {
+                            currentWordPart = testChar;
+                        } else {
+                            if (currentWordPart) {
+                                lines.push(currentWordPart);
+                            }
+                            currentWordPart = char;
+                        }
+                    }
+                    if (currentWordPart) {
+                        currentLine = currentWordPart;
+                    } else {
+                        currentLine = '';
+                    }
                 }
             }
-
-            if (current.trim().length > 0) {
-                lines.push(current.trimEnd());
-                current = '';
-            }
-
-            if (ctx.measureText(token).width <= maxWidth) {
-                current = token;
-            } else {
-                const chunks = breakLongToken(token);
-                lines.push(...chunks.slice(0, -1));
-                current = chunks[chunks.length - 1] || '';
-            }
         }
-        lines.push(current.trimEnd());
+        
+        if (currentLine) {
+            lines.push(currentLine);
+        }
     }
-
+    
     return lines.length ? lines : [''];
 }
 
@@ -1145,11 +1163,23 @@ function hasPerspective(el) {
 function getElementBox(ctx, el, lang, pad = 0) {
     const m = measureElement(ctx, el, lang);
     if (el.type === 'textblock') {
-        const x = el.x - pad;
-        const y = el.y - pad;
-        const w = (el.blockWidth || 400) + pad * 2;
-        const h = (el.blockHeight > 0 ? el.blockHeight : m.height) + pad * 2;
-        return { x, y, w, h, ox: el.x, oy: el.y };
+        // For textblocks, we need to handle the center property
+        let tx = el.x;
+        let ty = el.y;
+        const blockWidth = el.blockWidth || 400;
+        const blockHeight = el.blockHeight > 0 ? el.blockHeight : m.height;
+        
+        if (el.center) {
+            // Center the textblock around the point
+            tx = el.x - blockWidth / 2;
+            ty = el.y - blockHeight / 2;
+        }
+        
+        const x = tx - pad;
+        const y = ty - pad;
+        const w = blockWidth + pad * 2;
+        const h = blockHeight + pad * 2;
+        return { x, y, w, h, ox: tx + blockWidth / 2, oy: ty + blockHeight / 2 };
     }
     let tx = el.x;
     if (el.center) tx = el.x - m.width / 2;
@@ -1365,22 +1395,41 @@ function drawTextBlock(ctx, el, lang) {
         ctx.transform(1, Math.tan((el.skewY || 0) * Math.PI / 180), Math.tan((el.skewX || 0) * Math.PI / 180), 1, 0, 0);
         ctx.translate(-el.x, -el.y);
     }
-    ctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
+    
+    // Use the correct font size from blockLayout
+    ctx.font = `${el.bold ? 'bold ' : ''}${blockLayout.drawFontSize}px "${el.font}", sans-serif`;
     ctx.fillStyle = el.color;
     ctx.textBaseline = 'top';
 
     const maxHeight = contentHeight;
+    
+    // Calculate starting Y position based on text alignment and center property
+    let startY = el.y;
+    if (el.center) {
+        // For centered textblocks, adjust Y position so the text block is centered vertically
+        startY = el.y - renderHeight / 2;
+    }
 
     lines.forEach((line, i) => {
-        const y = el.y + i * lineHeight;
-        if (maxHeight > 0 && y + blockLayout.drawFontSize > el.y + maxHeight) return;
+        const y = startY + i * lineHeight;
+        if (maxHeight > 0 && y + blockLayout.drawFontSize > startY + maxHeight) return;
 
         let x = el.x;
         const lineWidth = ctx.measureText(line).width;
+        
+        // Handle horizontal alignment
         if (el.textAlign === 'center') {
-            x = el.x + (maxWidth - lineWidth) / 2;
+            x = el.x - maxWidth / 2 + (maxWidth - lineWidth) / 2;
         } else if (el.textAlign === 'right') {
-            x = el.x + maxWidth - lineWidth;
+            x = el.x - maxWidth / 2 + (maxWidth - lineWidth);
+        } else {
+            // left alignment
+            x = el.x - maxWidth / 2;
+        }
+        
+        // Apply center property for horizontal centering
+        if (el.center) {
+            // Already accounted for in the x calculation above
         }
 
         if (el.outline) {
