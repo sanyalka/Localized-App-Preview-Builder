@@ -874,13 +874,64 @@ function applyPendingTemplateElements() {
     state.images.forEach(img => {
         const saved = state.pendingTemplateElements[img.name];
         if (saved) {
-            state.templateElements[img.id] = saved.map(e => ({
-                ...e,
-                perspective: e.perspective ? getPerspective(e) : getDefaultPerspective(),
-            }));
+            state.templateElements[img.id] = saved.map(migrateLegacyElement);
         }
     });
     delete state.pendingTemplateElements;
+}
+
+function migrateLegacyElement(raw) {
+    const e = { ...(raw || {}) };
+    const legacyLayout = e.layout && typeof e.layout === 'object' ? e.layout : null;
+
+    const readNum = (v, fallback) => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : fallback;
+    };
+    const readBool = (v, fallback = false) => typeof v === 'boolean' ? v : fallback;
+
+    // Legacy files may keep sizing/position data inside `layout`.
+    if (legacyLayout) {
+        if (e.x == null) e.x = legacyLayout.x;
+        if (e.y == null) e.y = legacyLayout.y;
+        if (e.fontSize == null) e.fontSize = legacyLayout.fontSize;
+        if (e.blockWidth == null) e.blockWidth = legacyLayout.blockWidth;
+        if (e.blockHeight == null) e.blockHeight = legacyLayout.blockHeight;
+        if (e.lineHeight == null) e.lineHeight = legacyLayout.lineHeight;
+        if (e.textAlign == null) e.textAlign = legacyLayout.textAlign;
+        if (e.rotation == null) e.rotation = legacyLayout.rotation;
+        if (e.skewX == null) e.skewX = legacyLayout.skewX;
+        if (e.skewY == null) e.skewY = legacyLayout.skewY;
+    }
+
+    const type = e.type === 'textblock' ? 'textblock' : 'text';
+    const fontSize = Math.max(8, readNum(e.fontSize, 24));
+    const blockWidth = Math.max(10, readNum(e.blockWidth, 400));
+    const blockHeight = Math.max(0, readNum(e.blockHeight, 0));
+    const lineHeight = Math.max(0.1, readNum(e.lineHeight, 1.2));
+
+    return {
+        ...e,
+        type,
+        key: String(e.key || ''),
+        x: readNum(e.x, 100),
+        y: readNum(e.y, 100),
+        color: e.color || '#ffffff',
+        font: e.font || 'Inter',
+        fontSize,
+        blockWidth,
+        blockHeight,
+        lineHeight,
+        textAlign: ['left', 'center', 'right'].includes(e.textAlign) ? e.textAlign : 'left',
+        bold: readBool(e.bold),
+        shadow: readBool(e.shadow),
+        outline: readBool(e.outline),
+        center: readBool(e.center),
+        rotation: readNum(e.rotation, 0),
+        skewX: readNum(e.skewX, 0),
+        skewY: readNum(e.skewY, 0),
+        perspective: e.perspective ? getPerspective(e) : getDefaultPerspective(),
+    };
 }
 
 // Canvas
