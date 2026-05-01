@@ -837,14 +837,20 @@ els.loadProjectInput.addEventListener('change', async (e) => {
         state.nextId = 1;
         state.selectedId = null;
 
-        // Restore images
+        // Restore images (legacy-safe: skip broken image records instead of aborting whole project load)
         if (data.images && Array.isArray(data.images)) {
             for (const imgData of data.images) {
-                const fileObj = dataUrlToFile(imgData.base64, imgData.name);
-                const img = await loadImage(fileObj);
-                const id = state.nextId++;
-                state.images.push({ id, name: imgData.name, file: fileObj, img });
-                state.templateElements[id] = [];
+                try {
+                    if (!imgData || typeof imgData.base64 !== 'string') continue;
+                    const imgName = String(imgData.name || `image-${state.nextId}.png`);
+                    const fileObj = dataUrlToFile(imgData.base64, imgName);
+                    const img = await loadImage(fileObj);
+                    const id = state.nextId++;
+                    state.images.push({ id, name: imgName, file: fileObj, img });
+                    state.templateElements[id] = [];
+                } catch (imageErr) {
+                    console.warn('Skip invalid image from project file:', imgData?.name, imageErr);
+                }
             }
         }
 
@@ -871,8 +877,21 @@ els.loadProjectInput.addEventListener('change', async (e) => {
 
 function applyPendingTemplateElements() {
     if (!state.pendingTemplateElements) return;
+    const pending = state.pendingTemplateElements || {};
+    const pendingEntries = pending && typeof pending === 'object' ? Object.entries(pending) : [];
+    const normalizeName = (v) => String(v || '').trim().toLowerCase();
+
     state.images.forEach(img => {
-        const saved = state.pendingTemplateElements[img.name];
+        // Match by exact name (current format), case-insensitive name (legacy/manual edits),
+        // and numeric image id string (older project variants).
+        const exactByName = pending[img.name];
+        const exactById = pending[String(img.id)];
+        let saved = exactByName || exactById;
+        if (!saved) {
+            const nameNorm = normalizeName(img.name);
+            const found = pendingEntries.find(([key]) => normalizeName(key) === nameNorm);
+            if (found) saved = found[1];
+        }
         if (saved) {
             state.templateElements[img.id] = saved.map(migrateLegacyElement);
         }
