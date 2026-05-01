@@ -1401,65 +1401,69 @@ function drawTextBlock(ctx, el, lang) {
 }
 
 function drawElement(ctx, el, lang) {
-    if (el.type === 'textblock') {
-        drawTextBlock(ctx, el, lang);
-        return;
-    }
-    const { text, width } = measureElement(ctx, el, lang);
-    const height = el.fontSize;
+    try {
+        if (el.type === 'textblock') {
+            drawTextBlock(ctx, el, lang);
+            return;
+        }
+        const { text, width } = measureElement(ctx, el, lang);
+        const height = el.fontSize;
 
-    if (hasPerspective(el)) {
-        drawPerspectiveText(ctx, el, lang, width, height, (pctx) => {
-    ctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
-            pctx.fillStyle = el.color;
-            pctx.textBaseline = 'middle';
-            const y = height / 2;
-            if (el.outline) {
-                pctx.strokeStyle = 'rgba(0,0,0,0.85)';
-                pctx.lineWidth = Math.max(2, el.fontSize / 8);
-                pctx.strokeText(text, 0, y);
-            }
-            if (el.shadow) {
-                pctx.shadowColor = 'rgba(0,0,0,0.55)';
-                pctx.shadowBlur = Math.max(4, el.fontSize / 5);
-                pctx.shadowOffsetX = 2;
-                pctx.shadowOffsetY = 2;
-            }
-            pctx.fillText(text, 0, y);
-        });
-        return;
-    }
+        if (hasPerspective(el)) {
+            drawPerspectiveText(ctx, el, lang, width, height, (pctx) => {
+                pctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+                pctx.fillStyle = el.color;
+                pctx.textBaseline = 'middle';
+                const y = height / 2;
+                if (el.outline) {
+                    pctx.strokeStyle = 'rgba(0,0,0,0.85)';
+                    pctx.lineWidth = Math.max(2, el.fontSize / 8);
+                    pctx.strokeText(text, 0, y);
+                }
+                if (el.shadow) {
+                    pctx.shadowColor = 'rgba(0,0,0,0.55)';
+                    pctx.shadowBlur = Math.max(4, el.fontSize / 5);
+                    pctx.shadowOffsetX = 2;
+                    pctx.shadowOffsetY = 2;
+                }
+                pctx.fillText(text, 0, y);
+            });
+            return;
+        }
 
-    ctx.save();
-    let x = el.x;
-    if (el.center) {
-        x = el.x - width / 2;
-    }
-    const y = el.y;
-    const isTransformed = (el.rotation || 0) !== 0 || (el.skewX || 0) !== 0 || (el.skewY || 0) !== 0;
-    if (isTransformed) {
-        ctx.translate(x, y);
-        ctx.rotate((el.rotation || 0) * Math.PI / 180);
-        ctx.transform(1, Math.tan((el.skewY || 0) * Math.PI / 180), Math.tan((el.skewX || 0) * Math.PI / 180), 1, 0, 0);
-        ctx.translate(-x, -y);
-    }
-    ctx.font = `${el.bold ? 'bold ' : ''}${layout.drawFontSize}px "${el.font}", sans-serif`;
-    ctx.fillStyle = el.color;
-    ctx.textBaseline = 'middle';
+        ctx.save();
+        let x = el.x;
+        if (el.center) {
+            x = el.x - width / 2;
+        }
+        const y = el.y;
+        const isTransformed = (el.rotation || 0) !== 0 || (el.skewX || 0) !== 0 || (el.skewY || 0) !== 0;
+        if (isTransformed) {
+            ctx.translate(x, y);
+            ctx.rotate((el.rotation || 0) * Math.PI / 180);
+            ctx.transform(1, Math.tan((el.skewY || 0) * Math.PI / 180), Math.tan((el.skewX || 0) * Math.PI / 180), 1, 0, 0);
+            ctx.translate(-x, -y);
+        }
+        ctx.font = `${el.bold ? 'bold ' : ''}${el.fontSize}px "${el.font}", sans-serif`;
+        ctx.fillStyle = el.color;
+        ctx.textBaseline = 'middle';
 
-    if (el.outline) {
-        ctx.strokeStyle = 'rgba(0,0,0,0.85)';
-        ctx.lineWidth = Math.max(2, el.fontSize / 8);
-        ctx.strokeText(text, x, y);
+        if (el.outline) {
+            ctx.strokeStyle = 'rgba(0,0,0,0.85)';
+            ctx.lineWidth = Math.max(2, el.fontSize / 8);
+            ctx.strokeText(text, x, y);
+        }
+        if (el.shadow) {
+            ctx.shadowColor = 'rgba(0,0,0,0.55)';
+            ctx.shadowBlur = Math.max(4, el.fontSize / 5);
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+        }
+        ctx.fillText(text, x, y);
+        ctx.restore();
+    } catch (drawErr) {
+        console.error('drawElement failed for element:', el, drawErr);
     }
-    if (el.shadow) {
-        ctx.shadowColor = 'rgba(0,0,0,0.55)';
-        ctx.shadowBlur = Math.max(4, el.fontSize / 5);
-        ctx.shadowOffsetX = 2;
-        ctx.shadowOffsetY = 2;
-    }
-    ctx.fillText(text, x, y);
-    ctx.restore();
 }
 
 function drawSelection(ctx, el, lang) {
